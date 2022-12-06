@@ -17,10 +17,11 @@ class CreatePlatesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->integer('price');
-            $table->tinyInteger('hidden');
-            $table->string('image');
+            $table->decimal('price', 4, 2);
+            $table->boolean('hidden');
+            $table->string('image')->nullable();
             $table->string('slug')->unique();
+            $table->unsignedBigInteger('resturant_id')->nullable();
             $table->foreign('resturant_id')->references('id')->on('resturants');
             $table->timestamps();
         });

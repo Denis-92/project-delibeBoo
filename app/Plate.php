@@ -11,7 +11,7 @@ class Plate extends Model
         'name',
         'description',
         'price',
-        'visibility',
+        'hidden',
         'image',
         'slug',
         'resturant_id'
