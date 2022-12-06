@@ -26,7 +26,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.orders.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return view ('admin.orders.show', compact('order'));
     }
 
     /**
