@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::middleware('auth')
     ->namespace('Admin')
     ->name('admin.')
@@ -23,6 +22,6 @@ Route::middleware('auth')
         Route::resource('plates', 'PlatesController');
     });
 
-
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
+
