@@ -20,7 +20,7 @@ Route::middleware('auth')
     ->group(function () {
         Route::resource('resturants', 'ResturantController');
         Route::resource('orders', 'OrderController');
-        Route::resource('plates', 'PlatesController'); // PlateController?
+        Route::resource('plates', 'PlateController');
     });
 
 
