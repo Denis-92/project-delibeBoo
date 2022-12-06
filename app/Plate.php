@@ -15,7 +15,7 @@ class Plate extends Model
         'image',
         'slug',
         'restaurant_id'
-    ]
+    ];
 
     // TODO
     // public function restaurant() {
