@@ -21,7 +21,7 @@ class CreatePlatesTable extends Migration
             $table->tinyInteger('hidden');
             $table->string('image');
             $table->string('slug')->unique();
-            $table->integer('restaurant_id');
+            $table->foreign('resturant_id')->references('id')->on('resturants');
             $table->timestamps();
         });
     }

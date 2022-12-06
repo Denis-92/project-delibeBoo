@@ -14,11 +14,10 @@ class Plate extends Model
         'visibility',
         'image',
         'slug',
-        'restaurant_id'
+        'resturant_id'
     ];
 
-    // TODO
-    // public function restaurant() {
-    //     return $this->belongsTo('App\Restaurant');
-    // }
+    public function resturant() {
+        return $this->belongsTo('App\Resturant');
+    }
 }
