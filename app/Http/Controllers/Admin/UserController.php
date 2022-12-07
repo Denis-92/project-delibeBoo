@@ -47,10 +47,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show()
     {
         //
-        return view('admin.users.show', compact('user'));
     }
 
     /**
@@ -81,7 +80,7 @@ class UserController extends Controller
 
         $user->update($form_data);
 
-        return redirect()->route('admin.users.show', $user->id);
+        return redirect()->route('admin.users.index');
     }
 
     /**
