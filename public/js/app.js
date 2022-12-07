@@ -1979,41 +1979,12 @@ var staticRenderFns = [function () {
     staticClass: "container-animate"
   }, [_c("div", {
     staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-preview"
-  })])]);
+  }, [_c("img", {
+    attrs: {
+      src: "images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  })])])]);
 }];
 render._withStripped = true;
 
@@ -6516,7 +6487,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 25vh;\n  background-color: rgba(255, 0, 0, 0.521);\n  position: relative;\n  bottom: 50px;\n  z-index: 800;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.container-animate .card-preview[data-v-a8b8b442] {\n  width: 10%;\n  height: 45%;\n  background-color: rgb(124, 0, 196);\n}", ""]);
+exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 25vh;\n  background-color: rgba(255, 0, 0, 0.521);\n  position: relative;\n  bottom: 50px;\n  z-index: 800;\n  display: flex;\n  justify-content: start;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.container-animate .card-preview[data-v-a8b8b442] {\n  height: 45%;\n  background-color: rgb(124, 0, 196);\n}\n.container-animate .card-preview img[data-v-a8b8b442] {\n  max-height: 100%;\n}\n.card-preview[data-v-a8b8b442] {\n  position: relative;\n  animation-name: example-a8b8b442;\n  animation-duration: 5s;\n  animation-fill-mode: forwards;\n  animation-iteration-count: infinite;\n}\n@keyframes example-a8b8b442 {\nfrom {\n    left: 0%;\n}\nto {\n    left: 100%;\n    background-color: blue;\n}\n}", ""]);
 
 // exports
 
