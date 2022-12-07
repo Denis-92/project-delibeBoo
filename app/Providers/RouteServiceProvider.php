@@ -23,7 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
     public const ADMIN = '/admin/resturants';
-
+    public const USER = '{{route("admin.users.show")}}';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
