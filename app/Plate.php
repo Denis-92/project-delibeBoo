@@ -14,7 +14,8 @@ class Plate extends Model
         'hidden',
         'image',
         'slug',
-        'resturant_id'
+        'resturant_id',
+        'category'
     ];
 
     public function resturant() {
