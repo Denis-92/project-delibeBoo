@@ -2018,15 +2018,34 @@ var staticRenderFns = [function () {
     staticClass: "BSX"
   }), _vm._v(" "), _c("div", {
     staticClass: "centro"
-  }, [_vm._v("w")]), _vm._v(" "), _c("div", {
-    staticClass: "BDX"
+  }, [_c("input", {
+    attrs: {
+      type: "text",
+      name: "",
+      id: "",
+      placeholder: "Inserisci il tuo indirizzo completo"
+    }
   })]), _vm._v(" "), _c("div", {
+    staticClass: "BDX"
+  }, [_c("button", [_vm._v("Cerca")])])]), _vm._v(" "), _c("div", {
     staticClass: "info-last"
   }, [_c("p", [_c("a", {
     attrs: {
       href: ""
     }
-  }, [_vm._v("Accedi")]), _vm._v(" per visualizzare i tuoi indirizzi recenti.")])])])])]);
+  }, [_vm._v("Accedi")]), _vm._v(" per visualizzare i tuoi indirizzi recenti.")])])]), _vm._v(" "), _c("img", {
+    attrs: {
+      id: "foto1",
+      src: "images/HeaderGuest/busta.jpg",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      id: "foto2",
+      src: "images/HeaderGuest/burger.jpg",
+      alt: ""
+    }
+  })])]);
 }];
 render._withStripped = true;
 
@@ -6455,7 +6474,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  background-color: aquamarine;\n  display: flex;\n  justify-content: center;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  width: 70%;\n  background-color: red;\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: rgb(0, 197, 154);\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 50%;\n  height: 20%;\n  background-color: aquamarine;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: beige;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: beige;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
+exports.push([module.i, "*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  z-index: 500;\n  position: relative;\n}\nheader .Down #foto1[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down #foto2[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n  z-index: 500;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: #00ccbc;\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 60%;\n  height: 20%;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 30px 0px 0px 30px;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .centro input[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 25%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 0px 30px 30px 0px;\n  display: flex;\n  align-items: center;\n}\nheader .Down .container-center .barra .BDX button[data-v-9a8d6ea0] {\n  width: 97%;\n  height: 90%;\n  border: none;\n  border-radius: 30px;\n  background-color: #00ccbc;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
 
 // exports
 
