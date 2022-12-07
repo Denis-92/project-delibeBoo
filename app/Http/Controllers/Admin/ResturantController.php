@@ -109,8 +109,8 @@ class ResturantController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255|min:3',
-            'address' => 'required|min:3,max:255',
-            'p_iva' => 'required|numeric', //unique
+            'address' => 'required|min:3|max:255',
+            'p_iva' => 'required|numeric|min:11|max:11', //unique
         ]);
     }
     private function getSlug($title, $model)
