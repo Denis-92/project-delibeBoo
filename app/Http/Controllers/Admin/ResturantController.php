@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
 use App\Resturant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ResturantController extends Controller
 {
@@ -16,7 +19,8 @@ class ResturantController extends Controller
     public function index()
     {
         $resturants = Resturant::all();
-        return view("admin.resturants.index", compact('resturants'));
+        $user = Auth::user();
+        return view("admin.resturants.index", compact(['resturants', 'user']));
     }
 
     /**
@@ -26,7 +30,7 @@ class ResturantController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.resturants.create');
     }
 
     /**
@@ -35,9 +39,18 @@ class ResturantController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Resturant $resturant)
     {
-        //
+        $this->validateResturant($request);
+        $inputCreate = $request->all();
+        $newResturant = new Resturant();
+        $newResturant->fill($inputCreate);
+        $slug = $this->getSlug($newResturant->name, $resturant);
+        $newResturant->slug = $slug;
+        $user = Auth::user();
+        $newResturant->user_id = $user->id;
+        $newResturant->save();
+        return redirect()->route('admin.resturants.index');
     }
 
     /**
@@ -48,7 +61,7 @@ class ResturantController extends Controller
      */
     public function show(Resturant $resturant)
     {
-        //
+        return view('admin.resturants.show', compact('resturant'));
     }
 
     /**
@@ -59,7 +72,7 @@ class ResturantController extends Controller
      */
     public function edit(Resturant $resturant)
     {
-        //
+        return view('admin.resturants.edit', compact('resturant'));
     }
 
     /**
@@ -71,7 +84,14 @@ class ResturantController extends Controller
      */
     public function update(Request $request, Resturant $resturant)
     {
-        //
+        $this->validateResturant($request);
+        $resturantUpdate = $request->all();
+        if ($resturantUpdate['name'] != $resturant->name) {
+            $slug =  $this->getSlug($resturantUpdate['name'], $resturant);
+            $resturantUpdate['slug'] = $slug;
+        }
+        $resturant->update($resturantUpdate);
+        return redirect()->route('admin.resturants.index');
     }
 
     /**
@@ -82,6 +102,29 @@ class ResturantController extends Controller
      */
     public function destroy(Resturant $resturant)
     {
-        //
+        $resturant->delete();
+        return redirect()->route('admin.resturants.index');
+    }
+    private function validateResturant(request $request)
+    {
+        $request->validate([
+            'name' => 'required|max:255|min:3',
+            'address' => 'required|min:3,max:255',
+            'p_iva' => 'required|numeric', //unique
+        ]);
+    }
+    private function getSlug($title, $model)
+    {
+        $slug = Str::slug($title);
+        $slug_base = $slug;
+
+        $existingPost = $model::where('slug', $slug)->first();
+        $counter = 1;
+        while ($existingPost) {
+            $slug = $slug_base . '_' . $counter;
+            $counter++;
+            $existingPost = $model::where('slug', $slug)->first();
+        }
+        return $slug;
     }
 }
