@@ -90,14 +90,40 @@
                             </div>
 
                         </li>
-                        <li class=" d-flex align-items-center cardnav">
+
+                        <li class=" d-flex align-items-center cardnav" style="position: relative">
                             <div>
                                 <img src="{{ asset('images/dishes_icon.png') }}" class="iconSideBar" alt="">
                             </div>
                             <div>
-                                <a class="nav-link" href="{{ route('admin.resturants.index') }}">
-                                    <H5>DISHES</H5>
+                                <a class="nav-link" style="cursor: pointer">
+                                    <h5 onclick="showMenu()">DISHES</h5>
                                 </a>
+                            </div>
+                            <div class="d-none" id="menudishes"
+                                style="
+                                width:250px;
+                                    background-color: white;
+                                    border-radius:5%;
+                                    border: 2px solid rgb(220, 190, 248);
+                                    position: absolute;
+                                    /* bottom: 0; */
+                                    top: 100px;
+                                    left: 190px;
+                                    padding: 3px 0
+                                ">
+
+                                <h5 class="text-center">RISTORANTE:</h5>
+
+                                <ul>
+                                    @foreach (Auth::user()->resturants as $item)
+                                        <li>
+                                            <a
+                                                href="{{ route('admin.plates.index', $item->id) }}">{{ $item->name }}</a>
+                                        </li>
+                                    @endforeach
+
+                                </ul>
                             </div>
 
                         </li>
@@ -124,6 +150,24 @@
 
 </html>
 
+<script>
+    let activemenu = false
+
+    function showMenu() {
+
+        if (activemenu == false) {
+            console.log('dentro')
+            const div = document.getElementById('menudishes')
+            div.classList.remove('d-none')
+            activemenu = true
+        } else {
+            const div = document.getElementById('menudishes')
+            div.classList.add('d-none')
+            activemenu = false
+        };
+
+    }
+</script>
 <style>
     .header {
         height: 150px
@@ -156,5 +200,22 @@
         width: 70%;
         display: flex;
         align-items: center
+    }
+
+    #menudishes>ul {
+        width: 100%;
+        padding: 5px 10px
+    }
+
+    #menudishes>ul>li {
+        list-style: none;
+        margin: 5px 0;
+        border: 2px solid rgb(180, 215, 246);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #menudishes>ul>li:hover {
+        transform: scale(1.1)
     }
 </style>
