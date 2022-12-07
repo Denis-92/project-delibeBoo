@@ -32,7 +32,7 @@ class UpdatePlatesTable extends Migration
     public function down()
     {
         Schema::table('plates', function (Blueprint $table) {
-            //
+            $table->dropColumn('category');
         });
     }
 }
