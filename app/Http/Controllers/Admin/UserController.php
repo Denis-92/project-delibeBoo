@@ -94,7 +94,7 @@ class UserController extends Controller
         //
         $user->resturants()->delete();
         $user->delete();
-        return redirect()->route('home');
+        return redirect()->route('admin.');
     }
 
     private function validateUser(Request $request)

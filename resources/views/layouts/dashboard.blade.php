@@ -46,9 +46,16 @@
                 <li class="nav-item text-danger py-2 pr-3">
                     Non autorizzato
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}">
+                        Login
+                    </a>
+                    @csrf
+                    </form>
+                </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                 @endif
             @endauth
@@ -62,8 +69,7 @@
                     <ul class="nav d-flex flex-column">
                         <li class=" d-flex cardnav">
                             <div>
-                                <img src="{{ asset('images/resturants_icon.png') }}" class="iconSideBar"
-                                    alt="">
+                                <img src="{{ asset('images/user_icon.png') }}" class="iconSideBar" alt="">
                             </div>
                             <div>
                                 <a class="nav-link" href="{{ route('admin.users.index') }}">
@@ -109,7 +115,7 @@
                     </ul>
                 </div>
             </nav>
-            <main role="main" style="width: 80%">
+            <main role="main" class="pt-5 d-flex flex-column align-items-center" style="width: 80%; margin: 0 auto">
                 @yield('content')
             </main>
         </div>
