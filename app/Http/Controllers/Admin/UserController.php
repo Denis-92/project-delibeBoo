@@ -92,6 +92,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+        $user->resturants()->delete();
         $user->delete();
         return redirect()->route('home');
     }
