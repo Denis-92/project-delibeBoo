@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Plate;
 
 class PlateController extends Controller
 {
@@ -16,8 +18,8 @@ class PlateController extends Controller
     public function index()
     {
         //
-        $plate = Plate::all();
-            return view('admin.plates.index', compact('plate'));
+        $plates = Plate::all();
+            return view('admin.plates.index', compact('plates'));
     }
 
     /**
@@ -28,6 +30,7 @@ class PlateController extends Controller
     public function create()
     {
         //
+        return view('admin.plates.create');
     }
 
     /**
@@ -36,9 +39,17 @@ class PlateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Plate $plate)
     {
         //
+        $this->validatePlate($request);
+        $inputCreate = $request->all();
+        $newPlate = new Plate();
+        $newPlate->fill($inputCreate);
+        $slug = $this->getSlug($newPlate->name, $plate);
+        $newPlate->slug = $slug;
+        $newPlate->save();
+        return redirect()->route('admin.plates.index');
     }
 
     /**
@@ -47,9 +58,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
     {
         //
+        return view('admin.plates.show', compact('plate'));
     }
 
     /**
@@ -58,9 +70,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
         //
+        return view('admin.plates.edit', compact('plate'));
     }
 
     /**
@@ -70,9 +83,17 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
         //
+        $this->validatePlate($request);
+        $form_data = $request->all();
+        if ($form_data['name'] != $plate->name) {
+            $slug =  $this->getSlug($form_data['name'], $plate);
+            $form_data['slug'] = $slug;
+        }
+        $plate->update($form_data);
+        return redirect()->route('admin.plates.show', $plate->id);
     }
 
     /**
@@ -81,8 +102,34 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
         //
+        $plate->delete();
+        return redirect()->route('admin.plates.index');
+    }
+
+    private function validatePlate(request $request)
+    {
+        $request->validate([
+            'name' => 'required|max:255|min:3',
+            'description' => 'required|min:3|max:255',
+            'price' => 'required|numeric',
+            'hidden' => 'required',
+        ]);
+    }
+    private function getSlug($title, $model)
+    {
+        $slug = Str::slug($title);
+        $slug_base = $slug;
+
+        $existingPost = $model::where('slug', $slug)->first();
+        $counter = 1;
+        while ($existingPost) {
+            $slug = $slug_base . '_' . $counter;
+            $counter++;
+            $existingPost = $model::where('slug', $slug)->first();
+        }
+        return $slug;
     }
 }
