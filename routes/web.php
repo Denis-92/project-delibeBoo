@@ -21,6 +21,7 @@ Route::middleware('auth')
         Route::resource('resturants', 'ResturantController');
         Route::resource('orders', 'OrderController');
         Route::resource('plates', 'PlateController');
+        Route::resource('users', 'UserController');
     });
 
 Auth::routes();
