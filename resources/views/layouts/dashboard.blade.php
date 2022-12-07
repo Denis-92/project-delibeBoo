@@ -60,7 +60,18 @@
             <nav class="py-5" style="background-color: aliceblue; height:calc(100vh - 150px); width:16%">
                 <div class="sidebar-sticky">
                     <ul class="nav d-flex flex-column">
+                        <li class=" d-flex cardnav">
+                            <div>
+                                <img src="{{ asset('images/resturants_icon.png') }}" class="iconSideBar"
+                                    alt="">
+                            </div>
+                            <div>
+                                <a class="nav-link" href="{{ route('admin.users.index') }}">
+                                    <h5>PROFILO</h5>
+                                </a>
+                            </div>
 
+                        </li>
                         <li class=" d-flex cardnav">
                             <div>
                                 <img src="{{ asset('images/resturants_icon.png') }}" class="iconSideBar"

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        return view('admin.users.index', compact('user'));
     }
 
     /**
@@ -61,7 +63,6 @@ class UserController extends Controller
     {
         //
         return view('admin.users.edit', compact('user'));
-
     }
 
     /**
@@ -97,7 +98,8 @@ class UserController extends Controller
         return redirect()->route('home');
     }
 
-    private function validateUser(Request $request) {
+    private function validateUser(Request $request)
+    {
         $request->validate([
             'name' => 'required',
             'email' => 'required',
