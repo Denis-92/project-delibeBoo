@@ -3,17 +3,14 @@
 @section('content')
     <div>
         <h3>Scegli ristorante per vedere i relativi ordini ricevuti:</h3>
-        <form method='GET' action="{{ route('admin.orders.index') }}">
-            @csrf
-            @foreach (Auth::user()->resturants as $item)
-                <div class="d-flex justify-content-around btn btn-primary my-3 align-items-center">
-                    <label class='m-0' for="">{{ $item->name }}</label>
-                    <input type="radio" name="r_id" style="width: 100%" value="{{ $item->id }}">
+        @foreach ($orders as $rest)
+            @if ($rest->user_id === $user->id)
+                <div class="d-flex justify-content-between align-items-center p-2"
+                    style="width: 100%; background-color: #bfe2fe !important">
+                    <h3 class="m-0 text-dark">{{ $rest->name }}</h3>
+                    <a href="{{ route('admin.orders.index', $rest->id) }}" class="btn btn-info">Lista</a>
                 </div>
-            @endforeach
-            <div class="d-flex justify-content-around">
-                <input type="submit" class="btn btn-info" value="Ricerca">
-            </div>
-        </form>
+            @endif
+        @endforeach
     </div>
 @endsection

@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-// use App\Plate;
-// use App\Resturant; FORSE NON SERVE
+use App\Plate;
+use App\Resturant;
 
 class OrderController extends Controller
 {
     public function baseOrder()
     {
-        return view('admin.orders.ordini');
+        $orders = Resturant::all();
+        $user = Auth::user();
+        return view("admin.orders.ordini", compact(['orders', 'user']));
     }
     /**
      * Display a listing of the resource.
