@@ -42,13 +42,42 @@
 
                 <!-- ---------------------------------------------------- -->
 
-
+                <img src="Images/HeaderGuest/Carrefour.png" alt=""> 
+                <img src="Images/HeaderGuest/gelato.png" alt="">
+                <img src="Images/HeaderGuest/ciambella-rosa.png" alt="">
+                <img src="Images/HeaderGuest/delhop.png" alt="">
+                <img src="Images/HeaderGuest/mega-busta.png" alt="">
+                <img src="Images/HeaderGuest/kfc.png" alt="">
+                <img src="Images/HeaderGuest/king.png" alt="">
+                <img src="Images/HeaderGuest/Mc.png" alt="">
+                <img src="Images/HeaderGuest/megaSuperPanino.png" alt="">
+                <img src="Images/HeaderGuest/old-wild-west.png" alt="">
+                <img src="Images/HeaderGuest/patate.png" alt="">
+                <img src="Images/HeaderGuest/pizzaY.png" alt="">
+                <img src="Images/HeaderGuest/vegan.png" alt="">
+                <img src="Images/HeaderGuest/piatto.png" alt="">
 
             </div>
 
             <div class="animate-2">
                 <img src="Images/HeaderGuest/piatto.png" alt="">
                 <img src="Images/HeaderGuest/vegan.png" alt="">s
+                <img src="Images/HeaderGuest/pizzaY.png" alt="">
+                <img src="Images/HeaderGuest/patate.png" alt="">
+                <img src="Images/HeaderGuest/old-wild-west.png" alt="">
+                <img src="Images/HeaderGuest/megaSuperPanino.png" alt="">
+                <img src="Images/HeaderGuest/Mc.png" alt="">
+                <img src="Images/HeaderGuest/king.png" alt="">
+                <img src="Images/HeaderGuest/kfc.png" alt="">
+                <img src="Images/HeaderGuest/mega-busta.png" alt="">
+                <img src="Images/HeaderGuest/delhop.png" alt="">
+                <img src="Images/HeaderGuest/ciambella-rosa.png" alt="">
+                <img src="Images/HeaderGuest/gelato.png" alt="">
+                <img src="Images/HeaderGuest/Carrefour.png" alt=""> 
+
+
+                <img src="Images/HeaderGuest/piatto.png" alt="">
+                <img src="Images/HeaderGuest/vegan.png" alt="">
                 <img src="Images/HeaderGuest/pizzaY.png" alt="">
                 <img src="Images/HeaderGuest/patate.png" alt="">
                 <img src="Images/HeaderGuest/old-wild-west.png" alt="">
@@ -130,8 +159,8 @@
 
   position: relative;
   animation-name: slider;
-  animation-duration: 35s;
-  animation-timing-function: ease;
+  animation-duration: 30s;
+  animation-timing-function: cubic-bezier(.48,.24,.5,.76);
   animation-iteration-count: infinite;
   animation-direction: alternate;  
 }
@@ -141,15 +170,15 @@
 
 position: relative;
 animation-name: slider;
-animation-duration: 35s;
-animation-timing-function: ease;
+animation-duration: 30s;
+animation-timing-function: cubic-bezier(.48,.24,.5,.76);
 animation-iteration-count: infinite;
 animation-direction: alternate;  
 }
 
 @keyframes slider {
   0%   {right:0px; top:0px;}
-  100%  {right:1200px; top:0px;}
+  100%  {right:2400px; top:0px;}
 
 }
 

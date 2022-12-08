@@ -2119,6 +2119,76 @@ var staticRenderFns = [function () {
       src: "Images/HeaderGuest/piatto.png",
       alt: ""
     }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
   })]), _vm._v(" "), _c("div", {
     staticClass: "animate-2"
   }, [_c("img", {
@@ -2132,6 +2202,76 @@ var staticRenderFns = [function () {
       alt: ""
     }
   }), _vm._v("s\n            "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
     attrs: {
       src: "Images/HeaderGuest/pizzaY.png",
       alt: ""
@@ -6764,7 +6904,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 30vh;\n  position: absolute;\n  top: 52%;\n  z-index: 800;\n  overflow-x: hidden;\n}\n.container-animate .animate-1[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n}\n.container-animate .animate-1 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.container-animate .animate-2[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n  position: absolute;\n  bottom: 0;\n  left: -50%;\n}\n.container-animate .animate-2 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.animate-1 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 35s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n.animate-2 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 35s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slider-a8b8b442 {\n0% {\n    right: 0px;\n    top: 0px;\n}\n100% {\n    right: 1200px;\n    top: 0px;\n}\n}", ""]);
+exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 30vh;\n  position: absolute;\n  top: 52%;\n  z-index: 800;\n  overflow-x: hidden;\n}\n.container-animate .animate-1[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n}\n.container-animate .animate-1 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.container-animate .animate-2[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n  position: absolute;\n  bottom: 0;\n  left: -50%;\n}\n.container-animate .animate-2 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.animate-1 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 30s;\n  animation-timing-function: cubic-bezier(0.48, 0.24, 0.5, 0.76);\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n.animate-2 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 30s;\n  animation-timing-function: cubic-bezier(0.48, 0.24, 0.5, 0.76);\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slider-a8b8b442 {\n0% {\n    right: 0px;\n    top: 0px;\n}\n100% {\n    right: 2400px;\n    top: 0px;\n}\n}", ""]);
 
 // exports
 
