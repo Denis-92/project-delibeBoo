@@ -15,7 +15,7 @@
         <AnimationGuest />
         <FixAnimat />
         <MainMap />
-        
+        <Offert />
 
 
     </div>
@@ -29,11 +29,13 @@
   import AnimationGuest from '../components/AnimationGuest.vue';
   import FixAnimat from '../components/FixAnimat.vue';
   import MainMap from '../components/MainMap.vue';
+  import Offert from '../components/Offert.vue';
+
   
   
   export default {
       name: 'app',
-      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap },
+      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap, Offert },
       
       }
   </script>
