@@ -92,7 +92,7 @@ header{
             // background-color: bisque;
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: flex-end;
             gap: 20px;
             
             button{

@@ -10,9 +10,13 @@
 <body>
     <div>
 
+
         <HeaderGuest />
         <AnimationGuest />
-</div>
+        <FixAnimat />
+
+
+    </div>
 </body>
 </html>
   </template>
@@ -21,11 +25,12 @@
   
   import HeaderGuest from '../components/HeaderGuest.vue';
   import AnimationGuest from '../components/AnimationGuest.vue';
+  import FixAnimat from '../components/FixAnimat.vue';
   
   
   export default {
       name: 'app',
-      components: { HeaderGuest, AnimationGuest  },
+      components: { HeaderGuest, AnimationGuest, FixAnimat },
       
       }
   </script>
