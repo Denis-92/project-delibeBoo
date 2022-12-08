@@ -159,7 +159,7 @@
 
   position: relative;
   animation-name: slider;
-  animation-duration: 30s;
+  animation-duration: 40s;
   animation-timing-function: cubic-bezier(.48,.24,.5,.76);
   animation-iteration-count: infinite;
   animation-direction: alternate;  
@@ -170,7 +170,7 @@
 
 position: relative;
 animation-name: slider;
-animation-duration: 30s;
+animation-duration: 40s;
 animation-timing-function: cubic-bezier(.48,.24,.5,.76);
 animation-iteration-count: infinite;
 animation-direction: alternate;  
