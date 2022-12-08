@@ -108,7 +108,7 @@
                                 <img src="{{ asset('images/orders_icon.png') }}" class="iconSideBar" alt="">
                             </div>
                             <div>
-                                <a class="nav-link" href="{{ route('admin.resturants.index') }}">
+                                <a class="nav-link" href="{{ route('admin.baseOrder') }}">
                                     <H5>ORDERS</H5>
                                 </a>
                             </div>
