@@ -11,9 +11,9 @@
         <form method='GET' action="{{ route('admin.plates.index') }}">
             @csrf
             @foreach (Auth::user()->resturants as $item)
-                <div class="d-flex justify-content-around btn btn-primary my-3 align-items-center">
+                <div class="d-flex justify-content-between btn btn-primary my-3 align-items-center">
                     <label class='m-0' for="">{{ $item->name }}</label>
-                    <input type="radio" name="r_id" style="width: 100%" value="{{ $item->id }}">
+                    <input type="radio" name="r_id" value="{{ $item->id }}">
                 </div>
             @endforeach
             <div class="d-flex justify-content-around">

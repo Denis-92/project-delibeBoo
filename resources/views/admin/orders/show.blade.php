@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h3>DETTAGLI ORDINE:</h3>
@@ -23,6 +23,6 @@
     </div>
 
     <div>
-        <a href="{{ route('admin.orders.edit', $order->id)}}">EDITA</a>
+        <a href="{{ URL::previous() }}" class="btn btn-danger">Back</a>
     </div>
 @endsection

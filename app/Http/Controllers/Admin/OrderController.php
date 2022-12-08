@@ -8,15 +8,30 @@ use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
+    public function baseOrder()
+    {
+        return view('admin.orders.ordini');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $orders = Order::all();
-            return view('admin.orders.index', compact('orders'));
+        $data = $request->all();
+        $plateId = $data['plate_id'];
+        $ordersTotale = Order::all();
+        $orders = [];
+        foreach ($ordersTotale as $order) {
+            foreach ($order->plates as $plate) {
+                if ($plate->id == $plateId) {
+                    array_push($orders, $order);
+                }
+            };
+        }
+
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
@@ -26,7 +41,6 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return view ('admin.orders.create');
     }
 
     /**
@@ -48,7 +62,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        return view ('admin.orders.show', compact('order'));
+        return view('admin.orders.show', compact('order'));
     }
 
     /**

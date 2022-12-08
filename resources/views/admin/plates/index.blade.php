@@ -11,7 +11,7 @@
                     <div class="d-flex justify-content-between">
                         <h4> {{ $plate->name }}</h4>
 
-                        <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 25%">
                             <a href="{{ route('admin.plates.show', $plate->id) }}" class="btn btn-success">Dettails</a>
                             <a href="{{ route('admin.plates.edit', $plate->id) }}" class="btn btn-warning">Modifica</a>
                             <form action="{{ route('admin.plates.destroy', $plate->id) }}" method="post"
