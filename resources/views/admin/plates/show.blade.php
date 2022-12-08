@@ -33,7 +33,11 @@
     </p>
 
 
-    <div>
-        <a href="{{ URL::previous() }}" class="btn btn-danger">BACK</a>
-    </div>
+    <form method='GET' action="{{ route('admin.plates.index') }}">
+        @csrf
+        <input type="number" name="r_id" style="width: 100%; display:none" value="{{ $plate->resturant_id }}">
+        <div class="d-flex justify-content-around">
+            <input type="submit" class="btn btn-danger" value="BACK">
+        </div>
+    </form>
 @endsection

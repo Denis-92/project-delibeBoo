@@ -39,6 +39,26 @@
             <input type="time" name="dinner_opening" placeholder="Apertura Cena">
             <label for="dinner_closing">Chiusura Cena:</label>
             <input type="time" name="dinner_closing" placeholder="Chiusura Cena">
+            <div class="d-flex justify-content-center align-items-center" @error('cats') class="is-invalid" @enderror>
+                <p class="m-0 p-0">Categorie:</p>
+                <div class="d-flex justify-content-center align-items-center flex-wrap"
+                    style="column-gap: 30px; row-gap: 10px">
+                    @foreach ($categories as $category)
+                        <div class="d-flex" style="width:calc(100% / 7 - 10px)">
+                            <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                            <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                                {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }} />
+                        </div>
+                    @endforeach
+                </div>
+
+                @error('cats')
+                    <div class='alert alert-danger p-1 ms-3 mb-0'>
+                        {{ __($message) }}
+                        <!-- i __ sono per aggiungere le traduzioni per le lingue-->
+                    </div>
+                @enderror
+            </div>
             <input type="submit" class="btn btn-success m-2" value="Invia">
 
         </div>
@@ -47,7 +67,7 @@
 
 <style>
     form {
-        width: 30%
+        width: 80%
     }
 
     form>* {

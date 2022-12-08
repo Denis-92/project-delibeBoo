@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Resturant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Category;
 
 class ResturantController extends Controller
 {
@@ -30,7 +31,8 @@ class ResturantController extends Controller
      */
     public function create()
     {
-        return view('admin.resturants.create');
+        $categories = Category::all();
+        return view('admin.resturants.create', compact('categories'));
     }
 
     /**
@@ -50,6 +52,9 @@ class ResturantController extends Controller
         $user = Auth::user();
         $newResturant->user_id = $user->id;
         $newResturant->save();
+        if (array_key_exists('categories', $inputCreate)) {
+            $newResturant->categories()->sync($inputCreate['categories']);
+        }
         return redirect()->route('admin.resturants.index');
     }
 
@@ -72,7 +77,8 @@ class ResturantController extends Controller
      */
     public function edit(Resturant $resturant)
     {
-        return view('admin.resturants.edit', compact('resturant'));
+        $categories = Category::all();
+        return view('admin.resturants.edit', compact(['resturant', 'categories']));
     }
 
     /**
@@ -90,8 +96,13 @@ class ResturantController extends Controller
             $slug =  $this->getSlug($resturantUpdate['name'], $resturant);
             $resturantUpdate['slug'] = $slug;
         }
+        if (array_key_exists('categories', $resturantUpdate)) {
+            $resturant->categories()->sync($resturantUpdate['categories']);
+        } else {
+            $resturant->categories()->sync([]);
+        }
         $resturant->update($resturantUpdate);
-        return redirect()->route('admin.resturants.index');
+        return redirect()->route('admin.resturants.show', compact('resturant'));
     }
 
     /**

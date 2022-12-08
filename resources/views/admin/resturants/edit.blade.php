@@ -40,6 +40,40 @@
             <label for="dinner_closing">Chiusura Cena:</label>
             <input type="time" name="dinner_closing" value="{{ old('dinner_closing', $resturant->dinner_closing) }}" />
 
+            @if ($errors->any())
+                <div class="d-flex justify-content-center align-items-center flex-wrap" style="column-gap: 80px"
+                    @error('categories') class="is-invalid" @enderror>
+                    <p class="m-0 p-0">Categories:</p>
+                    <div class="d-flex justify-content-center align-items-center " style="column-gap: 80px">
+                        @foreach ($categories as $category)
+                            <div class="d-flex" style="column-gap:10px">
+                                <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                                <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                                    {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }} />
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @else
+                <div class="d-flex justify-content-center align-items-center flex-wrap" style="column-gap: 80px">
+                    <p class="m-0 p-0 me-5">Categories:</p>
+                    <div class="d-flex flex-wrap" style="column-gap: 40px">
+                        @foreach ($categories as $category)
+                            <div class="d-flex" style="column-gap:10px">
+                                <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                                <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                                    {{ $resturant->categories->contains($category) ? 'checked' : '' }} />
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                @error('categories')
+                    <div class='alert alert-danger p-1 ms-3 mb-0'>
+                        {{ __($message) }}
+                        <!-- i __ sono per aggiungere le traduzioni per le lingue-->
+                    </div>
+                @enderror
+            @endif
 
             <input type="submit" value="Invia">
 
