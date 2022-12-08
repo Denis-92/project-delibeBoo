@@ -32,21 +32,8 @@
         {{ $plate->category }}
     </p>
 
-    <a href="{{ route('admin.plates.edit', $plate->id) }}">Modifica</a>
 
-    <form action="{{ route('admin.plates.destroy', $plate->id) }}" method="post" onsubmit="conferma(event)">
-        @csrf
-        @method('delete')
-        <input type="submit" value="Cancella">
-    </form>
+    <div>
+        <a href="{{ URL::previous() }}" class="btn btn-danger">BACK</a>
+    </div>
 @endsection
-<script>
-    function conferma(event) {
-        const confirmdelete = confirm(
-            "Are u sure u want to delete it?"
-        );
-        if (!confirmdelete) {
-            event.preventDefault(); // evento che inibisce submit del form
-        }
-    }
-</script>

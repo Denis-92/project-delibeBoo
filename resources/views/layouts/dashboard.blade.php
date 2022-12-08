@@ -62,6 +62,7 @@
 
         </ul>
     </nav>
+
     <div class="">
         <div class="d-flex">
             <nav class="py-5" style="background-color: aliceblue; height:calc(100vh - 150px); width:16%">
@@ -96,34 +97,9 @@
                                 <img src="{{ asset('images/dishes_icon.png') }}" class="iconSideBar" alt="">
                             </div>
                             <div>
-                                <a class="nav-link" style="cursor: pointer">
-                                    <h5 onclick="showMenu()">DISHES</h5>
+                                <a class="nav-link" href="{{ route('admin.basePlate') }}">
+                                    <h5>DISHES</h5>
                                 </a>
-                            </div>
-                            <div class="d-none" id="menudishes"
-                                style="
-                                width:250px;
-                                    background-color: white;
-                                    border-radius:5%;
-                                    border: 2px solid rgb(220, 190, 248);
-                                    position: absolute;
-                                    /* bottom: 0; */
-                                    top: 100px;
-                                    left: 190px;
-                                    padding: 3px 0
-                                ">
-
-                                <h5 class="text-center">RISTORANTE:</h5>
-
-                                <ul>
-                                    @foreach (Auth::user()->resturants as $item)
-                                        <li>
-                                            <a
-                                                href="{{ route('admin.plates.index', $item->id) }}">{{ $item->name }}</a>
-                                        </li>
-                                    @endforeach
-
-                                </ul>
                             </div>
 
                         </li>
@@ -146,28 +122,11 @@
             </main>
         </div>
     </div>
+
 </body>
 
 </html>
 
-<script>
-    let activemenu = false
-
-    function showMenu() {
-
-        if (activemenu == false) {
-            console.log('dentro')
-            const div = document.getElementById('menudishes')
-            div.classList.remove('d-none')
-            activemenu = true
-        } else {
-            const div = document.getElementById('menudishes')
-            div.classList.add('d-none')
-            activemenu = false
-        };
-
-    }
-</script>
 <style>
     .header {
         height: 150px

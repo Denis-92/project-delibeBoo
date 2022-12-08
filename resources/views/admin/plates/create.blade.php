@@ -7,6 +7,17 @@
         @csrf
         <div class="d-flex flex-column">
 
+
+            <label for="">Su quale Ristorante:</label>
+
+            @foreach (Auth::user()->resturants as $item)
+                <div class="d-flex align-items-center justify-content-start mb-3">
+                    <label class="m-0 p-0 mr-4" for="resturant_id">{{ $item->name }}</label>
+                    <input type="checkbox" value="{{ $item->id }}" name="resturant_id">
+                </div>
+            @endforeach
+
+
             <label for="name">Nome Piatto:</label>
             <input type="text" name="name" required>
             @error('name')
@@ -64,6 +75,10 @@
 
         </div>
     </form>
+
+    <div>
+        <a href="{{ route('admin.basePlate') }}" class="btn btn-danger">BACK</a>
+    </div>
 @endsection
 
 <style>

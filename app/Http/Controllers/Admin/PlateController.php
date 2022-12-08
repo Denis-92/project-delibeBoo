@@ -2,24 +2,33 @@
 
 namespace App\Http\Controllers\Admin;
 
+
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Plate;
+use Illuminate\Contracts\Session\Session;
 
 class PlateController extends Controller
 {
+    public function basePlate()
+    {
+        return view('admin.plates.piatti');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        $plates = Plate::all();
-            return view('admin.plates.index', compact('plates'));
+        $rest_id = $request->all();
+        $resturant = $rest_id["r_id"];
+        $plates = Plate::where('resturant_id', $resturant)->get();
+        return view('admin.plates.index', compact('plates', 'resturant'));
     }
 
     /**
@@ -29,7 +38,7 @@ class PlateController extends Controller
      */
     public function create()
     {
-        //
+        $resturants = Auth::user()->resturants;
         return view('admin.plates.create');
     }
 
@@ -49,7 +58,7 @@ class PlateController extends Controller
         $slug = $this->getSlug($newPlate->name, $plate);
         $newPlate->slug = $slug;
         $newPlate->save();
-        return redirect()->route('admin.plates.index');
+        return redirect()->route('admin.plates.show', $newPlate->id);
     }
 
     /**
@@ -60,7 +69,6 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
-        //
         return view('admin.plates.show', compact('plate'));
     }
 
@@ -104,9 +112,9 @@ class PlateController extends Controller
      */
     public function destroy(Plate $plate)
     {
-        //
+        $urlprev = URL::previous();
         $plate->delete();
-        return redirect()->route('admin.plates.index');
+        return redirect($urlprev);
     }
 
     private function validatePlate(request $request)
