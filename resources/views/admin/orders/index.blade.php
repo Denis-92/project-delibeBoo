@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <div>
@@ -15,7 +15,7 @@
         @endforeach
 
         <div>
-            <a href="{{ route('admin.orders.create')}}">NUOVO</a>
+            <a href="{{ route('admin.orders.create') }}">NUOVO</a>
         </div>
     </div>
 @endsection

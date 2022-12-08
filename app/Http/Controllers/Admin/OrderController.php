@@ -5,18 +5,25 @@ namespace App\Http\Controllers\Admin;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+// use App\Plate;
+// use App\Resturant; FORSE NON SERVE
 
 class OrderController extends Controller
 {
+    public function baseOrder()
+    {
+        return view('admin.orders.ordini');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $orders = Order::all();
-            return view('admin.orders.index', compact('orders'));
+        return view('admin.orders.index', compact('orders'));
+
     }
 
     /**
