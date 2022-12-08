@@ -35,7 +35,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+    overflow-x: hidden;
+}
+
+  
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 

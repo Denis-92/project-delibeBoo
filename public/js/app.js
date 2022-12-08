@@ -1978,10 +1978,287 @@ var staticRenderFns = [function () {
   return _c("section", [_c("div", {
     staticClass: "container-animate"
   }, [_c("div", {
-    staticClass: "card-preview"
+    staticClass: "animate-1"
   }, [_c("img", {
     attrs: {
-      src: "images/HeaderGuest/Carrefour.png",
+      src: "Images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "animate-2"
+  }, [_c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v("s\n            "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Carrefour.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/piatto.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/vegan.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/pizzaY.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/patate.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/old-wild-west.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/megaSuperPanino.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Mc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/king.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/kfc.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/mega-busta.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/delhop.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/ciambella-rosa.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/gelato.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "Images/HeaderGuest/Carrefour.png",
       alt: ""
     }
   })])])]);
@@ -6487,7 +6764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 25vh;\n  background-color: rgba(255, 0, 0, 0.521);\n  position: relative;\n  bottom: 50px;\n  z-index: 800;\n  display: flex;\n  justify-content: start;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n.container-animate .card-preview[data-v-a8b8b442] {\n  height: 45%;\n  background-color: rgb(124, 0, 196);\n}\n.container-animate .card-preview img[data-v-a8b8b442] {\n  max-height: 100%;\n}\n.card-preview[data-v-a8b8b442] {\n  position: relative;\n  animation-name: example-a8b8b442;\n  animation-duration: 5s;\n  animation-fill-mode: forwards;\n  animation-iteration-count: infinite;\n}\n@keyframes example-a8b8b442 {\nfrom {\n    left: 0%;\n}\nto {\n    left: 100%;\n    background-color: blue;\n}\n}", ""]);
+exports.push([module.i, ".container-animate[data-v-a8b8b442] {\n  width: 100%;\n  height: 30vh;\n  position: absolute;\n  top: 52%;\n  z-index: 800;\n  overflow-x: hidden;\n}\n.container-animate .animate-1[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n}\n.container-animate .animate-1 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.container-animate .animate-2[data-v-a8b8b442] {\n  display: flex;\n  gap: 25px;\n  justify-content: center;\n  position: absolute;\n  bottom: 0;\n  left: -50%;\n}\n.container-animate .animate-2 img[data-v-a8b8b442] {\n  max-height: 130px;\n  border-radius: 12px;\n}\n.animate-1 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 35s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n.animate-2 > img[data-v-a8b8b442] {\n  position: relative;\n  animation-name: slider-a8b8b442;\n  animation-duration: 35s;\n  animation-timing-function: ease;\n  animation-iteration-count: infinite;\n  animation-direction: alternate;\n}\n@keyframes slider-a8b8b442 {\n0% {\n    right: 0px;\n    top: 0px;\n}\n100% {\n    right: 1200px;\n    top: 0px;\n}\n}", ""]);
 
 // exports
 
@@ -6525,7 +6802,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-91ac6b5c] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}", ""]);
+exports.push([module.i, "*[data-v-91ac6b5c] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n}", ""]);
 
 // exports
 
