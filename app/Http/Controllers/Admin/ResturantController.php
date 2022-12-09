@@ -55,6 +55,12 @@ class ResturantController extends Controller
         if (array_key_exists('categories', $inputCreate)) {
             $newResturant->categories()->sync($inputCreate['categories']);
         }
+        if (array_key_exists('newcat', $inputCreate)) {
+            $newcat = new Category;
+            $newcat->nome = $inputCreate['newcat'];
+            $newcat->save();
+            $newResturant->categories()->sync($newcat->id);
+        }
         return redirect()->route('admin.resturants.index');
     }
 

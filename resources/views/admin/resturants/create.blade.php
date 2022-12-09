@@ -32,17 +32,16 @@
                 </div>
             @enderror
             <label for="lunch_opening">Apertura Pranzo:</label>
-            <input type="time" name="lunch_opening" placeholder="Apertura Pranzo">
+            <input type="time" name="lunch_opening">
             <label for="lunch_closing">Chiusura Pranzo:</label>
-            <input type="time" name="lunch_closing" placeholder="Chiusura Pranzo">
+            <input type="time" name="lunch_closing">
             <label for="dinner_opening">Apertura Cena:</label>
-            <input type="time" name="dinner_opening" placeholder="Apertura Cena">
+            <input type="time" name="dinner_opening">
             <label for="dinner_closing">Chiusura Cena:</label>
-            <input type="time" name="dinner_closing" placeholder="Chiusura Cena">
+            <input type="time" name="dinner_closing">
             <div class="d-flex justify-content-center align-items-center" @error('categories') class="is-invalid" @enderror>
                 <p class="m-0 p-0">Categorie:</p>
-                <div class="d-flex justify-content-center align-items-center flex-wrap"
-                    style="column-gap: 30px; row-gap: 10px">
+                <div class="d-flex align-items-center flex-wrap ml-5" style="column-gap: 30px; row-gap: 10px">
                     @foreach ($categories as $category)
                         <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
                             <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
@@ -58,6 +57,10 @@
                         <!-- i __ sono per aggiungere le traduzioni per le lingue-->
                     </div>
                 @enderror
+            </div>
+            <div>
+                <label for="newcat">Nuova Categoria:</label>
+                <input type="text" name="newcat">
             </div>
             <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success m-2" value="Invia">
             </div>
