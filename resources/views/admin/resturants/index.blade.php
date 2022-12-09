@@ -24,13 +24,5 @@
                 <a href="{{ route('admin.resturants.create') }}" class="btn btn-success">Aggiungi</a>
             </div>
         </div>
-
-        <div class="w-100">
-            <div class="d-flex flex-column justify-content-between align-items-center p-2"
-                style="width: 100%; background-color: #bffed9 !important; row-gap:15px">
-                <h3 class="m-0 text-success">Aggiungi Categoria Ristorante</h3>
-                <a href="{{ route('admin.categories.create') }}" class="btn btn-success">Aggiungi</a>
-            </div>
-        </div>
     </div>
 @endsection
