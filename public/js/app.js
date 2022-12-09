@@ -2641,6 +2641,21 @@ var staticRenderFns = [function () {
       src: "images/HeaderGuest/download.svg",
       alt: ""
     }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "images/HeaderGuest/cose.svg",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "images/HeaderGuest/doppia.svg",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "images/HeaderGuest/singola.svg",
+      alt: ""
+    }
   }), _vm._v(" "), _c("div", {
     staticClass: "offert-content"
   }, [_c("h2", [_vm._v("Menù in offerta: sconti "), _c("br"), _vm._v(" fino al 25%")]), _vm._v(" "), _c("h3", [_vm._v("Perfetti per dare più gusto alla tua settimana, ordinare i piatti più amati da tutta la famiglia e fare una pausa da fornelli.")]), _vm._v(" "), _c("p", [_vm._v("Si applicano spese di consegna e di servizio.\n                Offerta soggetta a disponibilità, solo per "), _c("br"), _vm._v("\n                risotranti aderenti all'iniziativa. Si applicano termini e condizioni,\n                consultabili qui. "), _c("a", {
@@ -7133,7 +7148,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#sec[data-v-56c7be70] {\n  width: 100%;\n  height: 50vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-map[data-v-56c7be70] {\n  width: 75%;\n  height: 80%;\n  border-radius: 15px;\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.7);\n  display: flex;\n}\n#sec .container-map .Sx[data-v-56c7be70] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\n#sec .container-map .Sx .info[data-v-56c7be70] {\n  width: 75%;\n  margin-left: 40px;\n}\n#sec .container-map .Sx .info h1[data-v-56c7be70] {\n  font-weight: 800;\n}\n#sec .container-map .Sx .info p[data-v-56c7be70] {\n  font-size: 1.1rem;\n  color: rgba(0, 0, 0, 0.521);\n  margin: 25px 0px 50px 0px;\n}\n#sec .container-map .Dx[data-v-56c7be70] {\n  width: 60%;\n  height: 100%;\n}\n#sec .container-map .Dx .map[data-v-56c7be70] {\n  width: 100%;\n  height: 100%;\n}\n#sec .container-map .Dx .map img[data-v-56c7be70] {\n  height: 100%;\n  width: 100%;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, "#sec[data-v-56c7be70] {\n  width: 100%;\n  height: 50vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-map[data-v-56c7be70] {\n  width: 75%;\n  height: 80%;\n  border-radius: 15px;\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.7);\n  background-color: white;\n  display: flex;\n}\n#sec .container-map .Sx[data-v-56c7be70] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\n#sec .container-map .Sx .info[data-v-56c7be70] {\n  width: 75%;\n  margin-left: 40px;\n}\n#sec .container-map .Sx .info h1[data-v-56c7be70] {\n  font-weight: 800;\n}\n#sec .container-map .Sx .info p[data-v-56c7be70] {\n  font-size: 1.1rem;\n  color: rgba(0, 0, 0, 0.521);\n  margin: 25px 0px 50px 0px;\n}\n#sec .container-map .Dx[data-v-56c7be70] {\n  width: 60%;\n  height: 100%;\n}\n#sec .container-map .Dx .map[data-v-56c7be70] {\n  width: 100%;\n  height: 100%;\n}\n#sec .container-map .Dx .map img[data-v-56c7be70] {\n  height: 100%;\n  width: 100%;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -7152,7 +7167,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#sec[data-v-f587587a] {\n  width: 100%;\n  height: 55vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-offert[data-v-f587587a] {\n  width: 100%;\n  height: 90%;\n  position: relative;\n}\n#sec .container-offert img[data-v-f587587a] {\n  width: 100%;\n  height: 100%;\n}\n#sec .container-offert .offert-content[data-v-f587587a] {\n  position: absolute;\n  top: 45%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 35%;\n  text-align: center;\n}\n#sec .container-offert .offert-content h2[data-v-f587587a] {\n  font-weight: 800;\n  color: white;\n  font-size: 3.5rem;\n}\n#sec .container-offert .offert-content h3[data-v-f587587a] {\n  color: rgba(255, 255, 255, 0.815);\n  margin: 30px 0px;\n  font-size: 1.25rem;\n}\n#sec .container-offert .offert-content p[data-v-f587587a], #sec .container-offert .offert-content a[data-v-f587587a] {\n  color: white;\n  font-size: 0.75rem;\n}\n#sec .container-offert .offert-content a[data-v-f587587a] {\n  text-decoration: underline;\n}", ""]);
+exports.push([module.i, "#sec[data-v-f587587a] {\n  width: 100%;\n  height: 55vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-offert[data-v-f587587a] {\n  width: 100%;\n  height: 90%;\n  background-color: aquamarine;\n  position: relative;\n}\n#sec .container-offert img[data-v-f587587a]:nth-child(1) {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n}\n#sec .container-offert img[data-v-f587587a]:nth-child(2) {\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n}\n#sec .container-offert img[data-v-f587587a]:nth-child(3) {\n  position: absolute;\n  right: 28%;\n  top: 10%;\n}\n#sec .container-offert img[data-v-f587587a]:nth-child(4) {\n  position: absolute;\n  left: 28%;\n  top: 10%;\n}\n#sec .container-offert .offert-content[data-v-f587587a] {\n  position: absolute;\n  top: 45%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 35%;\n  text-align: center;\n}\n#sec .container-offert .offert-content h2[data-v-f587587a] {\n  font-weight: 800;\n  color: white;\n  font-size: 3.5rem;\n}\n#sec .container-offert .offert-content h3[data-v-f587587a] {\n  color: rgba(255, 255, 255, 0.815);\n  margin: 30px 0px;\n  font-size: 1.25rem;\n}\n#sec .container-offert .offert-content p[data-v-f587587a], #sec .container-offert .offert-content a[data-v-f587587a] {\n  color: white;\n  font-size: 0.75rem;\n}\n#sec .container-offert .offert-content a[data-v-f587587a] {\n  text-decoration: underline;\n}", ""]);
 
 // exports
 
@@ -51823,8 +51838,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Angelo\Desktop\Delivebooa\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\Delivebooa\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -1,7 +1,15 @@
 <template>
     <section id="sec">
         <div class="container-offert">
+            
             <img src="images/HeaderGuest/download.svg" alt="">
+            <img src="images/HeaderGuest/cose.svg" alt=""> 
+
+            <img src="images/HeaderGuest/doppia.svg" alt="">
+            <img src="images/HeaderGuest/singola.svg" alt="">
+            
+
+            
             <div class="offert-content">
                 <h2>Menù in offerta: sconti <br> fino al 25%</h2>
                 <h3>Perfetti per dare più gusto alla tua settimana, ordinare i piatti più amati da tutta la famiglia e fare una pausa da fornelli.</h3>
@@ -26,13 +34,37 @@
     .container-offert{
         width: 100%;
         height: 90%;
-        // background-color: aquamarine;
+        background-color: aquamarine;
         position: relative;
         
-        img{
+        
+        img:nth-child(1){
             width: 100%;
             height: 100%;
+            position: absolute;
+            top: 0;
         }
+        img:nth-child(2){
+            width: 100%;
+            // height: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        img:nth-child(3){
+            // width: 100%;
+            // height: 100%;
+            position: absolute;
+            right: 28%;
+            top: 10%;
+        }
+        img:nth-child(4){
+            // width: 100%;
+            // height: 100%;
+            position: absolute;
+            left: 28%;
+            top: 10%;
+        }
+
         .offert-content{
             position: absolute;
             top: 45%;
@@ -40,7 +72,7 @@
             transform: translate(-50%, -50%);
              width: 35%;
             text-align: center;
-            //  background-color: burlywood;
+            // background-color: burlywood;
             h2{
                 font-weight: 800;
                 color: white;

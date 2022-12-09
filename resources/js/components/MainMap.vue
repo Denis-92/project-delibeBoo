@@ -35,7 +35,7 @@
         height: 80%;
         border-radius: 15px;
         box-shadow: 0px 5px 30px -10px rgb(0 0 0 / 70%);
-        // background-color: aliceblue;
+         background-color: white;
         display: flex;
         .Sx{
             width: 40%;
