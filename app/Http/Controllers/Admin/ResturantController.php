@@ -54,8 +54,8 @@ class ResturantController extends Controller
         $newResturant->save();
         if (array_key_exists('categories', $inputCreate)) {
             $newResturant->categories()->sync($inputCreate['categories']);
-        }
-        if (array_key_exists('newcat', $inputCreate)) {
+        };
+        if (!is_null($inputCreate['newcat'])) {
             $newcat = new Category;
             $newcat->name = $inputCreate['newcat'];
             $newcat->save();
