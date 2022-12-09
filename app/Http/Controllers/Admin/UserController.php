@@ -93,6 +93,12 @@ class UserController extends Controller
     {
         //
         $user->resturants()->delete();
+
+        // $user->resturants()->categories()->sync([]);
+        // $user->resturants()->plates()->delete();
+
+        // $user->resturants()->plates()->orders()->sync([]);
+
         $user->delete();
         return redirect()->route('admin.');
     }

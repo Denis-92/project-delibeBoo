@@ -9,6 +9,7 @@ use App\Resturant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Category;
+use Illuminate\Support\Facades\Storage;
 
 class ResturantController extends Controller
 {
@@ -45,6 +46,10 @@ class ResturantController extends Controller
     {
         $this->validateResturant($request);
         $inputCreate = $request->all();
+        if(array_key_exists('image', $inputCreate)) {
+            $image = Storage::put('resturant_covers', $inputCreate['image']);
+            $inputCreate['image']=$image;
+        }
         $newResturant = new Resturant();
         $newResturant->fill($inputCreate);
         $slug = $this->getSlug($newResturant->name, $resturant);
