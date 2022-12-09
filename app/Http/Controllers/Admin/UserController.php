@@ -92,13 +92,23 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
-        $user->resturants()->delete();
-
-        // $user->resturants()->categories()->sync([]);
-        // $user->resturants()->plates()->delete();
-
-        // $user->resturants()->plates()->orders()->sync([]);
-
+        $resturants = $user->resturants;
+        foreach ($resturants as $resturant) {
+            $plates = $resturant->plates;
+            foreach ($plates as $plate) {
+                $plate->resturant_id = null;
+                $orders = $plate->orders;
+                foreach ($orders as $order) {
+                    $order->plates()->sync([]);
+                    $plate->orders()->sync([]);
+                    $plate->delete();
+                    $order->delete();
+                }
+            }
+            $resturant->plates()->delete();
+            $resturant->categories()->sync([]);
+            $resturant->delete();
+        }
         $user->delete();
         return redirect()->route('admin.');
     }
