@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="mb-5">Inserisci nuovo piatto: </h1>
 
-    <form action="{{ route('admin.plates.store') }}" method="POST">
+    <form action="{{ route('admin.plates.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="d-flex flex-column">
 
@@ -66,6 +66,14 @@
                 <option value="Dolce">Dolce</option>
             </select>
             @error('category')
+                <div class='alert alert-danger p-1 ms-3 mb-0'>
+                    {{ __($message) }}
+                </div>
+            @enderror
+
+            <label for="image">Carica immagine:</label>
+            <input type="file" name="image">
+            @error('image')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>
                     {{ __($message) }}
                 </div>

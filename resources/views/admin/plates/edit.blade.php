@@ -62,6 +62,17 @@
                 </div>
             @enderror
 
+            <div>
+                <label for="image">Cambia immagine:</label>
+                <input type="file" name="image" />
+                <img src="{{ asset('storage/' . $plate->image) }}" alt="test">
+                @error('image')
+                    <div class='alert alert-danger p-1 ms-3 mb-0'>
+                        {{ __($message) }}
+                    </div>
+                @enderror
+            </div>
+
             <input type="submit" class="btn btn-success m-2" value="Modifica">
 
         </div>

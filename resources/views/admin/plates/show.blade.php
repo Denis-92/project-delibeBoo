@@ -31,6 +31,10 @@
         {{ $plate->category }}
     </p>
 
+    <div>
+        <img src="{{ asset('storage/' . $plate->image) }}" alt="test">
+    </div>
+
 
     <form method='GET' action="{{ route('admin.plates.index') }}">
         @csrf

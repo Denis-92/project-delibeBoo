@@ -116,11 +116,9 @@ class ResturantController extends Controller
             if($resturant->image){
                 Storage::delete($resturant->image);
             }
-            $resturantUpdate['image']=Storage::put('resturant_cover', $resturantUpdate['image']);
+            $resturantUpdate['image']=Storage::put('resturant_covers', $resturantUpdate['image']);
 
         }
-
-
         $resturant->update($resturantUpdate);
         return redirect()->route('admin.resturants.show', compact('resturant'));
     }
@@ -135,11 +133,10 @@ class ResturantController extends Controller
     {
         $resturant->categories()->sync([]);
         $resturant->plates()->delete();
-
-        $resturant->delete();
         if($resturant->image) {
             Storage::delete($resturant->image);
         }
+        $resturant->delete();
         return redirect()->route('admin.resturants.index');
     }
     private function validateResturant(request $request)
