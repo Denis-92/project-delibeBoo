@@ -113,6 +113,7 @@ class PlateController extends Controller
     public function destroy(Plate $plate)
     {
         $urlprev = URL::previous();
+        $plate->orders()->sync([]);
         $plate->delete();
         return redirect($urlprev);
     }
