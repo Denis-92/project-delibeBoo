@@ -47,8 +47,7 @@ class ResturantController extends Controller
         $this->validateResturant($request);
         $inputCreate = $request->all();
         if(array_key_exists('image', $inputCreate)) {
-            $image = Storage::put('resturant_covers', $inputCreate['image']);
-            $inputCreate['image']=$image;
+            $inputCreate['image'] = Storage::put('resturant_covers', $inputCreate['image']);
         }
         $newResturant = new Resturant();
         $newResturant->fill($inputCreate);
@@ -112,6 +111,16 @@ class ResturantController extends Controller
         } else {
             $resturant->categories()->sync([]);
         }
+
+        if(array_key_exists('image', $resturantUpdate)) {
+            if($resturant->image){
+                Storage::delete($resturant->image);
+            }
+            $resturantUpdate['image']=Storage::put('resturant_cover', $resturantUpdate['image']);
+
+        }
+
+
         $resturant->update($resturantUpdate);
         return redirect()->route('admin.resturants.show', compact('resturant'));
     }
@@ -128,6 +137,9 @@ class ResturantController extends Controller
         $resturant->plates()->delete();
 
         $resturant->delete();
+        if($resturant->image) {
+            Storage::delete($resturant->image);
+        }
         return redirect()->route('admin.resturants.index');
     }
     private function validateResturant(request $request)

@@ -3,7 +3,7 @@
 @section('content')
     <h1>Inserisci la tua Attivita' </h1>
 
-    <form action="{{ route('admin.resturants.update', $resturant->id) }}" method="POST">
+    <form action="{{ route('admin.resturants.update', $resturant->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
         <div class="d-flex flex-column">
@@ -85,6 +85,18 @@
                     @enderror
             @endif
         </div>
+
+        <div>
+            <label for="image">Cambia immagine:</label>
+            <input type="file" name="image" />
+            <img src="{{ asset('storage/' . $resturant->image) }}" alt="test">
+            @error('image')
+                <div class='alert alert-danger p-1 ms-3 mb-0'>
+                    {{ __($message) }}
+                </div>
+            @enderror
+        </div>
+
         <div class="d-flex justify-content-center">
             <input type="submit" class="btn btn-success" value="Invia">
         </div>

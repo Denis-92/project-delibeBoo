@@ -37,6 +37,9 @@
             </div>
         @endif
     </div>
+    <div>
+        <img src="{{ asset('storage/' . $resturant->image) }}" alt="test">
+    </div>
 
     <div class="d-flex mt-4" style="column-gap: 20px">
         <a class="btn btn-warning" href="{{ route('admin.resturants.edit', $resturant->id) }}">Modifica</a>
