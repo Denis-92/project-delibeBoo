@@ -2716,13 +2716,107 @@ var staticRenderFns = [function () {
     staticClass: "container-footer"
   }, [_c("div", {
     staticClass: "colonne"
-  }, [_c("h4", [_vm._v("Scopri Deliveroo")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Investitori")]), _vm._v(" "), _c("li", [_vm._v("Chi siamo")]), _vm._v(" "), _c("li", [_vm._v("Porta via")]), _vm._v(" "), _c("li", [_vm._v("di più")]), _vm._v(" "), _c("li", [_vm._v("Sala stampa")]), _vm._v(" "), _c("li", [_vm._v("Blog di ingegneria")]), _vm._v(" "), _c("li", [_vm._v("Blog di progettazione ")]), _vm._v(" "), _c("li", [_vm._v("Carte regalo")]), _vm._v(" "), _c("li", [_vm._v("Carriere")]), _vm._v(" "), _c("li", [_vm._v("Iscrizione al ristorante")]), _vm._v(" "), _c("li", [_vm._v("Diventa un Ristoratore")])])]), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "prova"
+  }, [_c("h4", [_vm._v("Scopri Deliveroo")]), _vm._v(" "), _c("ol", [_c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Investitori")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Chi siamo")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Porta via")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("di più")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Sala stampa")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Blog di ingegneria")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Blog di progettazione")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Carte regalo")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Carriere")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Iscrizione al ristorante")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Diventa un Ristoratore")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  }, [_c("h4", [_vm._v("Legale")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Termini e Condizioni")]), _vm._v(" "), _c("li", [_vm._v("Riservatezza")]), _vm._v(" "), _c("li", [_vm._v("Biscotti")]), _vm._v(" "), _c("li", [_vm._v("Dichiarazione sulla schiavitù moderna")]), _vm._v(" "), _c("li", [_vm._v("Strategia fiscale")]), _vm._v(" "), _c("li", [_vm._v("Sezione 172 Dichiarazione")])])]), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "prova"
+  }, [_c("h4", [_vm._v("Legale")]), _vm._v(" "), _c("ol", [_c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Termini e Condizioni")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Riservatezza")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Biscotti")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Dichiarazione sulla schiavitù moderna")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Strategia fiscale")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Sezione 172 Dichiarazione")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  }, [_c("h4", [_vm._v("Aiuto")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Contatto")]), _vm._v(" "), _c("li", [_vm._v("Domande frequenti")]), _vm._v(" "), _c("li", [_vm._v("Cucine")]), _vm._v(" "), _c("li", [_vm._v("Marche")])])]), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "prova"
+  }, [_c("h4", [_vm._v("Aiuto")]), _vm._v(" "), _c("ol", [_c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Contatto")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Domande frequenti")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Cucine")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_vm._v("Marche")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]);
+  }, [_c("div", {
+    staticClass: "prova"
+  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]), _vm._v(" "), _c("div", {
+    staticClass: "loghi-box"
+  })]);
 }];
 render._withStripped = true;
 
@@ -7246,7 +7340,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 90%;\n  background-color: #7a7e7e;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 90%;\n  background-color: #434848;\n}\n#cos .container-footer .colonne ol li[data-v-caf7c3f8] {\n  color: white;\n}", ""]);
+exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n#cos .loghi-box[data-v-caf7c3f8] {\n  width: 60%;\n  height: 10%;\n  background-color: red;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 80%;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .logo[data-v-caf7c3f8] {\n  width: 15px;\n  height: 15px;\n}\n#cos .container-footer .logo svg[data-v-caf7c3f8] {\n  max-height: 100%;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 100%;\n  background-color: #434848;\n  display: flex;\n  align-items: center;\n  border-radius: 5px;\n}\n#cos .container-footer .colonne .prova[data-v-caf7c3f8] {\n  width: 100%;\n  height: 90%;\n}\n#cos .container-footer .colonne h4[data-v-caf7c3f8] {\n  margin-left: 38px;\n  color: white;\n  font-weight: 700;\n}\n#cos .container-footer .colonne ol[data-v-caf7c3f8] {\n  list-style: none;\n}\n#cos .container-footer .colonne ol li[data-v-caf7c3f8] {\n  color: white;\n  padding: 2px 0px;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8] {\n  color: white;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8]:hover {\n  color: #00b8a9;\n  text-decoration: none;\n}\n#cos .container-footer .colonne button[data-v-caf7c3f8] {\n  margin-left: 38px;\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
