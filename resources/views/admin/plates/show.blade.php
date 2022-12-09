@@ -6,7 +6,6 @@
         {{ $plate->name }}
     </h2>
     <p>
-        Descrizione:
         {{ $plate->description }}
     </p>
     <p>

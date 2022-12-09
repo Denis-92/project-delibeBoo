@@ -17,7 +17,7 @@
             @enderror
 
 
-            <label for="description">Descrizione:</label>
+            <label for="description">Ingredienti:</label>
             <textarea name="description" cols="4" rows="10" required>{{ old('description', $plate->description) }}</textarea>
             @error('description')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>
