@@ -17,7 +17,7 @@ class CategorySeeder extends Seeder
         ];
         foreach ($tipologie as $type) {
             $category = new Category();
-            $category->nome = $type;
+            $category->name = $type;
             $category->save();
         }
     }

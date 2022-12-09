@@ -57,7 +57,7 @@ class ResturantController extends Controller
         }
         if (array_key_exists('newcat', $inputCreate)) {
             $newcat = new Category;
-            $newcat->nome = $inputCreate['newcat'];
+            $newcat->name = $inputCreate['newcat'];
             $newcat->save();
             $newResturant->categories()->attach($newcat->id);
         }

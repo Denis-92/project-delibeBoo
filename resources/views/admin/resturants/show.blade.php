@@ -31,7 +31,7 @@
             <div class="d-flex flex-column">
                 @foreach ($resturant->categories as $category)
                     <div class="d-flex">
-                        <h5>{{ $category->nome }}</h5>
+                        <h5>{{ $category->name }}</h5>
                     </div>
                 @endforeach
             </div>

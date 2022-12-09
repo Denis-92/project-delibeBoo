@@ -56,7 +56,7 @@
                     <div class="d-flex align-items-center flex-wrap ml-5" style="column-gap: 30px; row-gap: 10px">
                         @foreach ($categories as $category)
                             <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
-                                <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                                <label class="p-0 m-0" for="categories[]">{{ $category->name }}</label>
                                 <input type="checkbox" name="categories[]" value="{{ $category->id }}"
                                     {{ in_array($category->id, old('categories', [])) ? 'checked' : '' }} />
                             </div>
@@ -70,7 +70,7 @@
                         <div class="d-flex  align-items-center flex-wrap" style="column-gap: 30px; row-gap: 10px">
                             @foreach ($categories as $category)
                                 <div class="d-flex" style="width:calc(100% / 5 - 10px); column-gap:5px">
-                                    <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                                    <label class="p-0 m-0" for="categories[]">{{ $category->name }}</label>
                                     <input type="checkbox" name="categories[]" value="{{ $category->id }}"
                                         {{ $resturant->categories->contains($category) ? 'checked' : '' }} />
                                 </div>
