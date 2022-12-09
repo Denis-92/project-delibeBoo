@@ -2703,16 +2703,35 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("section", {
     attrs: {
       id: "cos"
     }
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "loghi-box"
   }, [_c("div", {
+    staticClass: "twitter"
+  }, [_c("svg", {
+    attrs: {
+      width: "256px",
+      height: "209px",
+      viewBox: "0 0 256 209",
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg",
+      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+      preserveAspectRatio: "xMidYMid"
+    }
+  }, [_c("g", [_c("path", {
+    attrs: {
+      d: "M256,25.4500259 C246.580841,29.6272672 236.458451,32.4504868 225.834156,33.7202333 C236.678503,27.2198053 245.00583,16.9269929 248.927437,4.66307685 C238.779765,10.6812633 227.539325,15.0523376 215.57599,17.408298 C205.994835,7.2006971 192.34506,0.822 177.239197,0.822 C148.232605,0.822 124.716076,24.3375931 124.716076,53.3423116 C124.716076,57.4586875 125.181462,61.4673784 126.076652,65.3112644 C82.4258385,63.1210453 43.7257252,42.211429 17.821398,10.4359288 C13.3005011,18.1929938 10.710443,27.2151234 10.710443,36.8402889 C10.710443,55.061526 19.9835254,71.1374907 34.0762135,80.5557137 C25.4660961,80.2832239 17.3681846,77.9207088 10.2862577,73.9869292 C10.2825122,74.2060448 10.2825122,74.4260967 10.2825122,74.647085 C10.2825122,100.094453 28.3867003,121.322443 52.413563,126.14673 C48.0059695,127.347184 43.3661509,127.988612 38.5755734,127.988612 C35.1914554,127.988612 31.9009766,127.659938 28.694773,127.046602 C35.3777973,147.913145 54.7742053,163.097665 77.7569918,163.52185 C59.7820257,177.607983 37.1354036,186.004604 12.5289147,186.004604 C8.28987161,186.004604 4.10888474,185.75646 0,185.271409 C23.2431033,200.173139 50.8507261,208.867532 80.5109185,208.867532 C177.116529,208.867532 229.943977,128.836982 229.943977,59.4326002 C229.943977,57.1552968 229.893412,54.8901664 229.792282,52.6381454 C240.053257,45.2331635 248.958338,35.9825545 256,25.4500259",
+      fill: "#55acee"
+    }
+  })])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "container-footer"
   }, [_c("div", {
     staticClass: "colonne"
@@ -2814,9 +2833,7 @@ var staticRenderFns = [function () {
     staticClass: "colonne"
   }, [_c("div", {
     staticClass: "prova"
-  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]), _vm._v(" "), _c("div", {
-    staticClass: "loghi-box"
-  })]);
+  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]);
 }];
 render._withStripped = true;
 
@@ -7340,7 +7357,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n#cos .loghi-box[data-v-caf7c3f8] {\n  width: 60%;\n  height: 10%;\n  background-color: red;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 80%;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .logo[data-v-caf7c3f8] {\n  width: 15px;\n  height: 15px;\n}\n#cos .container-footer .logo svg[data-v-caf7c3f8] {\n  max-height: 100%;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 100%;\n  background-color: #434848;\n  display: flex;\n  align-items: center;\n  border-radius: 5px;\n}\n#cos .container-footer .colonne .prova[data-v-caf7c3f8] {\n  width: 100%;\n  height: 90%;\n}\n#cos .container-footer .colonne h4[data-v-caf7c3f8] {\n  margin-left: 38px;\n  color: white;\n  font-weight: 700;\n}\n#cos .container-footer .colonne ol[data-v-caf7c3f8] {\n  list-style: none;\n}\n#cos .container-footer .colonne ol li[data-v-caf7c3f8] {\n  color: white;\n  padding: 2px 0px;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8] {\n  color: white;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8]:hover {\n  color: #00b8a9;\n  text-decoration: none;\n}\n#cos .container-footer .colonne button[data-v-caf7c3f8] {\n  margin-left: 38px;\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n#cos .loghi-box[data-v-caf7c3f8] {\n  width: 60%;\n  height: 10%;\n  background-color: red;\n}\n#cos .loghi-box .twitter[data-v-caf7c3f8] {\n  width: 15px;\n  height: 15px;\n  background-color: chocolate;\n}\n#cos .loghi-box .twitter svg[data-v-caf7c3f8] {\n  max-width: 100%;\n  max-height: 100%;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 80%;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .logo[data-v-caf7c3f8] {\n  width: 15px;\n  height: 15px;\n}\n#cos .container-footer .logo svg[data-v-caf7c3f8] {\n  max-height: 100%;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 100%;\n  background-color: #434848;\n  display: flex;\n  align-items: center;\n  border-radius: 5px;\n}\n#cos .container-footer .colonne .prova[data-v-caf7c3f8] {\n  width: 100%;\n  height: 90%;\n}\n#cos .container-footer .colonne h4[data-v-caf7c3f8] {\n  margin-left: 38px;\n  color: white;\n  font-weight: 700;\n}\n#cos .container-footer .colonne ol[data-v-caf7c3f8] {\n  list-style: none;\n}\n#cos .container-footer .colonne ol li[data-v-caf7c3f8] {\n  color: white;\n  padding: 2px 0px;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8] {\n  color: white;\n}\n#cos .container-footer .colonne ol li a[data-v-caf7c3f8]:hover {\n  color: #00b8a9;\n  text-decoration: none;\n}\n#cos .container-footer .colonne button[data-v-caf7c3f8] {\n  margin-left: 38px;\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
