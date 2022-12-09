@@ -21,6 +21,7 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index');
         Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
         Route::resource('resturants', 'ResturantController');
+        Route::resource('categories', 'CategoryController');
         Route::resource('orders', 'OrderController');
         Route::resource('plates', 'PlateController');
         Route::get('/piatti', 'PlateController@basePlate')->name('basePlate');

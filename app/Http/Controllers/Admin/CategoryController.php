@@ -26,6 +26,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        return view('admin.categories.create');
     }
 
     /**
@@ -34,9 +35,14 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Category $category)
     {
         //
+        $inputCreate = $request->all();
+        $newCategory = new Category();
+        $newCategory->fill($inputCreate);
+        $newCategory->save();
+        return redirect()->route('admin.resturants.index');
     }
 
     /**
