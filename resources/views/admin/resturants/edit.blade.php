@@ -66,7 +66,7 @@
                 </div>
             @else
                 <div class="d-flex justify-content-center align-items-center ">
-                    <p class="m-0 p-0 ">Categories:</p>
+                    <p class="m-0 p-0 ">Categorie:</p>
                     <div class="d-flex  justify-content-center align-items-center flex-wrap"
                         style="column-gap: 30px; row-gap: 10px">
                         @foreach ($categories as $category)
