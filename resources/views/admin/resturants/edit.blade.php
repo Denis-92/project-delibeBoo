@@ -67,21 +67,23 @@
                 <div class="d-flex justify-content-center align-items-center ">
                     <p class="m-0 p-0 ">Categorie:</p>
                     <div class="d-flex  ml-5 align-items-center flex-wrap" style="column-gap: 30px; row-gap: 10px">
-                        @foreach ($categories as $category)
-                            <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
-                                <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
-                                <input type="checkbox" name="categories[]" value="{{ $category->id }}"
-                                    {{ $resturant->categories->contains($category) ? 'checked' : '' }} />
-                            </div>
-                        @endforeach
+                        <div class="d-flex  justify-content-center align-items-center flex-wrap"
+                            style="column-gap: 30px; row-gap: 10px">
+                            @foreach ($categories as $category)
+                                <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
+                                    <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>
+                                    <input type="checkbox" name="categories[]" value="{{ $category->id }}"
+                                        {{ $resturant->categories->contains($category) ? 'checked' : '' }} />
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                </div>
-                @error('categories')
-                    <div class='alert alert-danger p-1 ms-3 mb-0'>
-                        {{ __($message) }}
-                        <!-- i __ sono per aggiungere le traduzioni per le lingue-->
-                    </div>
-                @enderror
+                    @error('categories')
+                        <div class='alert alert-danger p-1 ms-3 mb-0'>
+                            {{ __($message) }}
+                            <!-- i __ sono per aggiungere le traduzioni per le lingue-->
+                        </div>
+                    @enderror
             @endif
 
             <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success" value="Invia"></div>
