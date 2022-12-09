@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="mb-5">Inserisci i Dati per la tua Attivita': </h1>
 
-    <form action="{{ route('admin.resturants.store') }}" method="POST">
+    <form action="{{ route('admin.resturants.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="d-flex flex-column">
 
@@ -62,6 +62,15 @@
                 <label for="newcat">Nuova Categoria:</label>
                 <input type="text" name="newcat">
             </div>
+
+            <label for="image">Carica immagine:</label>
+            <input type="file" name="image">
+            @error('image')
+                <div class='alert alert-danger p-1 ms-3 mb-0'>
+                    {{ __($message) }}
+                </div>
+            @enderror
+
             <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success m-2" value="Invia">
             </div>
 
