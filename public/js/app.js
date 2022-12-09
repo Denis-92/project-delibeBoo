@@ -2716,13 +2716,13 @@ var staticRenderFns = [function () {
     staticClass: "container-footer"
   }, [_c("div", {
     staticClass: "colonne"
-  }), _vm._v(" "), _c("div", {
+  }, [_c("h4", [_vm._v("Scopri Deliveroo")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Investitori")]), _vm._v(" "), _c("li", [_vm._v("Chi siamo")]), _vm._v(" "), _c("li", [_vm._v("Porta via")]), _vm._v(" "), _c("li", [_vm._v("di più")]), _vm._v(" "), _c("li", [_vm._v("Sala stampa")]), _vm._v(" "), _c("li", [_vm._v("Blog di ingegneria")]), _vm._v(" "), _c("li", [_vm._v("Blog di progettazione ")]), _vm._v(" "), _c("li", [_vm._v("Carte regalo")]), _vm._v(" "), _c("li", [_vm._v("Carriere")]), _vm._v(" "), _c("li", [_vm._v("Iscrizione al ristorante")]), _vm._v(" "), _c("li", [_vm._v("Diventa un Ristoratore")])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  }), _vm._v(" "), _c("div", {
+  }, [_c("h4", [_vm._v("Legale")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Termini e Condizioni")]), _vm._v(" "), _c("li", [_vm._v("Riservatezza")]), _vm._v(" "), _c("li", [_vm._v("Biscotti")]), _vm._v(" "), _c("li", [_vm._v("Dichiarazione sulla schiavitù moderna")]), _vm._v(" "), _c("li", [_vm._v("Strategia fiscale")]), _vm._v(" "), _c("li", [_vm._v("Sezione 172 Dichiarazione")])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  }), _vm._v(" "), _c("div", {
+  }, [_c("h4", [_vm._v("Aiuto")]), _vm._v(" "), _c("ol", [_c("li", [_vm._v("Contatto")]), _vm._v(" "), _c("li", [_vm._v("Domande frequenti")]), _vm._v(" "), _c("li", [_vm._v("Cucine")]), _vm._v(" "), _c("li", [_vm._v("Marche")])])]), _vm._v(" "), _c("div", {
     staticClass: "colonne"
-  })])]);
+  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]);
 }];
 render._withStripped = true;
 
@@ -7246,7 +7246,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 90%;\n  background-color: #7a7e7e;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 90%;\n  background-color: #434848;\n}", ""]);
+exports.push([module.i, "#cos[data-v-caf7c3f8] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#cos .container-footer[data-v-caf7c3f8] {\n  width: 60%;\n  height: 90%;\n  background-color: #7a7e7e;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .colonne[data-v-caf7c3f8] {\n  width: 24%;\n  height: 90%;\n  background-color: #434848;\n}\n#cos .container-footer .colonne ol li[data-v-caf7c3f8] {\n  color: white;\n}", ""]);
 
 // exports
 
