@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Plate;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;
 
 class PlateController extends Controller
 {
@@ -53,7 +54,7 @@ class PlateController extends Controller
         //
         $this->validatePlate($request);
         $inputCreate = $request->all();
-        if(array_key_exists('image', $inputCreate)) {
+        if (array_key_exists('image', $inputCreate)) {
             $inputCreate['image'] = Storage::put('plate_covers', $inputCreate['image']);
         }
         $newPlate = new Plate();
@@ -103,12 +104,11 @@ class PlateController extends Controller
             $slug =  $this->getSlug($form_data['name'], $plate);
             $form_data['slug'] = $slug;
         }
-        if(array_key_exists('image', $form_data)) {
-            if($plate->image){
+        if (array_key_exists('image', $form_data)) {
+            if ($plate->image) {
                 Storage::delete($plate->image);
             }
-            $form_data['image']=Storage::put('plate_covers', $form_data['image']);
-
+            $form_data['image'] = Storage::put('plate_covers', $form_data['image']);
         }
         $plate->update($form_data);
         return redirect()->route('admin.plates.show', $plate->id);
@@ -124,7 +124,7 @@ class PlateController extends Controller
     {
         $urlprev = URL::previous();
         $plate->orders()->sync([]);
-        if($plate->image) {
+        if ($plate->image) {
             Storage::delete($plate->image);
         }
         $plate->delete();

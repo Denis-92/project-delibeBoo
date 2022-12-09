@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="mb-5">Modifica piatto: </h1>
 
-    <form action="{{ route('admin.plates.update', $plate->id) }}" method="POST">
+    <form action="{{ route('admin.plates.update', $plate->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="d-flex flex-column">
