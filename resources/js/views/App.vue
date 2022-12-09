@@ -16,6 +16,7 @@
         <FixAnimat />
         <MainMap />
         <Offert />
+        <footerDeli />
 
 
     </div>
@@ -30,12 +31,13 @@
   import FixAnimat from '../components/FixAnimat.vue';
   import MainMap from '../components/MainMap.vue';
   import Offert from '../components/Offert.vue';
+  import footerDeli from '../components/footerDeli.vue';
 
   
   
   export default {
       name: 'app',
-      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap, Offert },
+      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap, Offert, footerDeli },
       
       }
   </script>
