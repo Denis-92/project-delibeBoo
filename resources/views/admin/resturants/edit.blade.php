@@ -51,8 +51,7 @@
 
 
             @if ($errors->any())
-                <div class="d-flex justify-content-center align-items-center "
-                    @error('categories') class="is-invalid" @enderror>
+                <div class="d-flex align-items-center " @error('categories') class="is-invalid" @enderror>
                     <p class="m-0 p-0">Categorie:</p>
                     <div class="d-flex align-items-center flex-wrap ml-5" style="column-gap: 30px; row-gap: 10px">
                         @foreach ($categories as $category)
@@ -66,9 +65,8 @@
                 </div>
             @else
                 <div class="d-flex justify-content-center align-items-center ">
-                    <p class="m-0 p-0 ">Categories:</p>
-                    <div class="d-flex  justify-content-center align-items-center flex-wrap"
-                        style="column-gap: 30px; row-gap: 10px">
+                    <p class="m-0 p-0 ">Categorie:</p>
+                    <div class="d-flex  ml-5 align-items-center flex-wrap" style="column-gap: 30px; row-gap: 10px">
                         @foreach ($categories as $category)
                             <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
                                 <label class="p-0 m-0" for="categories[]">{{ $category->nome }}</label>

@@ -59,7 +59,7 @@ class ResturantController extends Controller
             $newcat = new Category;
             $newcat->nome = $inputCreate['newcat'];
             $newcat->save();
-            $newResturant->categories()->sync($newcat->id);
+            $newResturant->categories()->attach($newcat->id);
         }
         return redirect()->route('admin.resturants.index');
     }
