@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
-class UpdateCategories2Table extends Migration
+class UpdateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
