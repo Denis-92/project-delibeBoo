@@ -120,6 +120,8 @@ class ResturantController extends Controller
     public function destroy(Resturant $resturant)
     {
         $resturant->categories()->sync([]);
+        $resturant->plates()->delete();
+
         $resturant->delete();
         return redirect()->route('admin.resturants.index');
     }
