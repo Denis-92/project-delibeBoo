@@ -13,7 +13,7 @@
             @foreach (Auth::user()->resturants as $item)
                 <div class="d-flex align-items-center justify-content-start mb-3">
                     <label class="m-0 p-0 mr-4" for="resturant_id">{{ $item->name }}</label>
-                    <input type="checkbox" value="{{ $item->id }}" name="resturant_id">
+                    <input type="radio" value="{{ $item->id }}" name="resturant_id">
                 </div>
             @endforeach
 
