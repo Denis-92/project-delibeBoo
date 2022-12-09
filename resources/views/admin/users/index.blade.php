@@ -17,13 +17,23 @@
             </div>
 
             <div class="">
-                <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
+                <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="conferma(event)">
                     @csrf
                     @method('DELETE')
-                    <input class="btn btn-danger" type="submit" value="Cancella" onclick="confirm('Are you sure?')">
+                    <input class="btn btn-danger" type="submit" value="Cancella">
                 </form>
             </div>
 
         </div>
     </div>
 @endsection
+<script>
+    function conferma(event) {
+        const confirmdelete = confirm(
+            "Are u sure u want to delete it?"
+        );
+        if (!confirmdelete) {
+            event.preventDefault(); // evento che inibisce submit del form
+        }
+    }
+</script>
