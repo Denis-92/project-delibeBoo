@@ -1,6 +1,11 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <div class="d-flex w-100">
+        <h5> <a class="text-danger" style="text-decoration: underline"
+                href="{{ route('admin.resturants.show', $resturant->id) }}">Back</a>
+        </h5>
+    </div>
     <h1>Inserisci la tua Attivita' </h1>
 
     <form action="{{ route('admin.resturants.update', $resturant->id) }}" method="POST" enctype="multipart/form-data">

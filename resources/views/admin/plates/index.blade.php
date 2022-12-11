@@ -1,6 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <div class="w-100 mb-4">
+        <a href="{{ route('admin.basePlate') }}" class="text-danger" style="text-decoration: underline">BACK</a>
+    </div>
     <h2 class="text-info mb-5">I TUOI PIATTI:</h2>
 
     <div class="d-flex flex-column w-100" style="row-gap: 100px">

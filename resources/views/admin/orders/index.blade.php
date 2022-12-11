@@ -1,6 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <div class="mb-4 d-flex w-100">
+        <h5> <a href="{{ route('admin.baseOrder') }}" class="text-danger" style="text-decoration: underline">Back</a></h5>
+    </div>
     <div style="width: 80%">
         <h1>Chi ha ordinato questo piatto:</h1>
         @if ($orders)
@@ -21,8 +24,6 @@
             <h5>non ci sono ordini per questo piatto</h5>
         @endif
 
-        <div class="my-5 d-flex justify-content-center">
-            <a href="{{ route('admin.baseOrder') }}" class="btn btn-danger">Back</a>
-        </div>
+
     </div>
 @endsection

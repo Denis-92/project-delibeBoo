@@ -1,46 +1,65 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h2>
-        Titolo:
-        {{ $plate->name }}
-    </h2>
-    <p>
-        {{ $plate->description }}
-    </p>
-    <p>
-        Prezzo:
-        {{ $plate->price }}
-    </p>
-    <p>
-        Hidden:
-        @if ($plate->hidden)
-            Piatto nascosto
-        @else
-            Piatto visibile
-        @endif
-    </p>
-
-    <p>
-        Slug:
-        {{ $plate->slug }}
-    </p>
-
-    <p>
-        Categoria:
-        {{ $plate->category }}
-    </p>
-
-    <div>
-        <img src="{{ asset('storage/' . $plate->image) }}" alt="test">
-    </div>
-
-
-    <form method='GET' action="{{ route('admin.plates.index') }}">
+    <form class="w-100 mb-3" method='GET' action="{{ route('admin.plates.index') }}">
         @csrf
         <input type="number" name="r_id" style="width: 100%; display:none" value="{{ $plate->resturant_id }}">
-        <div class="d-flex justify-content-around">
-            <input type="submit" class="btn btn-danger" value="BACK">
+        <div class="d-flex ">
+            <input type="submit"
+                style="border: 0!important;
+        background-color: transparent;
+        text-decoration: underline;
+        color:red"
+                value="BACK">
         </div>
     </form>
+    <div class="d-flex flex-column boxshow" style="row-gap: 20px">
+
+        <div>
+            <h3>Titolo:</h3>
+            <h2>{{ $plate->name }}</h2>
+        </div>
+
+        <div>
+            <h5>Descrizione e Ingredienti: </h5>
+            <h6> {{ $plate->description }}</h6>
+        </div>
+
+        <div>
+            <h5>Prezzo:</h5>
+            <h6>{{ $plate->price }}</h6>
+        </div>
+
+        <div>
+            <h5>Disponibilita':</h5>
+            @if ($plate->hidden)
+                <h6> Piatto nascosto</h6>
+            @else
+                <h6> Piatto visibile</h6>
+            @endif
+        </div>
+
+        <div>
+            <h5>Slug:</h5>
+            <h6>{{ $plate->slug }}</h6>
+        </div>
+
+        <div>
+            <h5>Categoria:</h5>
+            <h6> {{ $plate->category }}</h6>
+        </div>
+
+        @if ($plate->image !== null)
+            <div style="width: 400px; height:250px" class="p-0">
+                <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $plate->image) }}" alt="test">
+            </div>
+        @endif
+    </div>
 @endsection
+
+<style>
+    .boxshow>* {
+        padding: 5px;
+        background-color: rgb(237 248 253);
+    }
+</style>

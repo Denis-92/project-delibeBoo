@@ -1,6 +1,12 @@
 @extends('layouts.dashboard')
 
 @section('content')
+
+    <div class="d-flex w-100">
+        <h5> <a class="text-danger" style="text-decoration: underline" href="{{ route('admin.resturants.index') }}">Back</a>
+        </h5>
+    </div>
+
     <div class="d-flex" style="column-gap: 20px">
         <p>Nome:</p>
         <h5>{{ $resturant->name }}</h5>
@@ -37,10 +43,11 @@
             </div>
         @endif
     </div>
-    <div>
-        <img src="{{ asset('storage/' . $resturant->image) }}" alt="test">
-    </div>
-
+    @if ($resturant->image !== null)
+        <div style="width: 400px; height:250px">
+            <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $resturant->image) }}" alt="test">
+        </div>
+    @endif
     <div class="d-flex mt-4" style="column-gap: 20px">
         <a class="btn btn-warning" href="{{ route('admin.resturants.edit', $resturant->id) }}">Modifica</a>
 

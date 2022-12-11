@@ -1,6 +1,18 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <form class="w-100" method='GET' action="{{ route('admin.plates.index') }}">
+        @csrf
+        <input type="number" name="r_id" style="width: 100%; display:none" value="{{ $plate->resturant_id }}">
+        <div class="d-flex ">
+            <input type="submit"
+                style="border: 0!important;
+            background-color: transparent;
+            text-decoration: underline;
+            color:red"
+                value="BACK">
+        </div>
+    </form>
     <h1 class="mb-5">Modifica piatto: </h1>
 
     <form action="{{ route('admin.plates.update', $plate->id) }}" method="POST" enctype="multipart/form-data">
@@ -65,7 +77,7 @@
             <div>
                 <label for="image">Cambia immagine:</label>
                 <input type="file" name="image" />
-                <img src="{{ asset('storage/' . $plate->image) }}" alt="test">
+                <img class=" mt-3 img-fluid" src="{{ asset('storage/' . $plate->image) }}" alt="test">
                 @error('image')
                     <div class='alert alert-danger p-1 ms-3 mb-0'>
                         {{ __($message) }}
@@ -81,7 +93,7 @@
 
 <style>
     form {
-        width: 30%
+        width: 60%
     }
 
     form>* {

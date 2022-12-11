@@ -46,7 +46,7 @@ class ResturantController extends Controller
     {
         $this->validateResturant($request);
         $inputCreate = $request->all();
-        if(array_key_exists('image', $inputCreate)) {
+        if (array_key_exists('image', $inputCreate)) {
             $inputCreate['image'] = Storage::put('resturant_covers', $inputCreate['image']);
         }
         $newResturant = new Resturant();
@@ -112,12 +112,11 @@ class ResturantController extends Controller
             $resturant->categories()->sync([]);
         }
 
-        if(array_key_exists('image', $resturantUpdate)) {
-            if($resturant->image){
+        if (array_key_exists('image', $resturantUpdate)) {
+            if ($resturant->image) {
                 Storage::delete($resturant->image);
             }
-            $resturantUpdate['image']=Storage::put('resturant_covers', $resturantUpdate['image']);
-
+            $resturantUpdate['image'] = Storage::put('resturant_covers', $resturantUpdate['image']);
         }
         $resturant->update($resturantUpdate);
         return redirect()->route('admin.resturants.show', compact('resturant'));
@@ -133,7 +132,7 @@ class ResturantController extends Controller
     {
         $resturant->categories()->sync([]);
         $resturant->plates()->delete();
-        if($resturant->image) {
+        if ($resturant->image) {
             Storage::delete($resturant->image);
         }
         $resturant->delete();

@@ -1,6 +1,10 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <div class="d-flex w-100">
+        <h5> <a class="text-danger" style="text-decoration: underline" href="{{ route('admin.resturants.index') }}">Back</a>
+        </h5>
+    </div>
     <h1 class="mb-5">Inserisci i Dati per la tua Attivita': </h1>
 
     <form action="{{ route('admin.resturants.store') }}" method="POST" enctype="multipart/form-data">
