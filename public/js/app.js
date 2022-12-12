@@ -7357,7 +7357,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-91ac6b5c] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n}", ""]);
+exports.push([module.i, "*[data-v-91ac6b5c] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  overflow-y: hidden;\n}", ""]);
 
 // exports
 

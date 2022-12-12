@@ -23,6 +23,10 @@
 
 <style scoped lang="scss">
 
+
+
+
+
 @media screen and (max-width: 1300px) {
     .container-map{
         width: 80% !important;
