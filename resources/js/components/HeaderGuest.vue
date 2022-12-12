@@ -9,16 +9,19 @@
         <img src="images/HeaderGuest/deliveroo-logo.svg" alt="">
     </div>
     <div class="Dx">
-        <button>Collabora con noi</button>
-        <button>Registrati o accedi</button>
-        <button>Menù</button>
+        <button @click="mostra()">Area Riservata Ristoratori</button>
+        <div id="riservata" >
+            <a href="/login">Login</a>
+            <a href="/register">Registrati</a>
+        </div>
+
     </div>
 
 
 </div>
 
 <div class="Down">
-    
+
     <div class="container-center">
         <h3>I piatti dei ristoranti che ami e la spesa, a domicilio</h3>
         <p>inserisci un indirizzo per scoprire le opzioni disponibili nella tua zona</p>
@@ -27,7 +30,7 @@
         <div class="barra">
             <div class="BSX"></div>
             <div class="centro"><input type="text" name="" id="" placeholder="Inserisci il tuo indirizzo completo"></div>
-            <div class="BDX"><button>Cerca</button></div>
+            <div class="BDX"> <router-link to="resturants">Cerca</router-link> </div>
         </div>
 
 
@@ -50,6 +53,19 @@
 
 
 </template>
+
+<script>
+  export default {
+  name:'HeaderGuest',
+methods:{
+
+}
+  }
+
+
+
+
+</script>
 
 
 <style scoped lang="scss">
@@ -95,7 +111,9 @@
 
 
 
-
+#riservata{
+    display: none;
+}
 
 
 
@@ -135,12 +153,12 @@ header{
             align-items: center;
             justify-content: flex-end;
             gap: 20px;
-            
+
             button{
                 border: none;
                 border-radius: 4px;
                 padding: 1% 2.2% 1% 2.2%;
-                
+
             }
         }
 
@@ -175,12 +193,12 @@ header{
              padding-bottom: 5%;
              display: flex;
              justify-content: space-around;
-            
+
              flex-direction: column;
              text-align: center;
              z-index: 500;
 
-             
+
 
             h3{
                 color: white;
@@ -229,7 +247,7 @@ header{
                         border: none;
                         border-radius: 30px;
                         background-color: #00ccbc;
-                        
+
                     }
                 }
             }
@@ -246,13 +264,3 @@ header{
 
 </style>
 
-
-
-
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
