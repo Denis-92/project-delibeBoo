@@ -23,6 +23,35 @@
 
 <style scoped lang="scss">
 
+
+@media screen and (max-width: 1300px) {
+    .container-map{
+        width: 80% !important;
+    }
+    
+}
+
+@media screen and (max-width: 1070px) {
+    .container-map{
+        width: 90% !important;
+        .Sx{
+            width: 50% !important;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 950px) {
+    .container-map{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+
+
 #sec{
     width: 100%;
     height: 50vh;
@@ -76,6 +105,7 @@
 }
 
 </style>
+
 
 
 <script>

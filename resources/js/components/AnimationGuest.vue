@@ -118,7 +118,24 @@
 <style lang="scss" scoped>
 
 
+@media screen and (max-width: 1050px){
+    .container-animate{
+        top: 56% !important;
+        height: 23vh !important;
+        .animate-1{
 
+            img{
+                max-height: 100px !important;
+            }
+        }
+        .animate-2{
+
+            img{
+                max-height: 100px !important;
+            }
+        }
+    }
+}
 
 
 
