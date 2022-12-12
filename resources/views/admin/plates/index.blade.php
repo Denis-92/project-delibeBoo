@@ -32,7 +32,7 @@
     </div>
 
     <div>
-        <a href="{{ route('admin.plates.create') }}">Crea Nuovo Piatto</a>
+        <a href="{{ route('admin.plates.create', $restid) }}">Crea Nuovo Piatto</a>
     </div>
 @endsection
 <script>

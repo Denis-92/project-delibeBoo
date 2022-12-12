@@ -36,8 +36,9 @@ class PlateController extends Controller
      */
     public function create(Request $request)
     {
-
-        return view('admin.plates.create');
+        $id = $request->all();
+        $restid = array_keys($id);
+        return view('admin.plates.create', compact('restid'));
     }
 
     /**
