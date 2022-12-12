@@ -9,7 +9,7 @@
         <img src="images/HeaderGuest/deliveroo-logo.svg" alt="">
     </div>
     <div class="Dx">
-        <button @click="mostra()">Area Riservata Ristoratori</button>
+        <button>Area Riservata Ristoratori</button>
         <div id="riservata" >
             <a href="/login">Login</a>
             <a href="/register">Registrati</a>
