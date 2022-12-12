@@ -23,8 +23,6 @@ Route::middleware('auth')
         Route::resource('resturants', 'ResturantController');
         Route::resource('orders', 'OrderController');
         Route::resource('plates', 'PlateController');
-        Route::get('/piatti', 'PlateController@basePlate')->name('basePlate');
-        Route::get('/ordini', 'OrderController@baseOrder')->name('baseOrder');
         Route::resource('users', 'UserController');
     });
 

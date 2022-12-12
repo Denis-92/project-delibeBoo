@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ route('admin.basePlate') }}" class="text-danger" style="text-decoration: underline">BACK</a>
+        <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger" style="text-decoration: underline">BACK</a>
     </div>
     <h2 class="text-info mb-5">I TUOI PIATTI:</h2>
 
@@ -29,6 +29,10 @@
                 </h2>
             @endforeach
         </div>
+    </div>
+
+    <div>
+        <a href="{{ route('admin.plates.create') }}">Crea Nuovo Piatto</a>
     </div>
 @endsection
 <script>

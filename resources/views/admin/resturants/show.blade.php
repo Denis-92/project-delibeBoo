@@ -59,6 +59,15 @@
         </form>
     </div>
 
+    <div class="d-flex" style="column-gap: 20px">
+        <div>
+            <a href="{{ route('admin.orders.index', $resturant->id) }}" class="btn btn-info my-5">Ordini</a>
+        </div>
+        <div>
+            <a href="{{ route('admin.plates.index', $resturant->id) }}" class="btn btn-primary my-5">Menu</a>
+        </div>
+    </div>
+
 @endsection
 <script>
     function conferma(event) {

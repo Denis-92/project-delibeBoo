@@ -1,18 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <form class="w-100 mb-3" method='GET' action="{{ route('admin.plates.index') }}">
-        @csrf
-        <input type="number" name="r_id" style="width: 100%; display:none" value="{{ $plate->resturant_id }}">
-        <div class="d-flex ">
-            <input type="submit"
-                style="border: 0!important;
-        background-color: transparent;
-        text-decoration: underline;
-        color:red"
-                value="BACK">
-        </div>
-    </form>
+    <div class="w-100 mb-4">
+        <a href="{{ route('admin.plates.index', $id) }}" class="text-danger" style="text-decoration: underline">BACK</a>
+    </div>
     <div class="d-flex flex-column boxshow" style="row-gap: 20px">
 
         <div>

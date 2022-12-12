@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ route('admin.basePlate') }}" class="text-danger" style="text-decoration: underline">BACK</a>
+        <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">BACK</a>
     </div>
     <h1 class="mb-5">Inserisci nuovo piatto: </h1>
 

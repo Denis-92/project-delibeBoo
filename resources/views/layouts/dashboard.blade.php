@@ -92,28 +92,7 @@
 
                         </li>
 
-                        <li class=" d-flex align-items-center cardnav" style="position: relative">
-                            <div>
-                                <img src="{{ asset('images/dishes_icon.png') }}" class="iconSideBar" alt="">
-                            </div>
-                            <div>
-                                <a class="nav-link" href="{{ route('admin.basePlate') }}">
-                                    <h5>DISHES</h5>
-                                </a>
-                            </div>
 
-                        </li>
-                        <li class=" d-flex align-items-center cardnav">
-                            <div>
-                                <img src="{{ asset('images/orders_icon.png') }}" class="iconSideBar" alt="">
-                            </div>
-                            <div>
-                                <a class="nav-link" href="{{ route('admin.baseOrder') }}">
-                                    <H5>ORDERS</H5>
-                                </a>
-                            </div>
-
-                        </li>
                     </ul>
                 </div>
             </nav>

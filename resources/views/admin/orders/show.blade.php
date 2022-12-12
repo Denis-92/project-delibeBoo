@@ -2,27 +2,35 @@
 
 @section('content')
     <div class="w-100">
-        <h5><a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Back</a></h5>
+        <h5><a href="{{ route('admin.resturants.show', $id) }}" class="text-danger" style="text-decoration: underline">Back</a>
+        </h5>
     </div>
 
     <h3>DETTAGLI ORDINE:</h3>
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Totale ordine: {{ $order->total_price }}</p>
+        <p>Totale ordine: {{ $order->total_price }}</p>
     </div>
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Data ordine: {{ $order->date }}</p>
+        <p>Data ordine: {{ $order->date }}</p>
     </div>
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Indirizzo: {{ $order->address }}</p>
+        <p>Indirizzo: {{ $order->address }}</p>
     </div>
 
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Numero pezzi: {{ $order->pieces }}</p>
+        <p>Numero pezzi: {{ $order->pieces }}</p>
     </div>
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Email: {{ $order->email }}</p>
+        <p>Email: {{ $order->email }}</p>
     </div>
     <div>
-        <p {{ route('admin.orders.show', $order->id) }}>Numero di telefono: {{ $order->phone_number }}</p>
+        <p>Numero di telefono: {{ $order->phone_number }}</p>
+    </div>
+    <div>
+        <p>Piatti:
+            @foreach ($order->plates as $item)
+                <a href="{{ route('admin.plates.show', $item->id) }}">{{ $item->name }}</a>
+            @endforeach
+        </p>
     </div>
 @endsection

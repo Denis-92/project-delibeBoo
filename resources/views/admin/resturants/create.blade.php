@@ -62,11 +62,6 @@
                     </div>
                 @enderror
             </div>
-            <div>
-                <label for="newcat">Nuova Categoria:</label>
-                <input type="text" name="newcat">
-            </div>
-
             <label for="image">Carica immagine:</label>
             <input type="file" name="image">
             @error('image')

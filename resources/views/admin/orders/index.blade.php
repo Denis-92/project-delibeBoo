@@ -2,10 +2,11 @@
 
 @section('content')
     <div class="mb-4 d-flex w-100">
-        <h5> <a href="{{ route('admin.baseOrder') }}" class="text-danger" style="text-decoration: underline">Back</a></h5>
+        <h5> <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger"
+                style="text-decoration: underline">Back</a></h5>
     </div>
     <div style="width: 80%">
-        <h1>Chi ha ordinato questo piatto:</h1>
+        <h1>Ordini:</h1>
         @if ($orders)
             @foreach ($orders as $order)
                 <div class="card">

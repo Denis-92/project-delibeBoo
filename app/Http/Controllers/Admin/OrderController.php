@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Plate;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
-    public function baseOrder()
-    {
-        return view('admin.orders.ordini');
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -20,18 +18,16 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $data = $request->all();
-        $plateId = $data['plate_id'];
-        $ordersTotale = Order::all();
+        $restid = array_keys($data);
         $orders = [];
-        foreach ($ordersTotale as $order) {
-            foreach ($order->plates as $plate) {
-                if ($plate->id == $plateId) {
-                    array_push($orders, $order);
-                }
+        $plates = Plate::where('resturant_id', $restid)->get();
+        foreach ($plates as $plate) {
+            foreach ($plate->orders as $item) {
+                array_push($orders, $item);
             };
-        }
+        };
 
-        return view('admin.orders.index', compact('orders'));
+        return view('admin.orders.index', compact('orders', 'restid'));
     }
 
     /**
@@ -62,7 +58,11 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        return view('admin.orders.show', compact('order'));
+        $id = '';
+        foreach ($order->plates as $item) {
+            $id = $item->resturant_id;
+        };
+        return view('admin.orders.show', compact('order', 'id'));
     }
 
     /**

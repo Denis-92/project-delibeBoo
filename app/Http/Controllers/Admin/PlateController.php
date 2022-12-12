@@ -15,10 +15,7 @@ use Illuminate\Support\Facades\Session;
 
 class PlateController extends Controller
 {
-    public function basePlate()
-    {
-        return view('admin.plates.piatti');
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -26,10 +23,10 @@ class PlateController extends Controller
      */
     public function index(Request $request)
     {
-        $rest_id = $request->all();
-        $resturant = $rest_id["r_id"];
-        $plates = Plate::where('resturant_id', $resturant)->get();
-        return view('admin.plates.index', compact('plates', 'resturant'));
+        $id = $request->all();
+        $restid = array_keys($id);
+        $plates = Plate::where('resturant_id', $restid)->get();
+        return view('admin.plates.index', compact('plates', "restid"));
     }
 
     /**
@@ -37,9 +34,9 @@ class PlateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $resturants = Auth::user()->resturants;
+
         return view('admin.plates.create');
     }
 
@@ -73,7 +70,8 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
-        return view('admin.plates.show', compact('plate'));
+        $id = $plate->resturant_id;
+        return view('admin.plates.show', compact('plate', 'id'));
     }
 
     /**
