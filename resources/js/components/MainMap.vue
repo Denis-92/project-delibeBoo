@@ -23,6 +23,24 @@
 
 <style scoped lang="scss">
 
+@media screen and (max-width: 1300px) {
+    .container-map{
+        width: 80% !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 1070px) {
+    .container-map{
+        width: 90% !important;
+        .Sx{
+            width: 50% !important;
+        }
+    }
+    
+}
+
 
 
 @media screen and (max-width: 950px) {
@@ -56,25 +74,16 @@
     }
     }
 
-
-
-
-@media screen and (max-width: 1300px) {
-    .container-map{
-        width: 80% !important;
+    @media screen and (max-width: 550px) {
+    .Sx{
+        height: 70% !important;
     }
-    
 }
 
-@media screen and (max-width: 1070px) {
-    .container-map{
-        width: 90% !important;
-        .Sx{
-            width: 50% !important;
-        }
-    }
-    
-}
+
+
+
+
 
 
 
