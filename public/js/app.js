@@ -7300,7 +7300,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@media screen and (max-width: 1300px) {\n.container-map[data-v-56c7be70] {\n    width: 80% !important;\n}\n}\n@media screen and (max-width: 1070px) {\n.container-map[data-v-56c7be70] {\n    width: 90% !important;\n}\n.container-map .Sx[data-v-56c7be70] {\n    width: 50% !important;\n}\n}\n@media screen and (max-width: 950px) {\n.container-map[data-v-56c7be70] {\n    display: flex;\n    flex-direction: column;\n}\n}\n#sec[data-v-56c7be70] {\n  width: 100%;\n  height: 50vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-map[data-v-56c7be70] {\n  width: 75%;\n  height: 80%;\n  border-radius: 15px;\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.7);\n  background-color: white;\n  display: flex;\n}\n#sec .container-map .Sx[data-v-56c7be70] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\n#sec .container-map .Sx .info[data-v-56c7be70] {\n  width: 75%;\n  margin-left: 40px;\n}\n#sec .container-map .Sx .info h1[data-v-56c7be70] {\n  font-weight: 800;\n}\n#sec .container-map .Sx .info p[data-v-56c7be70] {\n  font-size: 1.1rem;\n  color: rgba(0, 0, 0, 0.521);\n  margin: 25px 0px 50px 0px;\n}\n#sec .container-map .Dx[data-v-56c7be70] {\n  width: 60%;\n  height: 100%;\n}\n#sec .container-map .Dx .map[data-v-56c7be70] {\n  width: 100%;\n  height: 100%;\n}\n#sec .container-map .Dx .map img[data-v-56c7be70] {\n  height: 100%;\n  width: 100%;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 950px) {\n#sec[data-v-56c7be70] {\n    height: 60vh !important;\n}\n#sec .container-map[data-v-56c7be70] {\n    display: flex !important;\n    flex-direction: column !important;\n    width: 95% !important;\n    height: 90% !important;\n}\n#sec .container-map .Sx[data-v-56c7be70] {\n    width: 100% !important;\n    height: 40% !important;\n}\n#sec .container-map .Sx .info[data-v-56c7be70] {\n    width: 75% !important;\n    margin-left: 40px !important;\n}\n#sec .container-map .Sx .info p[data-v-56c7be70] {\n    margin: 1px !important;\n}\n#sec .container-map .Dx[data-v-56c7be70] {\n    width: 100% !important;\n    height: 60% !important;\n}\n#sec .container-map .Dx .map[data-v-56c7be70] {\n    width: 100% !important;\n    height: 100% !important;\n}\n}\n@media screen and (max-width: 1300px) {\n.container-map[data-v-56c7be70] {\n    width: 80% !important;\n}\n}\n@media screen and (max-width: 1070px) {\n.container-map[data-v-56c7be70] {\n    width: 90% !important;\n}\n.container-map .Sx[data-v-56c7be70] {\n    width: 50% !important;\n}\n}\n#sec[data-v-56c7be70] {\n  width: 100%;\n  height: 50vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n#sec .container-map[data-v-56c7be70] {\n  width: 75%;\n  height: 80%;\n  border-radius: 15px;\n  box-shadow: 0px 5px 30px -10px rgba(0, 0, 0, 0.7);\n  background-color: white;\n  display: flex;\n}\n#sec .container-map .Sx[data-v-56c7be70] {\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\n#sec .container-map .Sx .info[data-v-56c7be70] {\n  width: 75%;\n  margin-left: 40px;\n}\n#sec .container-map .Sx .info h1[data-v-56c7be70] {\n  font-weight: 800;\n}\n#sec .container-map .Sx .info p[data-v-56c7be70] {\n  font-size: 1.1rem;\n  color: rgba(0, 0, 0, 0.521);\n  margin: 25px 0px 50px 0px;\n}\n#sec .container-map .Dx[data-v-56c7be70] {\n  width: 60%;\n  height: 100%;\n}\n#sec .container-map .Dx .map[data-v-56c7be70] {\n  width: 100%;\n  height: 100%;\n}\n#sec .container-map .Dx .map img[data-v-56c7be70] {\n  height: 100%;\n  width: 100%;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -51547,13 +51547,8 @@ component.options.__file = "resources/js/components/AnimationGuest.vue"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnimationGuest_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AnimationGuest.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AnimationGuest.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnimationGuest_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-=======
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
->>>>>>> 167076e1fbb790bc70f1d6ac128f148fc0b363bd
 
 /***/ }),
 
@@ -52131,13 +52126,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 167076e1fbb790bc70f1d6ac128f148fc0b363bd
 
 
 /***/ })

@@ -24,6 +24,41 @@
 <style scoped lang="scss">
 
 
+
+@media screen and (max-width: 950px) {
+    #sec{
+        height: 60vh !important;
+        .container-map{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 95% !important;
+         height: 90% !important;
+            .Sx{
+                width: 100% !important;
+                height: 40% !important;
+                .info{
+                    width: 75% !important;
+                    margin-left: 40px !important;
+                    p{
+                        margin: 1px !important;
+                    }
+                }
+            }
+            .Dx{
+                width: 100% !important;
+                height: 60% !important;
+                .map{
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+    }
+
+
+
+
 @media screen and (max-width: 1300px) {
     .container-map{
         width: 80% !important;
@@ -41,13 +76,7 @@
     
 }
 
-@media screen and (max-width: 950px) {
-    .container-map{
-        display: flex;
-        flex-direction: column;
-    }
-    
-}
+
 
 
 
