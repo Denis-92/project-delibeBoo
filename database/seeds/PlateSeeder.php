@@ -35,12 +35,8 @@ class PlateSeeder extends Seeder
                 $counter++;
             }
             $plate->slug = $slug;
-
+            $plate->resturant_id = rand(1, 10);
             $plate->save();
-
-
         }
-
-
     }
 }

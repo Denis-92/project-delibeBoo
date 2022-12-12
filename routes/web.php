@@ -29,9 +29,12 @@ Route::middleware('auth')
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
+        Route::get('/', 'HomeController@index');
+        Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
         Route::resource('resturants', 'ResturantController');
         Route::resource('orders', 'OrderController');
         Route::resource('plates', 'PlateController');
+        Route::resource('users', 'UserController');
     });
 
  Auth::routes();

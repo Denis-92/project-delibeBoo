@@ -46,21 +46,39 @@
                 <li class="nav-item text-danger py-2 pr-3">
                     Non autorizzato
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('login') }}">
+                        Login
+                    </a>
+                    @csrf
+                    </form>
+                </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                 @endif
             @endauth
 
         </ul>
     </nav>
+
     <div class="">
         <div class="d-flex">
             <nav class="py-5" style="background-color: aliceblue; height:calc(100vh - 150px); width:16%">
                 <div class="sidebar-sticky">
                     <ul class="nav d-flex flex-column">
+                        <li class=" d-flex cardnav">
+                            <div>
+                                <img src="{{ asset('images/user_icon.png') }}" class="iconSideBar" alt="">
+                            </div>
+                            <div>
+                                <a class="nav-link" href="{{ route('admin.users.index') }}">
+                                    <h5>PROFILO</h5>
+                                </a>
+                            </div>
 
+                        </li>
                         <li class=" d-flex cardnav">
                             <div>
                                 <img src="{{ asset('images/resturants_icon.png') }}" class="iconSideBar"
@@ -73,36 +91,17 @@
                             </div>
 
                         </li>
-                        <li class=" d-flex align-items-center cardnav">
-                            <div>
-                                <img src="{{ asset('images/dishes_icon.png') }}" class="iconSideBar" alt="">
-                            </div>
-                            <div>
-                                <a class="nav-link" href="{{ route('admin.resturants.index') }}">
-                                    <H5>DISHES</H5>
-                                </a>
-                            </div>
 
-                        </li>
-                        <li class=" d-flex align-items-center cardnav">
-                            <div>
-                                <img src="{{ asset('images/orders_icon.png') }}" class="iconSideBar" alt="">
-                            </div>
-                            <div>
-                                <a class="nav-link" href="{{ route('admin.resturants.index') }}">
-                                    <H5>ORDERS</H5>
-                                </a>
-                            </div>
 
-                        </li>
                     </ul>
                 </div>
             </nav>
-            <main role="main" style="width: 80%">
+            <main role="main" class="pt-5 d-flex flex-column align-items-center" style="width: 80%; margin: 0 auto">
                 @yield('content')
             </main>
         </div>
     </div>
+
 </body>
 
 </html>
@@ -139,5 +138,22 @@
         width: 70%;
         display: flex;
         align-items: center
+    }
+
+    #menudishes>ul {
+        width: 100%;
+        padding: 5px 10px
+    }
+
+    #menudishes>ul>li {
+        list-style: none;
+        margin: 5px 0;
+        border: 2px solid rgb(180, 215, 246);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #menudishes>ul>li:hover {
+        transform: scale(1.1)
     }
 </style>

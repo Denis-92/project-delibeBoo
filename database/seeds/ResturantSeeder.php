@@ -54,7 +54,7 @@ class ResturantSeeder extends Seeder
                 $counter++;
             }
             $resturant->slug = $slug;
-
+            $resturant->user_id = rand(1, 10);
             $resturant->save();
         }
     }

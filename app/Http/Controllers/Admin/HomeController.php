@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\User;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,8 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $userID = $user->id;
-        return redirect()->route('admin.users.show', $userID);
+        return view('admin.home');
     }
 }
