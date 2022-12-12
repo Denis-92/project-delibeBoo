@@ -1,27 +1,49 @@
 <template>
-    <div>
-
-         
-        <h2>
-            sono il main
-        </h2>
-
-        <div v-for="ristorante in ristoranti" :key="ristorante.id">
-            <h2>{{ ristorante.name }}</h2>
-        </div>
-
-        <div v-for="categoria in categorie" :key="categoria.id">
-            <h4>{{ categoria.name }}</h4>
-        </div>
-
-
-    </div>
+    <section id="sec-main">
+        <div class="filter"></div>
+        <div class="result"></div>
+    </section>
 </template>
 
 
 <style scoped lang="scss">
+#sec-main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 217, 0, 0.445);
+    display: flex;
 
+    .filter{
+        width: 20%;
+        height: 100%;
+        background-color: greenyellow;
+    }
+
+    .result{
+        width: 80%;
+        height: 100%;
+        background-color: green;
+    }
+}
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
