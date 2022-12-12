@@ -34,13 +34,12 @@
         <div class="info-last">
             <p><a href="">Accedi</a> per visualizzare i tuoi indirizzi recenti.</p>
         </div>
-
-
-
     </div>
-        <img id="foto1" src="images/HeaderGuest/busta.jpg" alt="">
-        <img id="foto2" src="images/HeaderGuest/burger.jpg" alt="">
-    </div>
+
+    <img id="foto1" src="images/HeaderGuest/busta.jpg" alt="">
+    <img id="foto2" src="images/HeaderGuest/burger.jpg" alt="">
+
+</div>
 
 
 
@@ -55,8 +54,40 @@
 
 <style scoped lang="scss">
 
-*{
-    font-family: 'Roboto', sans-serif;
+@media  screen and (max-width: 1250px){
+        #foto1{
+        height: 70% !important;
+    }
+    #foto2{
+        height: 70% !important;
+    }
+}
+
+@media  screen and (max-width: 1050px){
+        #foto1{
+        display: none;
+    }
+    #foto2{
+        height: 90% !important;
+    }
+    .Down{
+        justify-content: flex-start !important;
+        .container-center{
+            // background-color: rgba(255, 0, 0, 0.274);
+            width: 50%;
+            margin-left: 10px;
+            h3{
+                text-align: start;
+            }
+            p{
+                text-align: start;
+            }
+            .barra{
+                margin: 0 !important;
+                width: 90% !important;
+            }
+        }
+    }
 
 }
 
@@ -65,10 +96,20 @@
 
 
 
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
+
 header{
     width: 100%;
     height: 60vh;
     background-color: rgb(0, 0, 0);
+
+
 
     .Up{
         width: 100%;
@@ -106,7 +147,7 @@ header{
     }
 
     .Down{
-        width: 100%;
+         width: 100%;
         height: 90%;
         //  background-color: rgb(0, 192, 206);
         display: flex;
@@ -199,6 +240,9 @@ header{
         }
     }
 }
+
+
+
 
 </style>
 

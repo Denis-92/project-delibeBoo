@@ -2703,35 +2703,16 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    attrs: {
-      id: "cos"
-    }
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
-    staticClass: "loghi-box"
-  }, [_c("div", {
-    staticClass: "twitter"
-  }, [_c("svg", {
-    attrs: {
-      width: "256px",
-      height: "209px",
-      viewBox: "0 0 256 209",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-      preserveAspectRatio: "xMidYMid"
-    }
-  }, [_c("g", [_c("path", {
-    attrs: {
-      d: "M256,25.4500259 C246.580841,29.6272672 236.458451,32.4504868 225.834156,33.7202333 C236.678503,27.2198053 245.00583,16.9269929 248.927437,4.66307685 C238.779765,10.6812633 227.539325,15.0523376 215.57599,17.408298 C205.994835,7.2006971 192.34506,0.822 177.239197,0.822 C148.232605,0.822 124.716076,24.3375931 124.716076,53.3423116 C124.716076,57.4586875 125.181462,61.4673784 126.076652,65.3112644 C82.4258385,63.1210453 43.7257252,42.211429 17.821398,10.4359288 C13.3005011,18.1929938 10.710443,27.2151234 10.710443,36.8402889 C10.710443,55.061526 19.9835254,71.1374907 34.0762135,80.5557137 C25.4660961,80.2832239 17.3681846,77.9207088 10.2862577,73.9869292 C10.2825122,74.2060448 10.2825122,74.4260967 10.2825122,74.647085 C10.2825122,100.094453 28.3867003,121.322443 52.413563,126.14673 C48.0059695,127.347184 43.3661509,127.988612 38.5755734,127.988612 C35.1914554,127.988612 31.9009766,127.659938 28.694773,127.046602 C35.3777973,147.913145 54.7742053,163.097665 77.7569918,163.52185 C59.7820257,177.607983 37.1354036,186.004604 12.5289147,186.004604 C8.28987161,186.004604 4.10888474,185.75646 0,185.271409 C23.2431033,200.173139 50.8507261,208.867532 80.5109185,208.867532 C177.116529,208.867532 229.943977,128.836982 229.943977,59.4326002 C229.943977,57.1552968 229.893412,54.8901664 229.792282,52.6381454 C240.053257,45.2331635 248.958338,35.9825545 256,25.4500259",
-      fill: "#55acee"
-    }
-  })])])])])]);
+  return _vm._m(0);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
+  return _c("section", {
+    attrs: {
+      id: "cos"
+    }
+  }, [_c("div", {
     staticClass: "container-footer"
   }, [_c("div", {
     staticClass: "colonne"
@@ -2739,11 +2720,11 @@ var staticRenderFns = [function () {
     staticClass: "prova"
   }, [_c("h4", [_vm._v("Scopri Deliveroo")]), _vm._v(" "), _c("ol", [_c("li", [_c("a", {
     attrs: {
-      href: ""
+      href: "https://corporate.deliveroo.co.uk/"
     }
   }, [_vm._v("Investitori")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
-      href: ""
+      href: "https://deliveroo.it/it/about-us"
     }
   }, [_vm._v("Chi siamo")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
@@ -2833,7 +2814,7 @@ var staticRenderFns = [function () {
     staticClass: "colonne"
   }, [_c("div", {
     staticClass: "prova"
-  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])]);
+  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])])]);
 }];
 render._withStripped = true;
 
@@ -7300,7 +7281,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  z-index: 500;\n  position: relative;\n}\nheader .Down #foto1[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down #foto2[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n  z-index: 500;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: #00ccbc;\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 60%;\n  height: 20%;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 30px 0px 0px 30px;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .centro input[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 25%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 0px 30px 30px 0px;\n  display: flex;\n  align-items: center;\n}\nheader .Down .container-center .barra .BDX button[data-v-9a8d6ea0] {\n  width: 97%;\n  height: 90%;\n  border: none;\n  border-radius: 30px;\n  background-color: #00ccbc;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 1250px) {\n#foto1[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n}\n@media screen and (max-width: 1050px) {\n#foto1[data-v-9a8d6ea0] {\n    display: none;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 90% !important;\n}\n.Down[data-v-9a8d6ea0] {\n    justify-content: flex-start !important;\n}\n.Down .container-center[data-v-9a8d6ea0] {\n    width: 50%;\n    margin-left: 10px;\n}\n.Down .container-center h3[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center p[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center .barra[data-v-9a8d6ea0] {\n    margin: 0 !important;\n    width: 90% !important;\n}\n}\n*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  z-index: 500;\n  position: relative;\n}\nheader .Down #foto1[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down #foto2[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n  z-index: 500;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: #00ccbc;\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 60%;\n  height: 20%;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 30px 0px 0px 30px;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .centro input[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 25%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 0px 30px 30px 0px;\n  display: flex;\n  align-items: center;\n}\nheader .Down .container-center .barra .BDX button[data-v-9a8d6ea0] {\n  width: 97%;\n  height: 90%;\n  border: none;\n  border-radius: 30px;\n  background-color: #00ccbc;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
 
 // exports
 

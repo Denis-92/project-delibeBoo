@@ -5,8 +5,8 @@
                 <div class="prova">
                     <h4>Scopri Deliveroo</h4>
                      <ol>
-                        <li><a href="">Investitori</a></li>
-                        <li><a href="">Chi siamo</a></li>
+                        <li><a href="https://corporate.deliveroo.co.uk/">Investitori</a></li>
+                        <li><a href="https://deliveroo.it/it/about-us">Chi siamo</a></li>
                         <li><a href="">Porta via</a></li>
                         <li><a href="">di più</a></li>
                         <li><a href="">Sala stampa</a></li>
@@ -56,7 +56,7 @@
         </div>
 
         <!-- -----------Loghi section------------- -->
-        <div class="loghi-box">
+        <!-- <div class="loghi-box">
             <div class="twitter">
                 <svg width="256px" height="209px" viewBox="0 0 256 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
                     <g>
@@ -64,7 +64,7 @@
                     </g>
                 </svg>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 
