@@ -24,6 +24,19 @@
 
 
 <style scoped lang="scss">
+
+@media screen and (min-width: 400px) and (max-width: 1500px){
+ 
+
+    .offert-content{
+        width: 90% !important;
+    }
+ 
+}
+
+
+
+
  #sec{
     width: 100%;
     height: 55vh;

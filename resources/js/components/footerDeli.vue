@@ -65,11 +65,52 @@
                 </svg>
             </div>
         </div> -->
+
+
     </section>
 </template>
 
 
 <style scoped lang="scss">
+
+
+@media screen and (max-width: 1600px) {
+    .container-footer{
+        width: 80% !important;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .container-footer{
+        width: 90% !important;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    #cos{
+        height: 90vh !important;
+        .container-footer{
+            width: 90% !important;
+            flex-wrap: wrap;
+            gap: 15px;
+            .colonne{
+                width: 48% !important;
+                height: auto !important;
+            }
+        }
+    }
+}
+
+
+
 #cos{
     width: 100%;
     height: 50vh;
@@ -153,7 +194,7 @@
 <script>
 export default {
     mounted() {
-        console.log('Component mounted.')
+        console.log('js Ok')
     }
 }
 </script>

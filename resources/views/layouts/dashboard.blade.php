@@ -86,7 +86,7 @@
                             </div>
                             <div>
                                 <a class="nav-link" href="{{ route('admin.resturants.index') }}">
-                                    <h5>RESTURANT</h5>
+                                    <h5>RISTORANTI</h5>
                                 </a>
                             </div>
 
