@@ -16,7 +16,7 @@
         <p>Email: {{ $user->email }}</p>
         <div class="d-flex" style="column-gap: 15px">
             <div class="">
-                <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-success">Edit</a>
+                <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-success">Modifica</a>
             </div>
 
             <div class="">
