@@ -1,38 +1,36 @@
 <template>
-<div>
-<div v-for="ristorante in ristoranti" :key="ristorante.id">
-<p>{{ristorante.name}}</p>
-</div>
-<div v-for="categoria in categorie" :key="categoria.name">
-<p>{{categoria.name}}</p>
-</div>
-</div>
 
+<body>
+    <div>
+
+        <headerResturants />
+        <MainResturants />
+        <FooterResturants />
+        
+    </div>
+</body>
 </template>
 
-<script>
-export default {
-name:"ResturantComponent",
-data(){
-    return{
-        ristoranti:undefined,
-        categorie:undefined
-    }
-},
-methods:{
-    takeResturantsandCategory(){
-        axios.get('api/resturants').then(({data})=>{
-            this.ristoranti=data.ristoranti
-            this.categorie = data.categorie
-        })
-    }
-},
 
-mounted(){
-    this.takeResturantsandCategory()
-}
-}
+
+<script>
+
+import headerResturants from '../components/resturantsComponents/headerResturants.vue';
+import MainResturants from '../components/resturantsComponents/MainResturants.vue';
+import FooterResturants from '../components/resturantsComponents/FooterResturants.vue';
+
+
+
+
+export default {
+      name: 'app',
+      components: { headerResturants, MainResturants, FooterResturants },
+
+      }
 </script>
+
+
+
 
 <style>
 
