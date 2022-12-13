@@ -128,6 +128,7 @@ methods:{
     background-color: white;
     padding: 10px;
     border-radius: 20%;
+    z-index: 800;
 }
 .nonvisibile{
     display: none;
