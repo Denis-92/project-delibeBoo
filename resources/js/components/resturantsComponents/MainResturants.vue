@@ -22,31 +22,6 @@
 
                 </div>
 
-
-
-
-                <!-- -------- ristoranti Titolo-----
-                <div >
-                    <div class="ristoranti-solo">
-                        <h4>Ristoranti</h4>
-
-                        <button id="Freccia-risto">
-                            <img  src="images/ResturantImage/Freccia.png" alt="">
-                        </button>
-                    </div>-->
-
-
-                <!-- -----------ristoranti Tendina a scomparsa----------
-                    <div id="tendina-ristoranti">
-                        <div v-for="ristorante in ristoranti" :key="ristorante.id">
-                            <ol >
-
-                            <li><input type="checkbox" name="" id="">{{ ristorante.name }}</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>-->
-
             </div>
         </div>
 
@@ -191,6 +166,77 @@
 
 
 <style scoped lang="scss">
+
+@media screen and (max-width: 1200px) {
+    .card{
+        height: 230px !important;
+    }
+    .center{
+        bottom: 30px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 1100px){
+    .center{
+        width: 45% !important;
+        right: 15px !important;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .card{
+        height: 230px !important;
+        width: 48% !important;
+    }
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+#sec-main{
+    flex-direction: column !important;
+    .result{
+        width: 100% !important;
+    }
+    .filter{
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        flex-direction: column !important;
+        .container-filter{
+            width: 90% !important;
+            .categorie-solo{
+                width: 100% !important;
+                height: 10% !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                border-bottom: 1px solid rgb(219, 219, 219) !important;
+                margin: 25px 0px;
+            }
+            #tendina-categorie{
+                margin-top: 20px;
+                ol{
+                    display: flex !important;
+                    list-style: none !important;
+                    gap: 40px !important;
+                    justify-content: flex-start !important;
+                    flex-wrap: wrap;
+                }
+
+            }
+        }
+    }
+}
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -214,7 +260,7 @@
 
 #sec-main{
     width: 100%;
-    height: 1290px;
+    // height: 1290px;
     // height: 100vh;
     // background-color: rgba(255, 217, 0, 0.445);
     display: flex;
@@ -276,11 +322,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-content: flex-start;
         gap: 10px;
         padding: 20px;
         // background-color: green;
         .card{
-            width: 25%;
+            width: 32%;
              height: 290px;
             // background-color: red;
             border: 10px;
@@ -289,7 +336,7 @@
                 width: 100%;
                 height: 220px;
                 flex-grow: 1;
-                background-color: rgba(0, 255, 42, 0.521);
+                // background-color: rgba(0, 255, 42, 0.521);
                 border-radius: 10px 10px 0px 0px;
                 border: 1px solid #00000017;
                 border-bottom: none;
