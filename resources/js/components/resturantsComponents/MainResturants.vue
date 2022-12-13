@@ -10,37 +10,40 @@
                     <button id="Freccia-cat">
                         <img  src="images/ResturantImage/Freccia.png" alt="">
                     </button>
-                    
+
                 </div>
 
                  <!-- --------Categorie Tendina a scomparsa---------- -->
                 <div id="tendina-categorie">
-                    <div v-for="categoria in categorie" :key="categoria.id">                 
-                        <ol >
-                          <li><input type="checkbox" name="" id="">{{ categoria.name }}</li>
-                         </ol> 
-                    </div>
+
+                        <ol>
+                                <li v-for="categoria in categorie" :key="categoria.id"><input type="checkbox" :value="categoria.id" @change="isCheck($event)" name="" id="">{{ categoria.name }}</li>
+                        </ol>
+
                 </div>
 
 
 
 
                 <!-- -------- ristoranti Titolo----- -->
-                <div class="ristoranti-solo">
-                    <h4>Ristoranti</h4>
+                <div >
+                    <div class="ristoranti-solo">
+                        <h4>Ristoranti</h4>
 
-                    <button id="Freccia-risto">
-                        <img  src="images/ResturantImage/Freccia.png" alt="">
-                    </button>
-                </div>
+                        <button id="Freccia-risto">
+                            <img  src="images/ResturantImage/Freccia.png" alt="">
+                        </button>
+                    </div>
 
 
                 <!-- -----------ristoranti Tendina a scomparsa---------- -->
-                <div id="tendina-ristoranti">
-                    <div v-for="ristorante in ristoranti" :key="ristorante.id">                 
-                        <ol >
-                          <li><input type="checkbox" name="" id="">{{ ristorante.name }}</li>
-                        </ol> 
+                    <div id="tendina-ristoranti">
+                        <div v-for="ristorante in ristoranti" :key="ristorante.id">
+                            <ol >
+
+                            <li><input type="checkbox" name="" id="">{{ ristorante.name }}</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
@@ -48,17 +51,20 @@
         </div>
 
 
-        <div class="result">
-
-
-           
+        <div  class="result">
                 <div class="card" v-for="ristorante in ristoranti" :key="ristorante.id">
                     <div class="up">
-                        Foto
+                        <img class="restaurant-image" :src="`storage/${ristorante.image}`" alt="">
                     </div>
-                    <div class="center">
+                    <div v-if="time === 'am'" class="center">
                         <p>Orari di apertura</p>
                         <p>{{ristorante.lunch_opening}}{{ristorante.lunch_closing}}</p>
+                        <div class="blocco1"><h3>-</h3></div>
+                        <div class="blocco2"></div>
+                    </div>
+                    <div v-else class="center">
+                        <p>Orari di apertura</p>
+                        <p>{{ristorante.dinner_opening}}{{ristorante.dinner_closing}}</p>
                         <div class="blocco1"><h3>-</h3></div>
                         <div class="blocco2"></div>
                     </div>
@@ -68,14 +74,109 @@
                         </div>
                     </div>
                 </div>
-            
-
-
         </div>
+
     </section>
 </template>
 
 <!-- ------------------------------- -->
+
+
+<script>
+ export default {
+    name:"MainResturants",
+    data(){
+        return{
+            url:'api/resturants',
+            ristoranti:undefined,
+            categorie:undefined,
+            time:'',
+            check:[],
+        }
+    },
+
+
+    methods:{
+        takeResturantsandCategory(url){
+            axios.get(url).then(({data})=>{
+                this.ristoranti=data.ristoranti
+                this.categorie= data.categorie
+            })
+        },
+        show(url){
+            axios.get(url).then(({data})=>{
+                this.ristoranti= data
+            })
+        },
+        isCheck(event){
+            if(!event.target.checked){
+                this.takeResturantsandCategory(this.url)
+                this.check=[]
+            }
+            else{
+
+                    let valuecheck = event.target.value
+                    this.check.push(valuecheck)
+                    valuecheck=''
+                    if(this.check.length >0){
+                    let url= 'api/resturantsfiltred/'+ this.check
+                    this.show(url)
+                }else{
+                    this.takeResturantsandCategory(this.url)
+                }
+
+            }
+
+        }
+    },
+
+    mounted(){
+        console.log(this.check)
+        this.takeResturantsandCategory(this.url)
+        let data = new Date();
+        let times = data.toLocaleTimeString('it-IT')
+        console.log(times)
+        if(times.includes('14, 15, 16, 17, 18, 19, 20,21,22,23')){
+           this.time = 'pm'
+        }else{
+           this.time = 'am'
+        };
+
+
+
+
+         // ------------Script tendina categorie---------
+         console.log("Finalmente il console log")
+            let buttonCat = document.getElementById("Freccia-cat")
+            let dropdownCat = document.getElementById("tendina-categorie")
+            let buttonRisto = document.getElementById("Freccia-risto")
+            let dropdownRisto = document.getElementById("tendina-ristoranti")
+
+            buttonCat.addEventListener("click", function(){
+                if (dropdownCat.style.display === "block") {
+                    dropdownCat.style.display = "none";
+                } else {
+                    dropdownCat.style.display = "block";
+
+                }
+            })
+
+            // ------------Script tendina ristoranti---------
+            buttonRisto.addEventListener("click", function(){
+                if (dropdownRisto.style.display === "block") {
+                    dropdownRisto.style.display = "none";
+                } else {
+                    dropdownRisto.style.display = "block";
+                }
+
+            })
+    },
+}
+</script>
+
+
+
+
 
 <style scoped lang="scss">
 *{
@@ -83,7 +184,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.restaurant-image{
+    width: 100%;
+    height: 100%;
+}
 #tendina-categorie{
     display: none;
 }
@@ -116,6 +220,7 @@
 
 #sec-main{
     width: 100%;
+    height: 1290px;
     // height: 100vh;
     // background-color: rgba(255, 217, 0, 0.445);
     display: flex;
@@ -185,9 +290,10 @@
              height: 290px;
             // background-color: red;
             border: 10px;
-            
+
             .up{
                 width: 100%;
+                height: 220px;
                 flex-grow: 1;
                 background-color: rgba(0, 255, 42, 0.521);
                 border-radius: 10px 10px 0px 0px;
@@ -248,73 +354,6 @@
 
 
 
-<script>
- export default {
-    name:"MainResturants",
-    data(){
-        return{
-            ristoranti:undefined,
-            categorie:undefined
-        }
-    },
-
-
-    methods:{
-        takeResturantsandCategory(){
-            axios.get('api/resturants').then(({data})=>{
-                this.ristoranti=data.ristoranti
-                this.categorie= data.categorie
-                
-                
-
-            })
-
-            // ------------Script tendina categorie---------
-            console.log("Finalmente il console log")
-            let buttonCat = document.getElementById("Freccia-cat")
-            let dropdownCat = document.getElementById("tendina-categorie")
-
-
-            let buttonRisto = document.getElementById("Freccia-risto")
-            let dropdownRisto = document.getElementById("tendina-ristoranti")
-
-
-            
-
-
-
-
-            buttonCat.addEventListener("click", function(){
-                if (dropdownCat.style.display === "block") {
-                    dropdownCat.style.display = "none";
-                    
-                    
-                } else {
-                    dropdownCat.style.display = "block";
-                    
-                }
-                
-            })
-
-             // ------------Script tendina ristoranti---------
-            buttonRisto.addEventListener("click", function(){
-                if (dropdownRisto.style.display === "block") {
-                    dropdownRisto.style.display = "none";
-                } else {
-                    dropdownRisto.style.display = "block";
-                }
-                
-            })
-           
-
-        }
-    },
-
-    mounted(){
-        this.takeResturantsandCategory()
-    },
-}  
-</script>
 
 
 

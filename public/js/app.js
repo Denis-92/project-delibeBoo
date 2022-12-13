@@ -2024,45 +2024,81 @@ __webpack_require__.r(__webpack_exports__);
   name: "MainResturants",
   data: function data() {
     return {
+      url: 'api/resturants',
       ristoranti: undefined,
-      categorie: undefined
+      categorie: undefined,
+      time: '',
+      check: []
     };
   },
   methods: {
-    takeResturantsandCategory: function takeResturantsandCategory() {
+    takeResturantsandCategory: function takeResturantsandCategory(url) {
       var _this = this;
-      axios.get('api/resturants').then(function (_ref) {
+      axios.get(url).then(function (_ref) {
         var data = _ref.data;
         _this.ristoranti = data.ristoranti;
         _this.categorie = data.categorie;
       });
-
-      // ------------Script tendina categorie---------
-      console.log("Finalmente il console log");
-      var buttonCat = document.getElementById("Freccia-cat");
-      var dropdownCat = document.getElementById("tendina-categorie");
-      var buttonRisto = document.getElementById("Freccia-risto");
-      var dropdownRisto = document.getElementById("tendina-ristoranti");
-      buttonCat.addEventListener("click", function () {
-        if (dropdownCat.style.display === "block") {
-          dropdownCat.style.display = "none";
-        } else {
-          dropdownCat.style.display = "block";
-        }
+    },
+    show: function show(url) {
+      var _this2 = this;
+      axios.get(url).then(function (_ref2) {
+        var data = _ref2.data;
+        _this2.ristoranti = data;
       });
-
-      // ------------Script tendina ristoranti---------
-      buttonRisto.addEventListener("click", function () {
-        if (dropdownRisto.style.display === "block") {
-          dropdownRisto.style.display = "none";
+    },
+    isCheck: function isCheck(event) {
+      if (!event.target.checked) {
+        this.takeResturantsandCategory(this.url);
+        this.check = [];
+      } else {
+        var valuecheck = event.target.value;
+        this.check.push(valuecheck);
+        valuecheck = '';
+        if (this.check.length > 0) {
+          var url = 'api/resturantsfiltred/' + this.check;
+          this.show(url);
         } else {
-          dropdownRisto.style.display = "block";
+          this.takeResturantsandCategory(this.url);
         }
-      });
+      }
     }
   },
   mounted: function mounted() {
-    this.takeResturantsandCategory();
+    console.log(this.check);
+    this.takeResturantsandCategory(this.url);
+    var data = new Date();
+    var times = data.toLocaleTimeString('it-IT');
+    console.log(times);
+    if (times.includes('14, 15, 16, 17, 18, 19, 20,21,22,23')) {
+      this.time = 'pm';
+    } else {
+      this.time = 'am';
+    }
+    ;
+
+    // ------------Script tendina categorie---------
+    console.log("Finalmente il console log");
+    var buttonCat = document.getElementById("Freccia-cat");
+    var dropdownCat = document.getElementById("tendina-categorie");
+    var buttonRisto = document.getElementById("Freccia-risto");
+    var dropdownRisto = document.getElementById("tendina-ristoranti");
+    buttonCat.addEventListener("click", function () {
+      if (dropdownCat.style.display === "block") {
+        dropdownCat.style.display = "none";
+      } else {
+        dropdownCat.style.display = "block";
+      }
+    });
+
+    // ------------Script tendina ristoranti---------
+    buttonRisto.addEventListener("click", function () {
+      if (dropdownRisto.style.display === "block") {
+        dropdownRisto.style.display = "none";
+      } else {
+        dropdownRisto.style.display = "block";
+      }
+    });
   }
 });
 
@@ -3135,17 +3171,25 @@ var render = function render() {
     attrs: {
       id: "tendina-categorie"
     }
-  }, _vm._l(_vm.categorie, function (categoria) {
-    return _c("div", {
+  }, [_c("ol", _vm._l(_vm.categorie, function (categoria) {
+    return _c("li", {
       key: categoria.id
-    }, [_c("ol", [_c("li", [_c("input", {
+    }, [_c("input", {
       attrs: {
         type: "checkbox",
         name: "",
         id: ""
+      },
+      domProps: {
+        value: categoria.id
+      },
+      on: {
+        change: function change($event) {
+          return _vm.isCheck($event);
+        }
       }
-    }), _vm._v(_vm._s(categoria.name))])])]);
-  }), 0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+    }), _vm._v(_vm._s(categoria.name))]);
+  }), 0)]), _vm._v(" "), _c("div", [_vm._m(1), _vm._v(" "), _c("div", {
     attrs: {
       id: "tendina-ristoranti"
     }
@@ -3159,7 +3203,7 @@ var render = function render() {
         id: ""
       }
     }), _vm._v(_vm._s(ristorante.name))])])]);
-  }), 0)])]), _vm._v(" "), _c("div", {
+  }), 0)])])]), _vm._v(" "), _c("div", {
     staticClass: "result"
   }, _vm._l(_vm.ristoranti, function (ristorante) {
     return _c("div", {
@@ -3167,9 +3211,19 @@ var render = function render() {
       staticClass: "card"
     }, [_c("div", {
       staticClass: "up"
-    }, [_vm._v("\n                    Foto\n                ")]), _vm._v(" "), _c("div", {
+    }, [_c("img", {
+      staticClass: "restaurant-image",
+      attrs: {
+        src: "storage/".concat(ristorante.image),
+        alt: ""
+      }
+    })]), _vm._v(" "), _vm.time === "am" ? _c("div", {
       staticClass: "center"
     }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.lunch_opening) + _vm._s(ristorante.lunch_closing))]), _vm._v(" "), _vm._m(2, true), _vm._v(" "), _c("div", {
+      staticClass: "blocco2"
+    })]) : _c("div", {
+      staticClass: "center"
+    }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.dinner_opening) + _vm._s(ristorante.dinner_closing))]), _vm._v(" "), _vm._m(3, true), _vm._v(" "), _c("div", {
       staticClass: "blocco2"
     })]), _vm._v(" "), _c("div", {
       staticClass: "down"
@@ -3208,6 +3262,12 @@ var staticRenderFns = [function () {
       alt: ""
     }
   })])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "blocco1"
+  }, [_c("h3", [_vm._v("-")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -7846,7 +7906,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1f01f057] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n#tendina-categorie[data-v-1f01f057] {\n  display: none;\n}\n#tendina-ristoranti[data-v-1f01f057] {\n  display: none;\n}\n.blocco1[data-v-1f01f057] {\n  width: 20px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 75px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.blocco2[data-v-1f01f057] {\n  width: 22px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 15px;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .filter .container-filter .ristoranti-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .ristoranti-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .ristoranti-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 20px;\n}\n#sec-main .result .card[data-v-1f01f057] {\n  width: 25%;\n  height: 290px;\n  border: 10px;\n}\n#sec-main .result .card .up[data-v-1f01f057] {\n  width: 100%;\n  flex-grow: 1;\n  background-color: rgba(0, 255, 42, 0.521);\n  border-radius: 10px 10px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-bottom: none;\n}\n#sec-main .result .card .center[data-v-1f01f057] {\n  width: 40%;\n  height: 20%;\n  position: absolute;\n  bottom: 46px;\n  right: 30px;\n  border-radius: 40px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.031372549);\n  background-color: white;\n}\n#sec-main .result .card .center p[data-v-1f01f057] {\n  font-weight: 800;\n}\n#sec-main .result .card .down[data-v-1f01f057] {\n  width: 100%;\n  height: 25%;\n  border-radius: 0px 0px 10px 10px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-top: none;\n}\n#sec-main .result .card .down .info-down[data-v-1f01f057] {\n  width: 50%;\n  height: 100%;\n}\n#sec-main .result .card .down .info-down h5[data-v-1f01f057] {\n  font-weight: 800;\n  padding: 5px 10px;\n}", ""]);
+exports.push([module.i, "*[data-v-1f01f057] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.restaurant-image[data-v-1f01f057] {\n  width: 100%;\n  height: 100%;\n}\n#tendina-categorie[data-v-1f01f057] {\n  display: none;\n}\n#tendina-ristoranti[data-v-1f01f057] {\n  display: none;\n}\n.blocco1[data-v-1f01f057] {\n  width: 20px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 75px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.blocco2[data-v-1f01f057] {\n  width: 22px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 15px;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  height: 1290px;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .filter .container-filter .ristoranti-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .ristoranti-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .ristoranti-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 20px;\n}\n#sec-main .result .card[data-v-1f01f057] {\n  width: 25%;\n  height: 290px;\n  border: 10px;\n}\n#sec-main .result .card .up[data-v-1f01f057] {\n  width: 100%;\n  height: 220px;\n  flex-grow: 1;\n  background-color: rgba(0, 255, 42, 0.521);\n  border-radius: 10px 10px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-bottom: none;\n}\n#sec-main .result .card .center[data-v-1f01f057] {\n  width: 40%;\n  height: 20%;\n  position: absolute;\n  bottom: 46px;\n  right: 30px;\n  border-radius: 40px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.031372549);\n  background-color: white;\n}\n#sec-main .result .card .center p[data-v-1f01f057] {\n  font-weight: 800;\n}\n#sec-main .result .card .down[data-v-1f01f057] {\n  width: 100%;\n  height: 25%;\n  border-radius: 0px 0px 10px 10px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-top: none;\n}\n#sec-main .result .card .down .info-down[data-v-1f01f057] {\n  width: 50%;\n  height: 100%;\n}\n#sec-main .result .card .down .info-down h5[data-v-1f01f057] {\n  font-weight: 800;\n  padding: 5px 10px;\n}", ""]);
 
 // exports
 
@@ -56407,8 +56467,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

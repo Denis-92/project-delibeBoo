@@ -7,6 +7,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Error;
+use Illuminate\Support\Facades\DB;
 
 class ResturantsController extends Controller
 {
@@ -27,6 +28,23 @@ class ResturantsController extends Controller
             ];
         };
 
+        return response()->json($data);
+    }
+    public function filtred($url)
+    {
+        $data = [];
+        $input = $url;
+        $inputvalue = explode(',', $input);
+        foreach ($inputvalue as $valore) {
+            $categories = Category::all();
+            foreach ($categories as $cat) {
+                if ($cat->id == $valore) {
+                    foreach ($cat->resturants as $item) {
+                        array_push($data, $item);
+                    }
+                }
+            }
+        };
         return response()->json($data);
     }
 }
