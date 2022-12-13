@@ -52,7 +52,7 @@
 
 
         <div  class="result">
-                <div class="card" v-for="ristorante in ristoranti" :key="ristorante.id">
+                <div class="card" v-for="ristorante, index in ristoranti" :key="index">
                     <div class="up">
                         <img class="restaurant-image" :src="`storage/${ristorante.image}`" alt="">
                     </div>
@@ -97,6 +97,8 @@
 
 
     methods:{
+
+
         takeResturantsandCategory(url){
             axios.get(url).then(({data})=>{
                 this.ristoranti=data.ristoranti
@@ -105,7 +107,9 @@
         },
         show(url){
             axios.get(url).then(({data})=>{
+                console.log(data)
                 this.ristoranti= data
+
             })
         },
         isCheck(event){
@@ -159,8 +163,8 @@
          console.log("Finalmente il console log")
             let buttonCat = document.getElementById("Freccia-cat")
             let dropdownCat = document.getElementById("tendina-categorie")
-            let buttonRisto = document.getElementById("Freccia-risto")
-            let dropdownRisto = document.getElementById("tendina-ristoranti")
+            //let buttonRisto = document.getElementById("Freccia-risto")
+            //let dropdownRisto = document.getElementById("tendina-ristoranti")
 
             buttonCat.addEventListener("click", function(){
                 if (dropdownCat.style.display === "block") {
@@ -172,14 +176,14 @@
             })
 
             // ------------Script tendina ristoranti---------
-            buttonRisto.addEventListener("click", function(){
+            /*buttonRisto.addEventListener("click", function(){
                 if (dropdownRisto.style.display === "block") {
                     dropdownRisto.style.display = "none";
                 } else {
                     dropdownRisto.style.display = "block";
                 }
 
-            })
+            })*/
     },
 }
 </script>
