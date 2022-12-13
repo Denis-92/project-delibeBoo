@@ -10,11 +10,13 @@
     </div>
     <div class="Dx">
         <button @click="riservata()">Area Riservata Ristoratori</button>
-        <div id="riservata" class="nonvisibile" >
-            <a class="btn btn-light" href="/login">Login</a>
-            <a class="btn btn-light" href="/register">Registrati</a>
-        </div>
 
+
+    </div>
+
+    <div id="riservata" class="nonvisibile" >
+            <a class="btn " href="/login">Login</a>
+            <a class="btn " href="/register">Registrati</a>
     </div>
 
 </div>
@@ -126,9 +128,12 @@ methods:{
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 10px;
-    border-radius: 20%;
+    padding: 10px 53px;
+    border-radius: 7px;
     z-index: 800;
+    position: absolute;
+    top: 50px;
+    right: 21px;
 }
 .nonvisibile{
     display: none;
