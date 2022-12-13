@@ -1944,7 +1944,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'HeaderGuest',
-  methods: {}
+  data: function data() {
+    return {
+      menu: false
+    };
+  },
+  methods: {
+    riservata: function riservata() {
+      var div = document.getElementById('riservata');
+      if (!this.menu) {
+        div.className = "visibile";
+        this.menu = true;
+      } else {
+        div.className = "nonvisibile";
+        this.menu = false;
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -2044,20 +2060,29 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
       axios.get(url).then(function (_ref2) {
         var data = _ref2.data;
+        console.log(data);
         _this2.ristoranti = data;
       });
     },
     isCheck: function isCheck(event) {
       if (!event.target.checked) {
-        this.takeResturantsandCategory(this.url);
-        this.check = [];
+        var value = event.target.value;
+        this.check = this.check.filter(function (item) {
+          return item != value;
+        });
+        if (this.check.length > 0) {
+          var url = 'api/resturantsfiltred/' + this.check;
+          this.show(url);
+        } else {
+          this.takeResturantsandCategory(this.url);
+        }
       } else {
         var valuecheck = event.target.value;
         this.check.push(valuecheck);
         valuecheck = '';
         if (this.check.length > 0) {
-          var url = 'api/resturantsfiltred/' + this.check;
-          this.show(url);
+          var _url = 'api/resturantsfiltred/' + this.check;
+          this.show(_url);
         } else {
           this.takeResturantsandCategory(this.url);
         }
@@ -2081,8 +2106,9 @@ __webpack_require__.r(__webpack_exports__);
     console.log("Finalmente il console log");
     var buttonCat = document.getElementById("Freccia-cat");
     var dropdownCat = document.getElementById("tendina-categorie");
-    var buttonRisto = document.getElementById("Freccia-risto");
-    var dropdownRisto = document.getElementById("tendina-ristoranti");
+    //let buttonRisto = document.getElementById("Freccia-risto")
+    //let dropdownRisto = document.getElementById("tendina-ristoranti")
+
     buttonCat.addEventListener("click", function () {
       if (dropdownCat.style.display === "block") {
         dropdownCat.style.display = "none";
@@ -2092,13 +2118,13 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     // ------------Script tendina ristoranti---------
-    buttonRisto.addEventListener("click", function () {
-      if (dropdownRisto.style.display === "block") {
-        dropdownRisto.style.display = "none";
-      } else {
-        dropdownRisto.style.display = "block";
-      }
-    });
+    /*buttonRisto.addEventListener("click", function(){
+        if (dropdownRisto.style.display === "block") {
+            dropdownRisto.style.display = "none";
+        } else {
+            dropdownRisto.style.display = "block";
+        }
+      })*/
   }
 });
 
@@ -2688,7 +2714,17 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("header", [_vm._m(0), _vm._v(" "), _c("div", {
+  return _c("header", [_c("div", {
+    staticClass: "Up"
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "Dx"
+  }, [_c("button", {
+    on: {
+      click: function click($event) {
+        return _vm.riservata();
+      }
+    }
+  }, [_vm._v("Area Riservata Ristoratori")]), _vm._v(" "), _vm._m(1)])]), _vm._v(" "), _c("div", {
     staticClass: "Down"
   }, [_c("div", {
     staticClass: "container-center"
@@ -2696,7 +2732,7 @@ var render = function render() {
     staticClass: "barra"
   }, [_c("div", {
     staticClass: "BSX"
-  }), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("div", {
     staticClass: "BDX"
   }, [_c("router-link", {
     attrs: {
@@ -2706,7 +2742,7 @@ var render = function render() {
     attrs: {
       id: "btn-search"
     }
-  }, [_vm._v("Cerca")])])], 1)]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("img", {
+  }, [_vm._v("Cerca")])])], 1)]), _vm._v(" "), _vm._m(3)]), _vm._v(" "), _c("img", {
     attrs: {
       id: "foto1",
       src: "images/HeaderGuest/busta.jpg",
@@ -2724,29 +2760,32 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "Up"
-  }, [_c("div", {
     staticClass: "Sx"
   }, [_c("img", {
     attrs: {
       src: "images/HeaderGuest/deliveroo-logo.svg",
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "Dx"
-  }, [_c("button", [_vm._v("Area Riservata Ristoratori")]), _vm._v(" "), _c("div", {
+  })]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "nonvisibile",
     attrs: {
       id: "riservata"
     }
   }, [_c("a", {
+    staticClass: "btn btn-light",
     attrs: {
       href: "/login"
     }
   }, [_vm._v("Login")]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-light",
     attrs: {
       href: "/register"
     }
-  }, [_vm._v("Registrati")])])])]);
+  }, [_vm._v("Registrati")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -3189,25 +3228,11 @@ var render = function render() {
         }
       }
     }), _vm._v(_vm._s(categoria.name))]);
-  }), 0)]), _vm._v(" "), _c("div", [_vm._m(1), _vm._v(" "), _c("div", {
-    attrs: {
-      id: "tendina-ristoranti"
-    }
-  }, _vm._l(_vm.ristoranti, function (ristorante) {
-    return _c("div", {
-      key: ristorante.id
-    }, [_c("ol", [_c("li", [_c("input", {
-      attrs: {
-        type: "checkbox",
-        name: "",
-        id: ""
-      }
-    }), _vm._v(_vm._s(ristorante.name))])])]);
   }), 0)])])]), _vm._v(" "), _c("div", {
     staticClass: "result"
-  }, _vm._l(_vm.ristoranti, function (ristorante) {
+  }, _vm._l(_vm.ristoranti, function (ristorante, index) {
     return _c("div", {
-      key: ristorante.id,
+      key: index,
       staticClass: "card"
     }, [_c("div", {
       staticClass: "up"
@@ -3219,13 +3244,9 @@ var render = function render() {
       }
     })]), _vm._v(" "), _vm.time === "am" ? _c("div", {
       staticClass: "center"
-    }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.lunch_opening) + _vm._s(ristorante.lunch_closing))]), _vm._v(" "), _vm._m(2, true), _vm._v(" "), _c("div", {
-      staticClass: "blocco2"
-    })]) : _c("div", {
+    }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.lunch_opening) + _vm._s(ristorante.lunch_closing))])]) : _c("div", {
       staticClass: "center"
-    }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.dinner_opening) + _vm._s(ristorante.dinner_closing))]), _vm._v(" "), _vm._m(3, true), _vm._v(" "), _c("div", {
-      staticClass: "blocco2"
-    })]), _vm._v(" "), _c("div", {
+    }, [_c("p", [_vm._v("Orari di apertura")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(ristorante.dinner_opening) + _vm._s(ristorante.dinner_closing))])]), _vm._v(" "), _c("div", {
       staticClass: "down"
     }, [_c("div", {
       staticClass: "info-down"
@@ -3247,33 +3268,6 @@ var staticRenderFns = [function () {
       alt: ""
     }
   })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "ristoranti-solo"
-  }, [_c("h4", [_vm._v("Ristoranti")]), _vm._v(" "), _c("button", {
-    attrs: {
-      id: "Freccia-risto"
-    }
-  }, [_c("img", {
-    attrs: {
-      src: "images/ResturantImage/Freccia.png",
-      alt: ""
-    }
-  })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "blocco1"
-  }, [_c("h3", [_vm._v("-")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "blocco1"
-  }, [_c("h3", [_vm._v("-")])]);
 }];
 render._withStripped = true;
 
@@ -7811,7 +7805,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@media screen and (max-width: 1250px) {\n#foto1[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n}\n@media screen and (max-width: 1050px) {\n#foto1[data-v-9a8d6ea0] {\n    display: none;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 90% !important;\n}\n.Down[data-v-9a8d6ea0] {\n    justify-content: flex-start !important;\n}\n.Down .container-center[data-v-9a8d6ea0] {\n    width: 50%;\n    margin-left: 10px;\n}\n.Down .container-center h3[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center p[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center .barra[data-v-9a8d6ea0] {\n    margin: 0 !important;\n    width: 90% !important;\n}\n}\n#btn-search[data-v-9a8d6ea0] {\n  width: 133px;\n  height: 57px;\n  background-color: #00ccbc;\n}\n#riservata[data-v-9a8d6ea0] {\n  display: none;\n}\n*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  z-index: 500;\n  position: relative;\n}\nheader .Down #foto1[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down #foto2[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n  z-index: 500;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: #00ccbc;\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 60%;\n  height: 20%;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 30px 0px 0px 30px;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .centro input[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 25%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 0px 30px 30px 0px;\n  display: flex;\n  align-items: center;\n}\nheader .Down .container-center .barra .BDX button[data-v-9a8d6ea0] {\n  width: 97%;\n  height: 90%;\n  border: none;\n  border-radius: 30px;\n  background-color: #00ccbc;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 1250px) {\n#foto1[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 70% !important;\n}\n}\n@media screen and (max-width: 1050px) {\n#foto1[data-v-9a8d6ea0] {\n    display: none;\n}\n#foto2[data-v-9a8d6ea0] {\n    height: 90% !important;\n}\n.Down[data-v-9a8d6ea0] {\n    justify-content: flex-start !important;\n}\n.Down .container-center[data-v-9a8d6ea0] {\n    width: 50%;\n    margin-left: 10px;\n}\n.Down .container-center h3[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center p[data-v-9a8d6ea0] {\n    text-align: start;\n}\n.Down .container-center .barra[data-v-9a8d6ea0] {\n    margin: 0 !important;\n    width: 90% !important;\n}\n}\n.visibile[data-v-9a8d6ea0] {\n  display: block;\n  display: flex;\n  flex-direction: column;\n  background-color: white;\n  padding: 10px;\n  border-radius: 20%;\n}\n.nonvisibile[data-v-9a8d6ea0] {\n  display: none;\n}\n#btn-search[data-v-9a8d6ea0] {\n  width: 133px;\n  height: 57px;\n  background-color: #00ccbc;\n}\n*[data-v-9a8d6ea0] {\n  font-family: \"Roboto\", sans-serif;\n}\nheader[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 60vh;\n  background-color: rgb(0, 0, 0);\n}\nheader .Up[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-around;\n}\nheader .Up .Sx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n}\nheader .Up .Sx img[data-v-9a8d6ea0] {\n  width: 120px;\n}\nheader .Up .Dx[data-v-9a8d6ea0] {\n  width: 47%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 20px;\n}\nheader .Up .Dx button[data-v-9a8d6ea0] {\n  border: none;\n  border-radius: 4px;\n  padding: 1% 2.2% 1% 2.2%;\n}\nheader .Down[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 90%;\n  display: flex;\n  justify-content: center;\n  z-index: 500;\n  position: relative;\n}\nheader .Down #foto1[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down #foto2[data-v-9a8d6ea0] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: 100;\n  height: 100%;\n}\nheader .Down .container-center[data-v-9a8d6ea0] {\n  padding-top: 5%;\n  padding-bottom: 5%;\n  display: flex;\n  justify-content: space-around;\n  flex-direction: column;\n  text-align: center;\n  z-index: 500;\n}\nheader .Down .container-center h3[data-v-9a8d6ea0] {\n  color: white;\n  font-size: 2.5rem;\n}\nheader .Down .container-center p[data-v-9a8d6ea0] {\n  color: rgba(236, 236, 236, 0.822);\n  font-size: 1.1rem;\n}\nheader .Down .container-center a[data-v-9a8d6ea0] {\n  color: #00ccbc;\n}\nheader .Down .container-center .barra[data-v-9a8d6ea0] {\n  width: 60%;\n  height: 20%;\n  margin: 0 auto;\n  display: flex;\n}\nheader .Down .container-center .barra .BSX[data-v-9a8d6ea0] {\n  width: 10%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 30px 0px 0px 30px;\n}\nheader .Down .container-center .barra .centro[data-v-9a8d6ea0] {\n  flex-grow: 1;\n  background-color: blue;\n}\nheader .Down .container-center .barra .centro input[data-v-9a8d6ea0] {\n  width: 100%;\n  height: 100%;\n  border: none;\n}\nheader .Down .container-center .barra .BDX[data-v-9a8d6ea0] {\n  width: 25%;\n  height: 100%;\n  background-color: rgb(255, 255, 255);\n  border-radius: 0px 30px 30px 0px;\n  display: flex;\n  align-items: center;\n}\nheader .Down .container-center .barra .BDX button[data-v-9a8d6ea0] {\n  width: 97%;\n  height: 90%;\n  border: none;\n  border-radius: 30px;\n  background-color: #00ccbc;\n}\nheader .Down .container-center .info-last p[data-v-9a8d6ea0], header .Down .container-center a[data-v-9a8d6ea0] {\n  font-size: 0.9rem;\n}", ""]);
 
 // exports
 
@@ -7906,7 +7900,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1f01f057] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.restaurant-image[data-v-1f01f057] {\n  width: 100%;\n  height: 100%;\n}\n#tendina-categorie[data-v-1f01f057] {\n  display: none;\n}\n#tendina-ristoranti[data-v-1f01f057] {\n  display: none;\n}\n.blocco1[data-v-1f01f057] {\n  width: 20px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 75px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.blocco2[data-v-1f01f057] {\n  width: 22px;\n  height: 15px;\n  background-color: white;\n  position: absolute;\n  bottom: 11px;\n  right: 15px;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  height: 1290px;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .filter .container-filter .ristoranti-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .ristoranti-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .ristoranti-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 20px;\n}\n#sec-main .result .card[data-v-1f01f057] {\n  width: 25%;\n  height: 290px;\n  border: 10px;\n}\n#sec-main .result .card .up[data-v-1f01f057] {\n  width: 100%;\n  height: 220px;\n  flex-grow: 1;\n  background-color: rgba(0, 255, 42, 0.521);\n  border-radius: 10px 10px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-bottom: none;\n}\n#sec-main .result .card .center[data-v-1f01f057] {\n  width: 40%;\n  height: 20%;\n  position: absolute;\n  bottom: 46px;\n  right: 30px;\n  border-radius: 40px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.031372549);\n  background-color: white;\n}\n#sec-main .result .card .center p[data-v-1f01f057] {\n  font-weight: 800;\n}\n#sec-main .result .card .down[data-v-1f01f057] {\n  width: 100%;\n  height: 25%;\n  border-radius: 0px 0px 10px 10px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-top: none;\n}\n#sec-main .result .card .down .info-down[data-v-1f01f057] {\n  width: 50%;\n  height: 100%;\n}\n#sec-main .result .card .down .info-down h5[data-v-1f01f057] {\n  font-weight: 800;\n  padding: 5px 10px;\n}", ""]);
+exports.push([module.i, "*[data-v-1f01f057] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.restaurant-image[data-v-1f01f057] {\n  width: 100%;\n  height: 100%;\n}\n#tendina-categorie[data-v-1f01f057] {\n  display: none;\n}\n#tendina-ristoranti[data-v-1f01f057] {\n  display: none;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  height: 1290px;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .filter .container-filter .ristoranti-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .ristoranti-solo button[data-v-1f01f057] {\n  border: none;\n}\n#sec-main .filter .container-filter .ristoranti-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 20px;\n}\n#sec-main .result .card[data-v-1f01f057] {\n  width: 25%;\n  height: 290px;\n  border: 10px;\n}\n#sec-main .result .card .up[data-v-1f01f057] {\n  width: 100%;\n  height: 220px;\n  flex-grow: 1;\n  background-color: rgba(0, 255, 42, 0.521);\n  border-radius: 10px 10px 0px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-bottom: none;\n}\n#sec-main .result .card .center[data-v-1f01f057] {\n  width: 40%;\n  height: 20%;\n  position: absolute;\n  bottom: 46px;\n  right: 30px;\n  border-radius: 40px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(0, 0, 0, 0.031372549);\n  background-color: white;\n}\n#sec-main .result .card .center p[data-v-1f01f057] {\n  font-weight: 800;\n}\n#sec-main .result .card .down[data-v-1f01f057] {\n  width: 100%;\n  height: 25%;\n  border-radius: 0px 0px 10px 10px;\n  border: 1px solid rgba(0, 0, 0, 0.0901960784);\n  border-top: none;\n}\n#sec-main .result .card .down .info-down[data-v-1f01f057] {\n  width: 50%;\n  height: 100%;\n}\n#sec-main .result .card .down .info-down h5[data-v-1f01f057] {\n  font-weight: 800;\n  padding: 5px 10px;\n}", ""]);
 
 // exports
 
@@ -56467,8 +56461,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

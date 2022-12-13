@@ -59,14 +59,12 @@
                     <div v-if="time === 'am'" class="center">
                         <p>Orari di apertura</p>
                         <p>{{ristorante.lunch_opening}}{{ristorante.lunch_closing}}</p>
-                        <div class="blocco1"><h3>-</h3></div>
-                        <div class="blocco2"></div>
+
                     </div>
                     <div v-else class="center">
                         <p>Orari di apertura</p>
                         <p>{{ristorante.dinner_opening}}{{ristorante.dinner_closing}}</p>
-                        <div class="blocco1"><h3>-</h3></div>
-                        <div class="blocco2"></div>
+
                     </div>
                     <div class="down">
                         <div class="info-down">
@@ -209,25 +207,7 @@
     display: none;
 }
 
-.blocco1{
-    width: 20px;
-    height: 15px;
-    background-color: white;
-    position: absolute;
-    bottom: 11px;
-    right: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.blocco2{
-    width: 22px;
-    height: 15px;
-    background-color: white;
-    position: absolute;
-    bottom: 11px;
-    right: 15px;
-}
+
 
 
 
