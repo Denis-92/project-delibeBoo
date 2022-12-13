@@ -17,7 +17,7 @@
                 <div id="tendina-categorie">
                     <div v-for="categoria in categorie" :key="categoria.id">                 
                         <ol >
-                          <li>{{ categoria.name }}</li>
+                          <li><input type="checkbox" name="" id="">{{ categoria.name }}</li>
                          </ol> 
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 <div id="tendina-ristoranti">
                     <div v-for="ristorante in ristoranti" :key="ristorante.id">                 
                         <ol >
-                          <li>{{ ristorante.name }}</li>
+                          <li><input type="checkbox" name="" id="">{{ ristorante.name }}</li>
                         </ol> 
                     </div>
                 </div>
@@ -96,6 +96,7 @@
                 
             })
 
+             // ------------Script tendina ristoranti---------
             buttonRisto.addEventListener("click", function(){
                 if (dropdownRisto.style.display === "block") {
                     dropdownRisto.style.display = "none";
@@ -104,7 +105,7 @@
                 }
                 
             })
-            // ------------Script tendina categorie 2---------
+           
 
         }
     },

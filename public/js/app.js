@@ -2050,6 +2050,8 @@ __webpack_require__.r(__webpack_exports__);
           dropdownCat.style.display = "block";
         }
       });
+
+      // ------------Script tendina ristoranti---------
       buttonRisto.addEventListener("click", function () {
         if (dropdownRisto.style.display === "block") {
           dropdownRisto.style.display = "none";
@@ -2057,7 +2059,6 @@ __webpack_require__.r(__webpack_exports__);
           dropdownRisto.style.display = "block";
         }
       });
-      // ------------Script tendina categorie 2---------
     }
   },
   mounted: function mounted() {
@@ -3130,7 +3131,13 @@ var render = function render() {
   }, _vm._l(_vm.categorie, function (categoria) {
     return _c("div", {
       key: categoria.id
-    }, [_c("ol", [_c("li", [_vm._v(_vm._s(categoria.name))])])]);
+    }, [_c("ol", [_c("li", [_c("input", {
+      attrs: {
+        type: "checkbox",
+        name: "",
+        id: ""
+      }
+    }), _vm._v(_vm._s(categoria.name))])])]);
   }), 0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
     attrs: {
       id: "tendina-ristoranti"
@@ -3138,7 +3145,13 @@ var render = function render() {
   }, _vm._l(_vm.ristoranti, function (ristorante) {
     return _c("div", {
       key: ristorante.id
-    }, [_c("ol", [_c("li", [_vm._v(_vm._s(ristorante.name))])])]);
+    }, [_c("ol", [_c("li", [_c("input", {
+      attrs: {
+        type: "checkbox",
+        name: "",
+        id: ""
+      }
+    }), _vm._v(_vm._s(ristorante.name))])])]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "result"
   })]);
