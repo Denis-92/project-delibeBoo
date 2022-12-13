@@ -192,9 +192,5 @@
 
 
 <script>
-export default {
-    mounted() {
-        console.log('js Ok')
-    }
-}
+
 </script>
