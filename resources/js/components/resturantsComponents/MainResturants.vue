@@ -63,7 +63,9 @@
                         <div class="blocco2"></div>
                     </div>
                     <div class="down">
-                        <h5>{{ristorante.name}}</h5>
+                        <div class="info-down">
+                            <h5>{{ristorante.name}}</h5>
+                        </div>
                     </div>
                 </div>
             
@@ -90,12 +92,12 @@
 }
 
 .blocco1{
-    width: 21px;
+    width: 20px;
     height: 15px;
-    background-color: #ffff;
+    background-color: white;
     position: absolute;
     bottom: 11px;
-    right: 78px;
+    right: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,10 +105,10 @@
 .blocco2{
     width: 22px;
     height: 15px;
-    background-color: #ffff;
+    background-color: white;
     position: absolute;
     bottom: 11px;
-    right: 18px;
+    right: 15px;
 }
 
 
@@ -139,6 +141,9 @@
                 align-items: center;
 
                 border-bottom: 1px solid rgb(219, 219, 219);
+                button{
+                    border: none;
+                }
                 img{
                     height: 15px;
                     transform: rotate(270deg);
@@ -152,6 +157,9 @@
                 justify-content: space-between;
                 align-items: center;
                 border-bottom: 1px solid rgb(219, 219, 219);
+                button{
+                    border: none;
+                }
                 img{
                     height: 15px;
                     transform: rotate(270deg);
@@ -170,6 +178,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 10px;
+        padding: 20px;
         // background-color: green;
         .card{
             width: 25%;
@@ -199,6 +208,9 @@
                 align-items: center;
                 border: 1px solid #00000008;
                 background-color: white;
+                p{
+                    font-weight: 800;
+                }
             }
             .down{
                 width: 100%;
@@ -207,6 +219,15 @@
                 border-radius: 0px 0px 10px 10px;
                 border: 1px solid #00000017;
                 border-top: none;
+                .info-down{
+                    width: 50%;
+                    height: 100%;
+                    // background-color: rgba(255, 0, 0, 0.308);
+                    h5{
+                        font-weight: 800;
+                        padding: 5px 10px;
+                    }
+                }
             }
         }
     }
@@ -258,12 +279,19 @@
             let dropdownRisto = document.getElementById("tendina-ristoranti")
 
 
+            
+
+
+
 
             buttonCat.addEventListener("click", function(){
                 if (dropdownCat.style.display === "block") {
                     dropdownCat.style.display = "none";
+                    
+                    
                 } else {
                     dropdownCat.style.display = "block";
+                    
                 }
                 
             })
