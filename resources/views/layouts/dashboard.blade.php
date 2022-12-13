@@ -19,12 +19,16 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-info bg-info flex-md-nowrap p-3 header">
         <img src="{{ asset('images/logo_deliveboo.webp') }}" class="deliveboo_icon" alt="">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-white" href="{{ route('login') }}">
-            <h3>Deliveboo</h3>
-        </a>
+        <div class="d-flex flex-column"><a class="navbar-brand col-sm-3 col-md-2 mr-0 text-white"
+                href="{{ route('login') }}">
+                <h3>Deliveboo</h3>
+            </a>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-white" href="/">Vai al Sito</a>
+        </div>
         <ul class="navbar-nav px-3 ml-auto">
 
             @auth
+
                 <div class="bg-white d-flex align-items-center border rounded">
                     <li class="nav-item text-success py-0 pl-3 d-flex">
                         Autorizzato:

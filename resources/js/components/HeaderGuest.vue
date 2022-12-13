@@ -9,14 +9,13 @@
         <img src="images/HeaderGuest/deliveroo-logo.svg" alt="">
     </div>
     <div class="Dx">
-        <button>Area Riservata Ristoratori</button>
-        <div id="riservata" >
-            <a href="/login">Login</a>
-            <a href="/register">Registrati</a>
+        <button @click="riservata()">Area Riservata Ristoratori</button>
+        <div id="riservata" class="nonvisibile" >
+            <a class="btn btn-light" href="/login">Login</a>
+            <a class="btn btn-light" href="/register">Registrati</a>
         </div>
 
     </div>
-
 
 </div>
 
@@ -57,8 +56,23 @@
 <script>
   export default {
   name:'HeaderGuest',
+  data(){
+    return{
+        menu:false
+    }
+  },
 methods:{
+    riservata(){
+        let div = document.getElementById('riservata')
+        if(!this.menu){
+            div.className="visibile"
+            this.menu=true
+        }else{
+            div.className="nonvisibile"
+            this.menu=false
+        }
 
+    }
 }
   }
 
@@ -107,6 +121,18 @@ methods:{
 
 }
 
+.visibile{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20%;
+}
+.nonvisibile{
+    display: none;
+}
+
 #btn-search{
     width: 133px;
     height: 57px;
@@ -114,10 +140,6 @@ methods:{
 }
 
 
-
-#riservata{
-    display: none;
-}
 
 
 
