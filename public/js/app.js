@@ -2036,16 +2036,28 @@ __webpack_require__.r(__webpack_exports__);
         _this.ristoranti = data.ristoranti;
         _this.categorie = data.categorie;
       });
+
+      // ------------Script tendina categorie---------
       console.log("Finalmente il console log");
-      var button = document.getElementById("Freccia");
-      var dropdown = document.getElementById("tendina");
-      button.addEventListener("click", function () {
-        if (dropdown.style.display === "block") {
-          dropdown.style.display = "none";
+      var buttonCat = document.getElementById("Freccia-cat");
+      var dropdownCat = document.getElementById("tendina-categorie");
+      var buttonRisto = document.getElementById("Freccia-risto");
+      var dropdownRisto = document.getElementById("tendina-ristoranti");
+      buttonCat.addEventListener("click", function () {
+        if (dropdownCat.style.display === "block") {
+          dropdownCat.style.display = "none";
         } else {
-          dropdown.style.display = "block";
+          dropdownCat.style.display = "block";
         }
       });
+      buttonRisto.addEventListener("click", function () {
+        if (dropdownRisto.style.display === "block") {
+          dropdownRisto.style.display = "none";
+        } else {
+          dropdownRisto.style.display = "block";
+        }
+      });
+      // ------------Script tendina categorie 2---------
     }
   },
   mounted: function mounted() {
@@ -3113,12 +3125,20 @@ var render = function render() {
     staticClass: "container-filter"
   }, [_vm._m(0), _vm._v(" "), _c("div", {
     attrs: {
-      id: "tendina"
+      id: "tendina-categorie"
     }
   }, _vm._l(_vm.categorie, function (categoria) {
     return _c("div", {
       key: categoria.id
     }, [_c("ol", [_c("li", [_vm._v(_vm._s(categoria.name))])])]);
+  }), 0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "tendina-ristoranti"
+    }
+  }, _vm._l(_vm.ristoranti, function (ristorante) {
+    return _c("div", {
+      key: ristorante.id
+    }, [_c("ol", [_c("li", [_vm._v(_vm._s(ristorante.name))])])]);
   }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "result"
   })]);
@@ -3130,7 +3150,22 @@ var staticRenderFns = [function () {
     staticClass: "categorie-solo"
   }, [_c("h4", [_vm._v("Categorie")]), _vm._v(" "), _c("button", {
     attrs: {
-      id: "Freccia"
+      id: "Freccia-cat"
+    }
+  }, [_c("img", {
+    attrs: {
+      src: "images/ResturantImage/Freccia.png",
+      alt: ""
+    }
+  })])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "ristoranti-solo"
+  }, [_c("h4", [_vm._v("Ristoranti")]), _vm._v(" "), _c("button", {
+    attrs: {
+      id: "Freccia-risto"
     }
   }, [_c("img", {
     attrs: {
@@ -7769,7 +7804,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#tendina[data-v-1f01f057] {\n  display: none;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  height: 100vh;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  height: 100%;\n  border-right: 1px solid rgb(221, 221, 221);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, "#tendina-categorie[data-v-1f01f057] {\n  display: none;\n}\n#tendina-ristoranti[data-v-1f01f057] {\n  display: none;\n}\n#sec-main[data-v-1f01f057] {\n  width: 100%;\n  height: 100vh;\n  display: flex;\n}\n#sec-main .filter[data-v-1f01f057] {\n  width: 18%;\n  height: 100%;\n  border-right: 1px solid rgb(221, 221, 221);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n#sec-main .filter .container-filter[data-v-1f01f057] {\n  width: 60%;\n  height: 100%;\n}\n#sec-main .filter .container-filter .categorie-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .categorie-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .filter .container-filter .ristoranti-solo[data-v-1f01f057] {\n  width: 100%;\n  height: 10%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgb(219, 219, 219);\n}\n#sec-main .filter .container-filter .ristoranti-solo img[data-v-1f01f057] {\n  height: 15px;\n  transform: rotate(270deg);\n}\n#sec-main .result[data-v-1f01f057] {\n  width: 82%;\n  height: 100%;\n}", ""]);
 
 // exports
 

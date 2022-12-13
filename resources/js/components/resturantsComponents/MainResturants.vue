@@ -2,24 +2,45 @@
     <section id="sec-main">
         <div class="filter">
             <div class="container-filter">
+
+                <!-- ------Categorie Titolo----- -->
                 <div class="categorie-solo">
                     <h4>Categorie</h4>
 
-
-
-                    <button id="Freccia">
+                    <button id="Freccia-cat">
                         <img  src="images/ResturantImage/Freccia.png" alt="">
                     </button>
                     
                 </div>
 
-
-
-                <div id="tendina">
+                 <!-- --------Categorie Tendina a scomparsa---------- -->
+                <div id="tendina-categorie">
                     <div v-for="categoria in categorie" :key="categoria.id">                 
                         <ol >
                           <li>{{ categoria.name }}</li>
                          </ol> 
+                    </div>
+                </div>
+
+
+
+
+                <!-- -------- ristoranti Titolo----- -->
+                <div class="ristoranti-solo">
+                    <h4>Ristoranti</h4>
+
+                    <button id="Freccia-risto">
+                        <img  src="images/ResturantImage/Freccia.png" alt="">
+                    </button>
+                </div>
+
+
+                <!-- -----------ristoranti Tendina a scomparsa---------- -->
+                <div id="tendina-ristoranti">
+                    <div v-for="ristorante in ristoranti" :key="ristorante.id">                 
+                        <ol >
+                          <li>{{ ristorante.name }}</li>
+                        </ol> 
                     </div>
                 </div>
 
@@ -54,18 +75,37 @@
                 
 
             })
-            console.log("Finalmente il console log")
-            let button = document.getElementById("Freccia")
-            let dropdown = document.getElementById("tendina")
 
-            button.addEventListener("click", function(){
-                if (dropdown.style.display === "block") {
-                    dropdown.style.display = "none";
+            // ------------Script tendina categorie---------
+            console.log("Finalmente il console log")
+            let buttonCat = document.getElementById("Freccia-cat")
+            let dropdownCat = document.getElementById("tendina-categorie")
+
+
+            let buttonRisto = document.getElementById("Freccia-risto")
+            let dropdownRisto = document.getElementById("tendina-ristoranti")
+
+
+
+            buttonCat.addEventListener("click", function(){
+                if (dropdownCat.style.display === "block") {
+                    dropdownCat.style.display = "none";
                 } else {
-                    dropdown.style.display = "block";
+                    dropdownCat.style.display = "block";
                 }
                 
             })
+
+            buttonRisto.addEventListener("click", function(){
+                if (dropdownRisto.style.display === "block") {
+                    dropdownRisto.style.display = "none";
+                } else {
+                    dropdownRisto.style.display = "block";
+                }
+                
+            })
+            // ------------Script tendina categorie 2---------
+
         }
     },
 
@@ -85,9 +125,17 @@
 <style scoped lang="scss">
 
 
-#tendina{
+#tendina-categorie{
     display: none;
 }
+#tendina-ristoranti{
+    display: none;
+}
+
+
+
+
+
 
 #sec-main{
     width: 100%;
@@ -115,6 +163,19 @@
                 justify-content: space-between;
                 align-items: center;
 
+                border-bottom: 1px solid rgb(219, 219, 219);
+                img{
+                    height: 15px;
+                    transform: rotate(270deg);
+                }
+            }
+
+            .ristoranti-solo{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 border-bottom: 1px solid rgb(219, 219, 219);
                 img{
                     height: 15px;
