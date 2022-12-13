@@ -44,16 +44,188 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
 
 
-        <div class="result"></div>
+        <div class="result">
+
+
+           
+                <div class="card" v-for="ristorante in ristoranti" :key="ristorante.id">
+                    <div class="up">
+                        Foto
+                    </div>
+                    <div class="center">
+                        <p>Orari di apertura</p>
+                        <p>{{ristorante.lunch_opening}}{{ristorante.lunch_closing}}</p>
+                        <div class="blocco1"><h3>-</h3></div>
+                        <div class="blocco2"></div>
+                    </div>
+                    <div class="down">
+                        <h5>{{ristorante.name}}</h5>
+                    </div>
+                </div>
+            
+
+
+        </div>
     </section>
 </template>
 
 <!-- ------------------------------- -->
+
+<style scoped lang="scss">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#tendina-categorie{
+    display: none;
+}
+#tendina-ristoranti{
+    display: none;
+}
+
+.blocco1{
+    width: 21px;
+    height: 15px;
+    background-color: #ffff;
+    position: absolute;
+    bottom: 11px;
+    right: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blocco2{
+    width: 22px;
+    height: 15px;
+    background-color: #ffff;
+    position: absolute;
+    bottom: 11px;
+    right: 18px;
+}
+
+
+
+
+#sec-main{
+    width: 100%;
+    // height: 100vh;
+    // background-color: rgba(255, 217, 0, 0.445);
+    display: flex;
+
+    .filter{
+        width: 18%;
+        // height: 100%;
+        // background-color: greenyellow;
+        // border-right: 1px solid rgb(221, 221, 221);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .container-filter{
+            width: 60%;
+            height: 100%;
+            // background-color: red;
+            .categorie-solo{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                border-bottom: 1px solid rgb(219, 219, 219);
+                img{
+                    height: 15px;
+                    transform: rotate(270deg);
+                }
+            }
+
+            .ristoranti-solo{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(219, 219, 219);
+                img{
+                    height: 15px;
+                    transform: rotate(270deg);
+                }
+            }
+
+
+
+        }
+    }
+
+    .result{
+        width: 82%;
+        // height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        // background-color: green;
+        .card{
+            width: 25%;
+             height: 290px;
+            // background-color: red;
+            border: 10px;
+            
+            .up{
+                width: 100%;
+                flex-grow: 1;
+                background-color: rgba(0, 255, 42, 0.521);
+                border-radius: 10px 10px 0px 0px;
+                border: 1px solid #00000017;
+                border-bottom: none;
+            }
+            .center{
+                width: 40%;
+                height: 20%;
+                // background-color: red;
+                position: absolute;
+                bottom: 46px;
+                right: 30px;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #00000008;
+                background-color: white;
+            }
+            .down{
+                width: 100%;
+                height: 25%;
+                // background-color: blueviolet;
+                border-radius: 0px 0px 10px 10px;
+                border: 1px solid #00000017;
+                border-top: none;
+            }
+        }
+    }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
  export default {
@@ -123,79 +295,7 @@
 
 
 
-<style scoped lang="scss">
 
-
-#tendina-categorie{
-    display: none;
-}
-#tendina-ristoranti{
-    display: none;
-}
-
-
-
-
-
-
-#sec-main{
-    width: 100%;
-    height: 100vh;
-    // background-color: rgba(255, 217, 0, 0.445);
-    display: flex;
-
-    .filter{
-        width: 18%;
-        height: 100%;
-        // background-color: greenyellow;
-        border-right: 1px solid rgb(221, 221, 221);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        .container-filter{
-            width: 60%;
-            height: 100%;
-            // background-color: red;
-            .categorie-solo{
-                width: 100%;
-                height: 10%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                border-bottom: 1px solid rgb(219, 219, 219);
-                img{
-                    height: 15px;
-                    transform: rotate(270deg);
-                }
-            }
-
-            .ristoranti-solo{
-                width: 100%;
-                height: 10%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid rgb(219, 219, 219);
-                img{
-                    height: 15px;
-                    transform: rotate(270deg);
-                }
-            }
-
-
-
-        }
-    }
-
-    .result{
-        width: 82%;
-        height: 100%;
-        // background-color: green;
-    }
-}
-</style>
 
 
 

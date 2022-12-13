@@ -1,6 +1,6 @@
 <template>
     <section id="sec-header">
-        <div class="Sx"><img src="images/DelLogo.svg" alt=""></div>
+        <div class="Sx"><img src="images/DelLogo.svg" alt="" id="element"></div>
         <div class="center">
             <input id="CercaCibo" type="text" name="" placeholder="Ristoranti, Piatti">
         </div>
@@ -70,7 +70,11 @@
 <script>
  export default {
             mounted() {
-                console.log('Component mounted.')
+                let imgElement = document.getElementById('element')
+                imgElement.onclick = function(){
+                    window.location = "/";
+                    
+                }
                 }
             }
 </script>
