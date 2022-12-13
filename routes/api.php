@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('resturants', 'Api\ResturantsController')->only('index');
+Route::resource('resturants', 'Api\ResturantsController');
 Route::get('resturantsfiltred/{url}', 'Api\ResturantsController@filtred')->name('filtred');
