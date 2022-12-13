@@ -25,7 +25,7 @@
 
 
 
-                <!-- -------- ristoranti Titolo----- -->
+                <!-- -------- ristoranti Titolo-----
                 <div >
                     <div class="ristoranti-solo">
                         <h4>Ristoranti</h4>
@@ -33,10 +33,10 @@
                         <button id="Freccia-risto">
                             <img  src="images/ResturantImage/Freccia.png" alt="">
                         </button>
-                    </div>
+                    </div>-->
 
 
-                <!-- -----------ristoranti Tendina a scomparsa---------- -->
+                <!-- -----------ristoranti Tendina a scomparsa----------
                     <div id="tendina-ristoranti">
                         <div v-for="ristorante in ristoranti" :key="ristorante.id">
                             <ol >
@@ -45,7 +45,7 @@
                             </ol>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
             </div>
         </div>
@@ -110,8 +110,18 @@
         },
         isCheck(event){
             if(!event.target.checked){
-                this.takeResturantsandCategory(this.url)
-                this.check=[]
+                let value = event.target.value
+                this.check = this.check.filter((item)=>{
+                    return item != value
+                })
+                if(this.check.length>0){
+                    let url= 'api/resturantsfiltred/'+ this.check
+                    this.show(url)
+                }else{
+                    this.takeResturantsandCategory(this.url)
+
+                }
+
             }
             else{
 
