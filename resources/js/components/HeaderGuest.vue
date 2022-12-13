@@ -93,7 +93,26 @@ methods:{
     #foto2{
         height: 70% !important;
     }
+
+    .BSX{
+        height: 90% !important;
+    }
+    .centro{
+        height: 90% !important;
+    }
+    .BDX{
+        height: 90% !important;
+    }
+    #btn-search{
+        width: 133px !important;
+        height: 63px !important;
+    }
 }
+
+
+
+
+
 
 @media  screen and (max-width: 1050px){
         #foto1{
@@ -121,6 +140,36 @@ methods:{
         }
     }
 
+    #btn-search{
+        position: absolute !important;
+         right: 54.5% !important;
+         top: 59.1% !important; 
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 960px) {
+    #btn-search{
+        position: absolute !important;
+        right: 54.5% !important;
+        top: 63.1% !important; 
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #btn-search{
+        width: 90px !important;
+        position: absolute !important;
+        right: 53.9% !important;
+        top: 63.4% !important;
+    }
+    .barra{
+        width: 110% !important;
+    }
 }
 
 .visibile{
