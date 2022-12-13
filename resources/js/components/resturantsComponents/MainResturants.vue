@@ -209,6 +209,11 @@
 
 
 @media screen and (max-width: 750px) {
+
+h5{
+    font-size: 0.9rem;
+}
+
 #sec-main{
     flex-direction: column !important;
     .result{
