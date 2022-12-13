@@ -52,6 +52,7 @@
 
 
         <div  class="result">
+
                 <div class="card" v-for="ristorante, index in ristoranti" :key="index">
                     <div class="up">
                         <img class="restaurant-image" :src="`storage/${ristorante.image}`" alt="">
@@ -69,7 +70,9 @@
                     <div class="down">
                         <div class="info-down">
                             <h5>{{ristorante.name}}</h5>
+                            <h5><button @click="showMenu(ristorante.id)" class="btn btn-success p-1">Menu</button></h5>
                         </div>
+
                     </div>
                 </div>
         </div>
@@ -95,6 +98,9 @@
 
 
     methods:{
+        showMenu(id){
+            this.$router.push('/resturants/' +id)
+        },
 
 
         takeResturantsandCategory(url){
