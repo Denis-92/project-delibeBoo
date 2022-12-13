@@ -227,6 +227,7 @@ h5{
         flex-direction: column !important;
         .container-filter{
             width: 90% !important;
+            height: 100% !important;
             .categorie-solo{
                 width: 100% !important;
                 height: 10% !important;
@@ -265,6 +266,9 @@ h5{
 }
 #tendina-categorie{
     display: none;
+    ol{
+        list-style: none;
+    }
 }
 #tendina-ristoranti{
     display: none;
@@ -299,8 +303,8 @@ h5{
         justify-content: flex-start;
         .container-filter{
             width: 60%;
-            height: 100%;
-            // background-color: red;
+            height: 1300px;
+            //  background-color: red;
             .categorie-solo{
                 width: 100%;
                 height: 10%;
