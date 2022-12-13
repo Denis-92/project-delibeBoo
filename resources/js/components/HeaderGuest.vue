@@ -181,8 +181,8 @@ methods:{
     border-radius: 7px;
     z-index: 800;
     position: absolute;
-    top: 50px;
-    right: 21px;
+    top: 5.5%;
+    right: 1.5%;
 }
 .nonvisibile{
     display: none;
