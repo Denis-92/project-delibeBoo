@@ -29,6 +29,9 @@
         <div  class="result">
 
                 <div class="card" v-for="ristorante, index in ristoranti" :key="index">
+                    <button @click="showMenu(ristorante.id)" class="bottone-menù"></button> 
+
+
                     <div class="up">
                         <img class="restaurant-image" :src="`storage/${ristorante.image}`" alt="">
                     </div>
@@ -45,9 +48,8 @@
                     <div class="down">
                         <div class="info-down">
                             <h5>{{ristorante.name}}</h5>
-                            <h5><button @click="showMenu(ristorante.id)" class="btn btn-success p-1">Menu</button></h5>
+                            
                         </div>
-
                     </div>
                 </div>
         </div>
@@ -71,11 +73,15 @@
         }
     },
 
+// -------------------------
+
 
     methods:{
         showMenu(id){
             this.$router.push('/resturants/' +id)
         },
+
+// ------------------------------
 
 
         takeResturantsandCategory(url){
@@ -259,7 +265,13 @@
     display: none;
 }
 
-
+.bottone-menù{
+     height: 100%;
+     width: 100%;
+     background-color: rgba(255, 255, 255, 0);
+     border: none;
+     position: absolute;
+ }
 
 
 
@@ -337,6 +349,7 @@
              height: 290px;
             // background-color: red;
             border: 10px;
+            position: relative;
 
             .up{
                 width: 100%;
@@ -380,6 +393,7 @@
                         font-weight: 800;
                         padding: 5px 10px;
                     }
+
                 }
             }
         }
