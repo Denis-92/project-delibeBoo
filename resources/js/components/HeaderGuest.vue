@@ -30,7 +30,7 @@
         <div class="barra">
             <div class="BSX"></div>
             <div class="centro"><input type="text" name="" id="" placeholder="Inserisci il tuo indirizzo completo"></div>
-            <div class="BDX"> <router-link to="resturants">Cerca</router-link> </div>
+            <div class="BDX"> <router-link to="resturants"><button id="btn-search">Cerca</button></router-link> </div>
         </div>
 
 
@@ -107,7 +107,11 @@ methods:{
 
 }
 
-
+#btn-search{
+    width: 133px;
+    height: 57px;
+    background-color: #00ccbc;
+}
 
 
 

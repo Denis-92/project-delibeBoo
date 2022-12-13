@@ -73,7 +73,7 @@
                 let imgElement = document.getElementById('element')
                 imgElement.onclick = function(){
                     window.location = "/";
-                    
+
                 }
                 }
             }
