@@ -72,7 +72,9 @@
 
 
 <style scoped lang="scss">
-
+*{
+    overflow-y: hidden;
+}
 
 @media screen and (max-width: 1600px) {
     .container-footer{
@@ -107,6 +109,18 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    #cos{
+        height: 100% !important;
+    }
+    .colonne{
+        min-width: 100% !important;
+    }
+    
 }
 
 
