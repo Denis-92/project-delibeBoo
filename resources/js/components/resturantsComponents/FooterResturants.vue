@@ -47,9 +47,8 @@
             </div>
             <div class="colonne">
                 <div class="prova">
-                  <h4>Porta Deliverro con te</h4>
-                  <button>App Store</button> <br>
-                  <button>Google Play</button>
+                  <h4>Porta Deliveroo con te</h4>
+                  <img src="images/HeaderGuest/icone-app.svg" alt="">
                 </div>
 
             </div>            
@@ -72,7 +71,9 @@
 
 
 <style scoped lang="scss">
-
+*{
+    overflow-y: hidden;
+}
 
 @media screen and (max-width: 1600px) {
     .container-footer{
@@ -110,18 +111,16 @@
 }
 
 
-@media screen and (min-width: 200px) and (max-width: 650px) {
+@media screen and (max-width: 450px) {
 
-#cos{
-height: 100% !important;
-.colonne{
-min-width: 100% !important;
-height: 100% !important;
+    #cos{
+        height: 100% !important;
+    }
+    .colonne{
+        min-width: 100% !important;
+    }
+    
 }
-}
-}
-
-
 
 
 
@@ -172,6 +171,10 @@ height: 100% !important;
                 width: 100%;
                 height: 90%;
                 // background-color: red;
+                img{
+                    width: 80%;
+                    margin-left: 25px;
+                }
             }
 
             h4{
@@ -200,11 +203,19 @@ height: 100% !important;
         }
     }
 }
+
+
+
+
 </style>
 
 
 
 
 <script>
-
+export default {
+    mounted() {
+        console.log('js Ok')
+    }
+}
 </script>

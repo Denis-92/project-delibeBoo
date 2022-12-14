@@ -2020,10 +2020,16 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resturantsComponents/FooterResturants.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('js Ok');
+  }
+});
 
 /***/ }),
 
@@ -3121,14 +3127,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function render() {
   var _vm = this,
-    _c = _vm._self._c,
-    _setup = _vm._self._setupProxy;
+    _c = _vm._self._c;
   return _vm._m(0);
 };
 var staticRenderFns = [function () {
   var _vm = this,
-    _c = _vm._self._c,
-    _setup = _vm._self._setupProxy;
+    _c = _vm._self._c;
   return _c("section", {
     attrs: {
       id: "cos"
@@ -3235,7 +3239,12 @@ var staticRenderFns = [function () {
     staticClass: "colonne"
   }, [_c("div", {
     staticClass: "prova"
-  }, [_c("h4", [_vm._v("Porta Deliverro con te")]), _vm._v(" "), _c("button", [_vm._v("App Store")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("button", [_vm._v("Google Play")])])])])]);
+  }, [_c("h4", [_vm._v("Porta Deliveroo con te")]), _vm._v(" "), _c("img", {
+    attrs: {
+      src: "images/HeaderGuest/icone-app.svg",
+      alt: ""
+    }
+  })])])])]);
 }];
 render._withStripped = true;
 
@@ -7972,7 +7981,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "@media screen and (max-width: 1600px) {\n.container-footer[data-v-406dde79] {\n    width: 80% !important;\n}\n}\n@media screen and (max-width: 1200px) {\n.container-footer[data-v-406dde79] {\n    width: 90% !important;\n}\n}\n@media screen and (max-width: 950px) {\n#cos[data-v-406dde79] {\n    height: 90vh !important;\n}\n#cos .container-footer[data-v-406dde79] {\n    width: 90% !important;\n    flex-wrap: wrap;\n    gap: 15px;\n}\n#cos .container-footer .colonne[data-v-406dde79] {\n    width: 48% !important;\n    height: auto !important;\n}\n}\n@media screen and (min-width: 200px) and (max-width: 650px) {\n#cos[data-v-406dde79] {\n    height: 100% !important;\n}\n#cos .colonne[data-v-406dde79] {\n    min-width: 100% !important;\n    height: 100% !important;\n}\n}\n#cos[data-v-406dde79] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n#cos .loghi-box[data-v-406dde79] {\n  width: 60%;\n  height: 10%;\n  background-color: red;\n}\n#cos .loghi-box .twitter[data-v-406dde79] {\n  width: 15px;\n  height: 15px;\n  background-color: chocolate;\n}\n#cos .loghi-box .twitter svg[data-v-406dde79] {\n  max-width: 100%;\n  max-height: 100%;\n}\n#cos .container-footer[data-v-406dde79] {\n  width: 60%;\n  height: 80%;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .logo[data-v-406dde79] {\n  width: 15px;\n  height: 15px;\n}\n#cos .container-footer .logo svg[data-v-406dde79] {\n  max-height: 100%;\n}\n#cos .container-footer .colonne[data-v-406dde79] {\n  width: 24%;\n  height: 100%;\n  background-color: #434848;\n  display: flex;\n  align-items: center;\n  border-radius: 5px;\n}\n#cos .container-footer .colonne .prova[data-v-406dde79] {\n  width: 100%;\n  height: 90%;\n}\n#cos .container-footer .colonne h4[data-v-406dde79] {\n  margin-left: 38px;\n  color: white;\n  font-weight: 700;\n}\n#cos .container-footer .colonne ol[data-v-406dde79] {\n  list-style: none;\n}\n#cos .container-footer .colonne ol li[data-v-406dde79] {\n  color: white;\n  padding: 2px 0px;\n}\n#cos .container-footer .colonne ol li a[data-v-406dde79] {\n  color: white;\n}\n#cos .container-footer .colonne ol li a[data-v-406dde79]:hover {\n  color: #00b8a9;\n  text-decoration: none;\n}\n#cos .container-footer .colonne button[data-v-406dde79] {\n  margin-left: 38px;\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, "*[data-v-406dde79] {\n  overflow-y: hidden;\n}\n@media screen and (max-width: 1600px) {\n.container-footer[data-v-406dde79] {\n    width: 80% !important;\n}\n}\n@media screen and (max-width: 1200px) {\n.container-footer[data-v-406dde79] {\n    width: 90% !important;\n}\n}\n@media screen and (max-width: 950px) {\n#cos[data-v-406dde79] {\n    height: 90vh !important;\n}\n#cos .container-footer[data-v-406dde79] {\n    width: 90% !important;\n    flex-wrap: wrap;\n    gap: 15px;\n}\n#cos .container-footer .colonne[data-v-406dde79] {\n    width: 48% !important;\n    height: auto !important;\n}\n}\n@media screen and (max-width: 450px) {\n#cos[data-v-406dde79] {\n    height: 100% !important;\n}\n.colonne[data-v-406dde79] {\n    min-width: 100% !important;\n}\n}\n#cos[data-v-406dde79] {\n  width: 100%;\n  height: 50vh;\n  background-color: #2e3333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n#cos .loghi-box[data-v-406dde79] {\n  width: 60%;\n  height: 10%;\n  background-color: red;\n}\n#cos .loghi-box .twitter[data-v-406dde79] {\n  width: 15px;\n  height: 15px;\n  background-color: chocolate;\n}\n#cos .loghi-box .twitter svg[data-v-406dde79] {\n  max-width: 100%;\n  max-height: 100%;\n}\n#cos .container-footer[data-v-406dde79] {\n  width: 60%;\n  height: 80%;\n  display: flex;\n  justify-content: space-between;\n}\n#cos .container-footer .logo[data-v-406dde79] {\n  width: 15px;\n  height: 15px;\n}\n#cos .container-footer .logo svg[data-v-406dde79] {\n  max-height: 100%;\n}\n#cos .container-footer .colonne[data-v-406dde79] {\n  width: 24%;\n  height: 100%;\n  background-color: #434848;\n  display: flex;\n  align-items: center;\n  border-radius: 5px;\n}\n#cos .container-footer .colonne .prova[data-v-406dde79] {\n  width: 100%;\n  height: 90%;\n}\n#cos .container-footer .colonne .prova img[data-v-406dde79] {\n  width: 80%;\n  margin-left: 25px;\n}\n#cos .container-footer .colonne h4[data-v-406dde79] {\n  margin-left: 38px;\n  color: white;\n  font-weight: 700;\n}\n#cos .container-footer .colonne ol[data-v-406dde79] {\n  list-style: none;\n}\n#cos .container-footer .colonne ol li[data-v-406dde79] {\n  color: white;\n  padding: 2px 0px;\n}\n#cos .container-footer .colonne ol li a[data-v-406dde79] {\n  color: white;\n}\n#cos .container-footer .colonne ol li a[data-v-406dde79]:hover {\n  color: #00b8a9;\n  text-decoration: none;\n}\n#cos .container-footer .colonne button[data-v-406dde79] {\n  margin-left: 38px;\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
@@ -56043,9 +56052,7 @@ component.options.__file = "resources/js/components/resturantsComponents/FooterR
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./FooterResturants.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/FooterResturants.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooterResturants_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
