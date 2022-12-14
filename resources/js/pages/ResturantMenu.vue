@@ -5,7 +5,7 @@
       <div v-if="resturant != undefined">
         <div v-for="plate, index in resturant.plates" :key="index" >
                 <div v-if="!plate.hidden">
-                  <button @click="order(plate)">Aggiungi</button>
+
                     <img  :src="`storage/${plate.image}`" alt="">
                     <h5>{{plate.name}}</h5>
                     <p>Descrizione:</p>
@@ -13,6 +13,8 @@
                     <p>Prezzo:</p>
                     <p>{{plate.price}}</p>
                 </div>
+
+                <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
         </div>
       </div>
       <OrderComponent :plateToadd="plateOrder"/>
