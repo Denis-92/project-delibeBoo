@@ -110,23 +110,17 @@ methods:{
 }
 
 
-
-
-
-
-@media  screen and (max-width: 1050px){
-        #foto1{
+@media screen and (max-width: 880px) {
+    #foto1{
         display: none;
     }
-    #foto2{
-        height: 90% !important;
-    }
+
     .Down{
+        display: flex;
         justify-content: flex-start !important;
         .container-center{
-            // background-color: rgba(255, 0, 0, 0.274);
-            width: 50%;
-            margin-left: 10px;
+            width: 60% ;
+            margin-left: 20px;
             h3{
                 text-align: start;
             }
@@ -135,42 +129,47 @@ methods:{
             }
             .barra{
                 margin: 0 !important;
-                width: 90% !important;
+                width: 450px !important;
+                .BDX{
+                    position: relative;
+                    a{
+                        button{
+                            position: absolute;
+                            bottom: 6px;
+                            right: 7px;
+                        }
+                    }
+                }
             }
         }
     }
-
-    #btn-search{
-        position: absolute !important;
-         right: 54.5% !important;
-         top: 59.1% !important; 
-    }
-
-
-
-
 }
 
 
-@media screen and (max-width: 960px) {
-    #btn-search{
-        position: absolute !important;
-        right: 54.5% !important;
-        top: 63.1% !important; 
-    }
-}
+@media screen and (max-width: 690px) {
 
-@media screen and (max-width: 780px) {
-    #btn-search{
-        width: 90px !important;
-        position: absolute !important;
-        right: 53.9% !important;
-        top: 63.4% !important;
+    .container-center{
+        margin-left: 20px;
     }
     .barra{
-        width: 110% !important;
+        height: 13.2% !important;
+        max-width: 350px !important;
+    
+    .BDX{
+        position: relative;
+        
+        a{
+            #btn-search{
+                 width: 90px !important;
+                 height: 40px !important;
+                 
+            }
+        }
     }
+  }
 }
+
+
 
 .visibile{
     display: block;

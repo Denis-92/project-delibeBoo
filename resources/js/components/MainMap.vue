@@ -22,7 +22,9 @@
 </template>
 
 <style scoped lang="scss">
-
+*{
+    overflow-y: hidden !important;
+}
 
 
 
@@ -78,12 +80,48 @@
     }
     }
 
-    @media screen and (max-width: 550px) {
-    .Sx{
-        height: 70% !important;
-    }
-}
 
+
+    @media screen and (max-width: 690px) {
+        .Sx{
+            min-height: 55% !important;
+            
+        }
+        
+    }
+
+
+    @media screen and (max-width: 550px) {
+        .Sx{
+            min-height: 45% !important;
+            p{
+                font-size: 1rem !important;
+            }
+            h1{
+                font-size: 1.8rem !important;
+            }
+            button{
+                display: none;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 400px) {
+        .Sx{
+            min-height: 45% !important;
+            p{
+                font-size: 0.9rem !important;
+            }
+            h1{
+                font-size: 1.6rem !important;
+            }
+            button{
+                display: none;
+            }
+        }
+        
+    }
 
 
 
