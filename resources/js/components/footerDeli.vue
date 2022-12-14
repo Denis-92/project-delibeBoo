@@ -47,9 +47,8 @@
             </div>
             <div class="colonne">
                 <div class="prova">
-                  <h4>Porta Deliverro con te</h4>
-                  <button>App Store</button> <br>
-                  <button>Google Play</button>
+                  <h4>Porta Deliveroo con te</h4>
+                  <img src="images/HeaderGuest/icone-app.svg" alt="">
                 </div>
 
             </div>            
@@ -172,6 +171,10 @@
                 width: 100%;
                 height: 90%;
                 // background-color: red;
+                img{
+                    width: 80%;
+                    margin-left: 25px;
+                }
             }
 
             h4{
@@ -200,6 +203,10 @@
         }
     }
 }
+
+
+
+
 </style>
 
 
