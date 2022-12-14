@@ -8,8 +8,8 @@
                         Vedrai quando il rider ha ritirato l'ordine, che potrai seguire passo passo,
                         e riceverai una notifica quando sarà quasi da te.
                     </p>
-                    <button>App store</button>
-                    <button>Google Play</button>
+                    <img src="images/HeaderGuest/icone-app.svg" alt="">
+                    
                 </div>
             </div>
             <div class="Dx">
@@ -100,7 +100,7 @@
             h1{
                 font-size: 1.8rem !important;
             }
-            button{
+            img{
                 display: none;
             }
         }
