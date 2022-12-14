@@ -43,7 +43,15 @@ methods:{
 
         })},
         order(plate){
-          this.plateOrder.push(plate)
+          let counter=1
+          let data=
+            {
+              'plate': plate,
+              'counter': counter
+            }
+          this.plateOrder.push(data)
+          console.log(this.plateOrder)
+          console.log(this.plateOrder[0].counter)
         },
 },
 
