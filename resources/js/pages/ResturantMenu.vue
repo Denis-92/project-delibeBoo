@@ -2,7 +2,16 @@
   <div>
       <headerResturants />
       <div v-if="resturant != undefined">
-        <div v-for="plate, index in resturant.plates" :key="index" >{{plate.name}}</div>
+        <div v-for="plate, index in resturant.plates" :key="index" >
+                <div v-if="!plate.hidden">
+                    <img  :src="`storage/${plate.image}`" alt="">
+                    <h5>{{plate.name}}</h5>
+                    <p>Descrizione:</p>
+                    <p>{{plate.description}} </p>
+                    <p>Prezzo:</p>
+                    <p>{{plate.price}}</p>
+                </div>
+        </div>
       </div>
       <FooterResturants />
   </div>

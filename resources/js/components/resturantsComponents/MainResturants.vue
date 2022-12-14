@@ -42,7 +42,7 @@
                     </div>
                     <div v-else class="center">
                         <p>Orari di apertura</p>
-                        <p>{{ristorante.dinner_opening}}{{ristorante.dinner_closing}}</p>
+                        <p>{{ristorante.dinner_opening}} - {{ristorante.dinner_closing}}</p>
 
                     </div>
                     <div class="down">
