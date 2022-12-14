@@ -17,7 +17,7 @@
                 <div id="tendina-categorie">
 
                         <ol>
-                                <li v-for="categoria in categorie" :key="categoria.id"><input type="checkbox" :value="categoria.id" @change="isCheck($event)" name="" id="">{{ categoria.name }}</li>
+                                <li v-for="categoria in categorie" :key="categoria.id"><input type="checkbox" :value="categoria.id" @change="isCheck($event)" name="" id=""><h5>{{ categoria.name }}</h5></li>
                         </ol>
 
                 </div>
@@ -245,6 +245,10 @@ h5{
                     gap: 40px !important;
                     justify-content: flex-start !important;
                     flex-wrap: wrap;
+                    li{
+                        gap: 5px !important;
+                         margin: 0px 0px !important;
+                    }
                 }
 
             }
@@ -254,6 +258,13 @@ h5{
 }
 
 
+@media screen and (min-width: 240px) and (max-width: 650px) {
+
+   .card{
+    width: 100% !important;
+   }
+
+}
 
 *{
     margin: 0;
@@ -268,6 +279,13 @@ h5{
     display: none;
     ol{
         list-style: none;
+        margin: 0px 10px;
+        li{
+            margin: 20px 0px;
+            display: flex;
+            gap: 5px;
+            width: 170px;
+        }
     }
 }
 #tendina-ristoranti{

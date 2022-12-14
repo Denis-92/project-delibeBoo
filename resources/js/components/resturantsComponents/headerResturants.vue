@@ -12,6 +12,35 @@
 </template>
 
 <style scoped lang="scss">
+
+
+@media screen and (max-width: 650px) {
+
+    .Sx{
+
+        width: 0% !important;
+        img{
+            display: none;
+        }
+    }
+
+    .Dx{
+        width: 0% !important;
+        button{
+            display: none;
+        }
+    }
+
+    .center{
+        input{
+            width: 100% !important;
+        }
+    }
+    
+}
+
+
+
 #sec-header{
     width: 100%;
     height: 8vh;

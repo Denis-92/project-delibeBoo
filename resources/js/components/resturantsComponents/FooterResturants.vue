@@ -110,6 +110,20 @@
 }
 
 
+@media screen and (min-width: 200px) and (max-width: 650px) {
+
+#cos{
+height: 100% !important;
+.colonne{
+min-width: 100% !important;
+height: 100% !important;
+}
+}
+}
+
+
+
+
 
 #cos{
     width: 100%;
