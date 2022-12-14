@@ -25,13 +25,32 @@
 
 <style scoped lang="scss">
 
-@media screen and (min-width: 400px) and (max-width: 1500px){
+@media screen and (min-width: 700px) and (max-width: 1500px){
  
 
     .offert-content{
         width: 90% !important;
     }
  
+}
+
+
+@media screen and (max-width: 699px){
+ 
+
+ .offert-content{
+     width: 90% !important;
+     h2{
+        font-size: 2.8rem !important;
+     }
+     h3{
+        font-size: 1.4rem !important;
+     }
+     p{
+        font-size: 0.7rem !important;
+     }
+ }
+
 }
 
 
