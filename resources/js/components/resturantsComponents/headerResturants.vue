@@ -56,6 +56,7 @@
         margin-left: 40px;
         img{
             max-height: 45%;
+            cursor: pointer;
         }
     }
     .center{
