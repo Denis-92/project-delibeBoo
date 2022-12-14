@@ -48,9 +48,9 @@ class ResturantsController extends Controller
         return response()->json($data);
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $resturant = Resturant::where('id', $id)->with('plates')->first();
+        $resturant = Resturant::where('slug', $slug)->with('plates')->first();
         $data = $resturant;
         return response()->json($data);
     }

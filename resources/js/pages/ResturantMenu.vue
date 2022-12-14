@@ -29,8 +29,8 @@ methods:{
         })}
 },
 mounted(){
-  const id = this.$route.params.id;
-  this.getResturant('api/resturants/' +id);
+  const slug = this.$route.params.slug;
+  this.getResturant('api/resturants/' +slug);
 }
 }
 </script>

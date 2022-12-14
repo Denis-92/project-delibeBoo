@@ -29,7 +29,7 @@
         <div  class="result">
 
                 <div class="card" v-for="ristorante, index in ristoranti" :key="index">
-                    <button @click="showMenu(ristorante.id)" class="bottone-menù"></button> 
+                    <button @click="showMenu(ristorante.slug)" class="bottone-menù"></button>
 
 
                     <div class="up">
@@ -37,7 +37,7 @@
                     </div>
                     <div v-if="time === 'am'" class="center">
                         <p>Orari di apertura</p>
-                        <p>{{ristorante.lunch_opening}}{{ristorante.lunch_closing}}</p>
+                        <p>{{ristorante.lunch_opening}} - {{ristorante.lunch_closing}}</p>
 
                     </div>
                     <div v-else class="center">
@@ -48,7 +48,7 @@
                     <div class="down">
                         <div class="info-down">
                             <h5>{{ristorante.name}}</h5>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -77,8 +77,8 @@
 
 
     methods:{
-        showMenu(id){
-            this.$router.push('/resturants/' +id)
+        showMenu(slug){
+            this.$router.push('/resturants/' +slug)
         },
 
 // ------------------------------
@@ -88,12 +88,50 @@
             axios.get(url).then(({data})=>{
                 this.ristoranti=data.ristoranti
                 this.categorie= data.categorie
+                this.ristoranti.forEach(element => {
+                    element.lunch_opening=element.lunch_opening.split(':')
+                    let deleteElement= element.lunch_opening.pop();
+                    element.lunch_opening = element.lunch_opening.toString();
+
+                    element.lunch_closing=element.lunch_closing.split(':')
+                     deleteElement= element.lunch_closing.pop();
+                    element.lunch_closing = element.lunch_closing.toString();
+
+                    element.dinner_opening=element.dinner_opening.split(':')
+                     deleteElement= element.dinner_opening.pop();
+                    element.dinner_opening = element.dinner_opening.toString();
+
+                    element.dinner_closing=element.dinner_closing.split(':')
+                     deleteElement= element.dinner_closing.pop();
+                    element.dinner_closing = element.dinner_closing.toString();
+
+
+                });
             })
         },
         show(url){
             axios.get(url).then(({data})=>{
                 console.log(data)
                 this.ristoranti= data
+                this.ristoranti.forEach(element => {
+                    element.lunch_opening=element.lunch_opening.split(':')
+                    let deleteElement= element.lunch_opening.pop();
+                    element.lunch_opening = element.lunch_opening.toString();
+
+                    element.lunch_closing=element.lunch_closing.split(':')
+                     deleteElement= element.lunch_closing.pop();
+                    element.lunch_closing = element.lunch_closing.toString();
+
+                    element.dinner_opening=element.dinner_opening.split(':')
+                     deleteElement= element.dinner_opening.pop();
+                    element.dinner_opening = element.dinner_opening.toString();
+
+                    element.dinner_closing=element.dinner_closing.split(':')
+                     deleteElement= element.dinner_closing.pop();
+                    element.dinner_closing = element.dinner_closing.toString();
+
+
+                });
 
             })
         },
