@@ -33,7 +33,8 @@ components: { headerResturants, FooterResturants, OrderComponent },
 data(){
   return{
     resturant:undefined,
-    plateOrder:[]
+    plateOrder:[],
+    totale:0
   }
 },
 methods:{
@@ -51,9 +52,21 @@ methods:{
               'plate': plate,
               'counter': counter
             }
-          this.plateOrder.push(data)
-          console.log(this.plateOrder)
-          console.log(this.plateOrder[0].counter)
+          if(this.plateOrder.length>0){
+            const array = this.plateOrder.find(element => element.plate.name == data.plate.name);
+            console.log('const',array)
+            if(array == undefined){
+              this.plateOrder.push(data)
+            }else{
+              this.plateOrder.forEach(element => {
+                if(element.plate.name === array.plate.name){
+                  element.counter++
+                }
+              });
+            }
+          }else{
+            this.plateOrder.push(data)
+          }
         },
 },
 
