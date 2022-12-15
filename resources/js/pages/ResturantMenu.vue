@@ -1,6 +1,6 @@
 <template>
   <div >
-    <headerResturants />
+    <headerMenu />
 
 
 
@@ -14,20 +14,13 @@
 
 
       <div v-if="resturant != undefined"  class="main">
-
-
-        <div :class="plate.hidden? 'd-none' : '' " v-for="plate, index in resturant.plates" :key="index" class="card">
+        <div  v-for="plate, index in resturant.plates" :key="index" class="card">
           <div v-if="!plate.hidden" >
-
-
-
-
             <!-- img piatti -->
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
             </div>
             <!-- ------------------------ -->
-
             <!-- info -->
             <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
@@ -35,16 +28,29 @@
             <p>Prezzo:</p>
             <p>{{ plate.price }}€</p>
             <!-- ------------ -->
-
-
             <!-- ------------------Bottone--------------------------- -->
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
             <!-- --------------------------------------------------------------- -->
+          </div>
+          <div v-else >
+            <div class="hidden">
+                  <!-- img piatti -->
+                  <div class="card-img ">
+                      <img :src="`storage/${plate.image}`" alt="">
+                  </div>
+                  <!-- ------------------------ -->
+                  <!-- info -->
+                      <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
+                      <p>Descrizione:</p>
+                      <p>{{ plate.description }} </p>
+                      <p>Prezzo:</p>
+                      <p>{{ plate.price }}€</p>
+                      <!-- ------------ -->
 
-
-
-
-
+            </div>
+            <div class="soldout">
+                        <h2 class="text-danger">SOLD OUT</h2>
+                      </div>
           </div>
         </div>
       </div>
@@ -70,6 +76,20 @@ img {
   width: 100%;
   height: auto;
 }
+.hidden{
+  opacity: 0.5;
+  position: relative;
+
+}
+.soldout{
+  width:100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%) ;
+  z-index: 800;
+}
 </style>
 
 
@@ -80,7 +100,7 @@ img {
 
 
 <script>
-import headerResturants from '../components/resturantsComponents/headerResturants.vue';
+import headerMenu from '../components/resturantsComponents/headerMenu.vue';
 import FooterResturants from '../components/resturantsComponents/FooterResturants.vue';
 import OrderComponent from '../components/resturantsComponents/OrderComponent.vue';
 import infoResturants from '../components/resturantsComponents/infoResturants.vue';
@@ -89,7 +109,7 @@ import barraProdotti from '../components/resturantsComponents/barraProdotti.vue'
 
 export default {
 name:'ResturantMenu',
-components: { headerResturants, FooterResturants, OrderComponent, infoResturants, barraProdotti },
+components: { headerMenu, FooterResturants, OrderComponent, infoResturants, barraProdotti },
 data(){
   return{
     resturant:undefined,

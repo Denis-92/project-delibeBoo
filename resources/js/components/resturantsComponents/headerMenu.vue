@@ -1,6 +1,10 @@
 <template>
     <section id="sec-header">
         <div class="Sx"><img src="images/DelLogo.svg" alt="" id="element"></div>
+
+        <div class="Dx">
+            <button>Carrello</button>
+        </div>
     </section>
 </template>
 
