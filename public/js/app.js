@@ -3619,7 +3619,7 @@ var render = function render() {
           return _vm.order(plate);
         }
       }
-    }, [_vm._v("Aggiungi al\n            carrello")])]) : _vm._e()]);
+    }, [_vm._v("Aggiungi al carrello")])]) : _vm._e()]);
   }), 0) : _vm._e(), _vm._v(" "), _c("OrderComponent", {
     attrs: {
       plateToadd: _vm.plateOrder

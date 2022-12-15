@@ -7,20 +7,25 @@
         <div v-for="plate, index in resturant.plates" :key="index">
           <div v-if="!plate.hidden">
 
-
+            <!-- ---------IMG--------- -->
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
               <img :src="`storage/${resturant.image}`" alt="">
             </div>
+            <!-- --------------------------------- -->
 
-
+            <!-- -----------Descrizione prodotto--------- -->
             <h5>{{ plate.name }}</h5>
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
             <p>{{ plate.price }}</p>
-            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al
-              carrello</button>
+            <!-- ----------------------------------------------- -->
+            
+            <!-- ------------------Bottone--------------------------- -->
+            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
+
+            <!-- --------------------------------------------------------------- -->
           </div>
 
 
