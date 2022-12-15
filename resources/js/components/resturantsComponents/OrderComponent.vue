@@ -11,7 +11,7 @@
 
             <h5>Prezzo articolo:{{ element.piatto.price }} euro</h5>
             <div class="d-flex">
-              <button @click="remove(index)" :class="element.counter == 1  ? 'disabled': ''" class="btn btn-outline-info mx-2" >-</button>
+              <button @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " class="btn btn-outline-info mx-2" >-</button>
               <h5 class="m-0 d-flex align-items-center">Quantita': {{ element.counter}}</h5>
               <button @click="add(index)" class="btn btn-outline-info mx-2">+</button>
             </div>
@@ -73,10 +73,10 @@ mounted(){
 </script>
 
 <style lang="scss" scoped>
-.disabled{
-      opacity: 0.5;
-      pointer-events: none;
-      cursor: none;
+button.disabilita{
+      opacity: 0.5!important;
+      pointer-events: none !important;
+      cursor: none!important;
 }
 #sec-main{
   width: 20%;
