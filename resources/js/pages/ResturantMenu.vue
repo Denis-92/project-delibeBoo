@@ -2,14 +2,18 @@
   <div>
     <headerResturants />
     <infoResturants />
-    <div class="d-flex">
+
       <div v-if="resturant != undefined">
         <div v-for="plate, index in resturant.plates" :key="index">
           <div v-if="!plate.hidden">
 
+
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
+              <img :src="`storage/${resturant.image}`" alt="">
             </div>
+
+
             <h5>{{ plate.name }}</h5>
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
@@ -23,7 +27,7 @@
         </div>
       </div>
       <OrderComponent :plateToadd="plateOrder" />
-    </div>
+
     <FooterResturants />
   </div>
 </template>
@@ -84,7 +88,7 @@ methods:{
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .card-img {
   width: 300px;
 }
