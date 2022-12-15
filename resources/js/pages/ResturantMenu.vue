@@ -3,58 +3,62 @@
     <headerMenu />
     <infoResturants :resturant = 'resturant'/>
     <barraProdotti />
-    <div class="d-flex ">
+    
+
+
+    <section id="sec">
+      <div v-if="resturant != undefined" class="Mastro">
+        <div  v-for="plate, index in resturant.plates" :key="index" class="card-visible">
+          <div v-if="!plate.hidden">
+
+            
+            <!-- info card e card -->
+            
+              <div class="foto">
+                <img :src="`storage/${plate.image}`" alt="">
+              </div>
 
 
 
-      <div v-if="resturant != undefined"  class="main">
-        <div  v-for="plate, index in resturant.plates" :key="index" class="card">
-          <div v-if="!plate.hidden" >
-            <!-- img piatti -->
-            <div class="card-img">
-              <img :src="`storage/${plate.image}`" alt="">
-            </div>
-            <!-- ------------------------ -->
-
-            <!-- info -->
-            <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
-            <p>Descrizione:</p>
-            <p>{{ plate.description }} </p>
-            <p>Prezzo:</p>
-            <p>{{ plate.price }}€</p>
+              <h5>{{ plate.name }}</h5>
+              <p>Descrizione:</p>
+              <p>{{ plate.description }} </p>
+              <p>Prezzo:</p>
+              <p>{{ plate.price }}€</p>
+            
             <!-- ------------ -->
 
             <!-- ------------------Bottone--------------------------- -->
-            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
+            <button @click="order(plate)" type="button">Aggiungi al carrello</button>
             <!-- --------------------------------------------------------------- -->
 
           </div>
 
 
           <div v-else >
-            <div class="hidden">
+            <div class="card-nonVisible">
 
-                  <!-- img piatti -->
-                  <div class="card-img ">
-                      <img :src="`storage/${plate.image}`" alt="">
-                  </div>
-                  <!-- ------------------------ -->
+               <!-- img piatti -->
+               <div>
+                  <img :src="`storage/${plate.image}`" alt="">
+               </div>
+               <!-- ------------------------ -->
 
-                  <!-- info -->
-                      <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
-                      <p>Descrizione:</p>
-                      <p>{{ plate.description }} </p>
-                      <p>Prezzo:</p>
-                      <p>{{ plate.price }}€</p>
-                      <!-- ------------ -->
+               <!-- info -->
+               <h5>{{ plate.name }}</h5>
+               <p>Descrizione:</p>
+               <p>{{ plate.description }} </p>
+               <p>Prezzo:</p>
+               <p>{{ plate.price }}€</p>
+               <!-- ------------ -->
 
             </div>
 
 
             
-            <div class="soldout">
-                 <h2 class="text-danger">SOLD OUT</h2>
-            </div>
+            <!-- <div class="soldout">
+              <h2 class="text-danger">SOLD OUT</h2>
+            </div> -->
 
 
 
@@ -64,8 +68,11 @@
 
 
 
-      <OrderComponent :plateToadd="plateOrder"/>
-    </div>
+
+        <OrderComponent :plateToadd="plateOrder"/>
+
+      
+    </section>
 
 
 
@@ -75,28 +82,30 @@
 
 
 <style scoped lang="scss">
-.card-img {
-  width: 300px;
+
+#sec{
+  display: flex;
+  width: 75%;
+  height: 100%;
+  background-color: rgba(0, 255, 157, 0.336);
+  .Mastro{
+    width: 100%;
+    .card-visible{
+      width: 25%;
+      background-color: bisque;
+      border-radius: 10px;
+      .foto{
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-.hidden{
-  opacity: 0.5;
-  position: relative;
 
-}
-.soldout{
-  width:100%;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% ,-50%) ;
-  z-index: 800;
-}
+
+
 </style>
 
 
@@ -164,28 +173,3 @@ methods:{
 }
 </script>
 
-<style lang="scss" scoped>
-img{
-  width: 100%;
-  height: 100%;
-}
-.main{
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-
-}
-.card{
-    width: calc(100% / 4 - 20px);
-    padding: 10px 30px;
-    margin: 10px 10px;
-    border: 1px solid black;
-  }
-.card-img {
-  width: 100%;
-  height: 230px;
-}
-
-
-</style>

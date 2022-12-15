@@ -1,26 +1,26 @@
 <template>
-  <div id="sec-main" v-if='plate.length > 0' class="d-flex flex-column align-items-center">
+  <div id="sec-main" v-if='plate.length > 0' >
     <h2 style="padding:20px;">Il tuo ordine</h2>
-    <div class="result">
+    <div>
 
-    <div v-for="element,index in plate" :key="index" class="card my-5">
-          <div class="up">
+    <div v-for="element,index in plate" :key="index">
+          <div>
             <img :src="`storage/${element.piatto.image}`" alt="">
           </div>
-            <h5 style="text-transform: uppercase;" >{{ element.piatto.name }}</h5>
+            <h5>{{ element.piatto.name }}</h5>
 
             <h5>Prezzo base:{{ element.piatto.price }}€</h5>
-            <div class="d-flex">
-              <button @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " class="btn btn-outline-info mx-2" >-</button>
+            <div>
+              <button @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " >-</button>
               <h5 class="m-0 d-flex align-items-center">Quantita': {{ element.counter}}</h5>
-              <button @click="add(index)" class="btn btn-outline-info mx-2">+</button>
+              <button @click="add(index)">+</button>
             </div>
             <h5>Costo totale: {{element.totalPrice}}€</h5>
 
-            <button @click="plateToRemove(index)" class="btn btn-outline-danger">Rimuovi</button>
+            <button @click="plateToRemove(index)">Rimuovi</button>
     </div>
   </div>
-  <router-link  :to="{ name: 'cart', params: { plates: plateToadd }}" class="btn btn-success my-5">Vai al Carrello</router-link>
+  <router-link  :to="{ name: 'cart', params: { plates: plateToadd }}">Vai al Carrello</router-link>
   </div>
 </template>
 
