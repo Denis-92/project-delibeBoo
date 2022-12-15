@@ -2204,6 +2204,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "barraProdotti"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/headerResturants.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resturantsComponents/headerResturants.vue?vue&type=script&lang=js& ***!
@@ -2293,6 +2308,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_resturantsComponents_FooterResturants_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/resturantsComponents/FooterResturants.vue */ "./resources/js/components/resturantsComponents/FooterResturants.vue");
 /* harmony import */ var _components_resturantsComponents_OrderComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/resturantsComponents/OrderComponent.vue */ "./resources/js/components/resturantsComponents/OrderComponent.vue");
 /* harmony import */ var _components_resturantsComponents_infoResturants_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/resturantsComponents/infoResturants.vue */ "./resources/js/components/resturantsComponents/infoResturants.vue");
+/* harmony import */ var _components_resturantsComponents_barraProdotti_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/resturantsComponents/barraProdotti.vue */ "./resources/js/components/resturantsComponents/barraProdotti.vue");
+
 
 
 
@@ -2303,7 +2320,8 @@ __webpack_require__.r(__webpack_exports__);
     headerResturants: _components_resturantsComponents_headerResturants_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     FooterResturants: _components_resturantsComponents_FooterResturants_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     OrderComponent: _components_resturantsComponents_OrderComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    infoResturants: _components_resturantsComponents_infoResturants_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    infoResturants: _components_resturantsComponents_infoResturants_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    barraProdotti: _components_resturantsComponents_barraProdotti_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
     return {
@@ -3531,6 +3549,32 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _vm._m(0);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", [_c("h3", [_vm._v("sono Adriano")])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/headerResturants.vue?vue&type=template&id=30ac47cb&scoped=true&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resturantsComponents/headerResturants.vue?vue&type=template&id=30ac47cb&scoped=true& ***!
@@ -3648,7 +3692,7 @@ var render = function render() {
     attrs: {
       resturant: _vm.resturant
     }
-  }), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("barraProdotti"), _vm._v(" "), _c("div", {
     staticClass: "d-flex"
   }, [_vm.resturant != undefined ? _c("div", {
     staticClass: "main"
@@ -8285,7 +8329,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto=Roboto:wght@300;400;500&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6cbcc26c] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n#sec[data-v-6cbcc26c] {\n  width: 100%;\n  height: 30vh;\n}\n.container-principale[data-v-6cbcc26c] {\n  width: 90%;\n  height: 100%;\n  background-color: rgba(9, 255, 0, 0.411);\n  margin: auto;\n  display: flex;\n}\n.container-principale .Sx[data-v-6cbcc26c] {\n  height: 100%;\n  background-color: aquamarine;\n}\n.container-principale .Sx img[data-v-6cbcc26c] {\n  max-height: 100%;\n}\n.container-principale .Dx[data-v-6cbcc26c] {\n  flex-grow: 1;\n  height: 100%;\n  background-color: aqua;\n}\n.container-principale .Dx h5[data-v-6cbcc26c] {\n  font-weight: 500;\n}", ""]);
+exports.push([module.i, "*[data-v-6cbcc26c] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n#sec[data-v-6cbcc26c] {\n  width: 100%;\n  height: 30vh;\n  display: flex;\n  align-items: center;\n}\n.container-principale[data-v-6cbcc26c] {\n  width: 90%;\n  height: 80%;\n  margin: auto;\n  display: flex;\n  align-items: center;\n  gap: 20px;\n}\n.container-principale .Sx[data-v-6cbcc26c] {\n  height: 100%;\n}\n.container-principale .Sx img[data-v-6cbcc26c] {\n  max-height: 100%;\n  border-radius: 9px;\n}\n.container-principale .Dx[data-v-6cbcc26c] {\n  flex-grow: 1;\n  height: 95%;\n}\n.container-principale .Dx h5[data-v-6cbcc26c] {\n  font-weight: 500;\n  font-size: 2.2rem;\n}", ""]);
 
 // exports
 
@@ -56634,6 +56678,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_OrderComponent_vue_vue_type_template_id_a3d81ba0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_OrderComponent_vue_vue_type_template_id_a3d81ba0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/resturantsComponents/barraProdotti.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/resturantsComponents/barraProdotti.vue ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true& */ "./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true&");
+/* harmony import */ var _barraProdotti_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./barraProdotti.vue?vue&type=script&lang=js& */ "./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _barraProdotti_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5f92e63c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/resturantsComponents/barraProdotti.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_barraProdotti_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./barraProdotti.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_barraProdotti_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true& ***!
+  \*******************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../../node_modules/vue-loader/lib??vue-loader-options!./barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resturantsComponents/barraProdotti.vue?vue&type=template&id=5f92e63c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_barraProdotti_vue_vue_type_template_id_5f92e63c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
