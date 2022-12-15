@@ -13,12 +13,9 @@
 
       <h5>Prezzo base:{{ plate.piatto.price }}€</h5>
       <div class="d-flex">
-          <button @click="remove(index)" v-if="plate.counter ==1? '': 'disabled' " class="btn btn-outline-info mx-2" >-</button>
           <h5 class="m-0 d-flex align-items-center">Quantita': {{ plate.counter}}</h5>
-          <button @click="add(index)" class="btn btn-outline-info mx-2">+</button>
       </div>
           <h5>Costo totale: {{plate.totalPrice}}€</h5>
-          <button @click="plateToRemove(index)" class="btn btn-outline-danger">Rimuovi</button>
     </div>
     <div>
       <h2>Prezzo totale :</h2>
