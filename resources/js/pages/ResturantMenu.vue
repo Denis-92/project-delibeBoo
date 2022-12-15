@@ -1,25 +1,30 @@
 <template>
   <div>
-      <headerResturants />
-     <div class="d-flex">
+    <headerResturants />
+    <infoResturants />
+    <div class="d-flex">
       <div v-if="resturant != undefined">
-        <div v-for="plate, index in resturant.plates" :key="index" >
-                <div v-if="!plate.hidden">
+        <div v-for="plate, index in resturant.plates" :key="index">
+          <div v-if="!plate.hidden">
 
-                    <img  :src="`storage/${plate.image}`" alt="">
-                    <h5>{{plate.name}}</h5>
-                    <p>Descrizione:</p>
-                    <p>{{plate.description}} </p>
-                    <p>Prezzo:</p>
-                    <p>{{plate.price}}</p>
-                </div>
+            <div class="card-img">
+              <img :src="`storage/${plate.image}`" alt="">
+            </div>
+            <h5>{{ plate.name }}</h5>
+            <p>Descrizione:</p>
+            <p>{{ plate.description }} </p>
+            <p>Prezzo:</p>
+            <p>{{ plate.price }}</p>
+            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al
+              carrello</button>
+          </div>
 
-                <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
+
         </div>
       </div>
-      <OrderComponent :plateToadd="plateOrder"/>
-     </div>
-      <FooterResturants />
+      <OrderComponent :plateToadd="plateOrder" />
+    </div>
+    <FooterResturants />
   </div>
 </template>
 
@@ -27,6 +32,8 @@
 import headerResturants from '../components/resturantsComponents/headerResturants.vue';
 import FooterResturants from '../components/resturantsComponents/FooterResturants.vue';
 import OrderComponent from '../components/resturantsComponents/OrderComponent.vue';
+import infoResturants from '../components/resturantsComponents/infoResturants.vue';
+
 export default {
 name:'ResturantMenu',
 components: { headerResturants, FooterResturants, OrderComponent },
@@ -41,8 +48,8 @@ methods:{
   getResturant(url){
         axios.get(url).then(({data})=>{
 
-            console.log(data)
-            this.resturant = data
+        console.log(data)
+        this.resturant = data
 
         })},
         order(plate){
@@ -70,13 +77,20 @@ methods:{
         },
 },
 
-mounted(){
-  const slug = this.$route.params.slug;
-  this.getResturant('api/resturants/' +slug);
-}
+  mounted() {
+    const slug = this.$route.params.slug;
+    this.getResturant('api/resturants/' + slug);
+  }
 }
 </script>
 
 <style>
+.card-img {
+  width: 300px;
+}
 
+img {
+  width: 100%;
+  height: auto;
+}
 </style>
