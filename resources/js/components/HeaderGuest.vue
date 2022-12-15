@@ -25,19 +25,13 @@
 
     <div class="container-center">
         <h3>I piatti dei ristoranti che ami e la spesa, a domicilio</h3>
-        <p>inserisci un indirizzo per scoprire le opzioni disponibili nella tua zona</p>
 
 
-        <div class="barra">
-            <div class="BSX"></div>
-            <div class="centro"><input type="text" name="" id="" placeholder="Inserisci il tuo indirizzo completo"></div>
-            <div class="BDX"> <router-link to="resturants"><button id="btn-search">Cerca</button></router-link> </div>
+        <div class="d-flex align-items-center" style="column-gap:20px;">
+            <div class="text-white ricerca" style="text-transform:uppercase">Ordina dai tuoi ristorantiInizia la ricerca</div>
+            <div > <router-link to="resturants"><button class="btn btn-outline-success">VAI</button></router-link> </div>
         </div>
 
-
-        <div class="info-last">
-            <p><a href="">Accedi</a> per visualizzare i tuoi indirizzi recenti.</p>
-        </div>
     </div>
 
     <img id="foto1" src="images/HeaderGuest/busta.jpg" alt="">
@@ -151,22 +145,7 @@ methods:{
     .container-center{
         margin-left: 20px;
     }
-    .barra{
-        height: 13.2% !important;
-        max-width: 350px !important;
-    
-    .BDX{
-        position: relative;
-        
-        a{
-            #btn-search{
-                 width: 90px !important;
-                 height: 40px !important;
-                 
-            }
-        }
-    }
-  }
+
 }
 
 
@@ -340,7 +319,10 @@ header{
     }
 }
 
-
+.ricerca{
+    background-color: #00ccbc;
+    padding: 20px;
+ }
 
 
 </style>
