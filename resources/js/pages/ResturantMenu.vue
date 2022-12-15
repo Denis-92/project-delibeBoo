@@ -8,17 +8,25 @@
           <div v-if="!plate.hidden" >
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
+              <img :src="`storage/${resturant.image}`" alt="">
             </div>
             <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
             <p>{{ plate.price }}</p>
-            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al
-              carrello</button>
+            <!-- ----------------------------------------------- -->
+
+            <!-- ------------------Bottone--------------------------- -->
+            <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
+
+            <!-- --------------------------------------------------------------- -->
+
+
+
+
+
           </div>
-
-
         </div>
       </div>
       <OrderComponent :plateToadd="plateOrder"/>
@@ -26,6 +34,25 @@
     <FooterResturants />
   </div>
 </template>
+
+
+<style scoped lang="scss">
+.card-img {
+  width: 300px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+
+
+
+
+
+
 
 <script>
 import headerResturants from '../components/resturantsComponents/headerResturants.vue';
