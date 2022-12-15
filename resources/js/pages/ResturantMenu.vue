@@ -21,6 +21,7 @@
               <img :src="`storage/${plate.image}`" alt="">
             </div>
             <!-- ------------------------ -->
+
             <!-- info -->
             <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
@@ -28,17 +29,23 @@
             <p>Prezzo:</p>
             <p>{{ plate.price }}€</p>
             <!-- ------------ -->
+
             <!-- ------------------Bottone--------------------------- -->
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
             <!-- --------------------------------------------------------------- -->
+
           </div>
+
+
           <div v-else >
             <div class="hidden">
+
                   <!-- img piatti -->
                   <div class="card-img ">
                       <img :src="`storage/${plate.image}`" alt="">
                   </div>
                   <!-- ------------------------ -->
+
                   <!-- info -->
                       <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
                       <p>Descrizione:</p>
@@ -48,9 +55,15 @@
                       <!-- ------------ -->
 
             </div>
+
+
+            
             <div class="soldout">
-                        <h2 class="text-danger">SOLD OUT</h2>
-                      </div>
+                 <h2 class="text-danger">SOLD OUT</h2>
+            </div>
+
+
+
           </div>
         </div>
       </div>
