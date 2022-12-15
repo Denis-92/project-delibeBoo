@@ -7,6 +7,10 @@
         <div v-for="plate, index in resturant.plates" :key="index">
           <div v-if="!plate.hidden">
 
+
+
+
+
             <!-- ---------IMG--------- -->
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
@@ -26,16 +30,41 @@
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
 
             <!-- --------------------------------------------------------------- -->
+
+
+
+
+
           </div>
-
-
         </div>
       </div>
+
+      <!-- ----------------------------Cart--------------- -->
       <OrderComponent :plateToadd="plateOrder" />
+      <!-- ------------------------------------------------------- -->
 
     <FooterResturants />
   </div>
 </template>
+
+
+<style scoped lang="scss">
+.card-img {
+  width: 300px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+
+
+
+
+
+
 
 <script>
 import headerResturants from '../components/resturantsComponents/headerResturants.vue';
@@ -45,7 +74,7 @@ import infoResturants from '../components/resturantsComponents/infoResturants.vu
 
 export default {
 name:'ResturantMenu',
-components: { headerResturants, FooterResturants, OrderComponent },
+components: { headerResturants, OrderComponent, FooterResturants  },
 data(){
   return{
     resturant:undefined,
@@ -93,13 +122,3 @@ methods:{
 }
 </script>
 
-<style scoped lang="scss">
-.card-img {
-  width: 300px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-</style>

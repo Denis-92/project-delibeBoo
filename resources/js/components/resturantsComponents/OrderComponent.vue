@@ -1,5 +1,7 @@
 <template>
   <div>
+
+
     <h2>Il tuo ordine</h2>
     <div v-for="element,index in plateToadd" :key="index">
 
@@ -10,8 +12,16 @@
         {{ element.counter}}
     </div>
     <h4>Totale ordine:</h4>
+    
+
   </div>
 </template>
+
+
+<style scoped lang="scss">
+
+</style>
+
 
 <script>
 export default {
@@ -22,6 +32,4 @@ props:{
 }
 </script>
 
-<style>
 
-</style>
