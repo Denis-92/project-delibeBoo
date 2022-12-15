@@ -1,16 +1,15 @@
 <template>
-  <div>
+  <div >
     <headerResturants />
-    <infoResturants />
-    <div class="d-flex">
-      <div v-if="resturant != undefined">
-        <div v-for="plate, index in resturant.plates" :key="index">
-          <div v-if="!plate.hidden">
-
+    <infoResturants :resturant = 'resturant'/>
+    <div class="d-flex ">
+      <div v-if="resturant != undefined"  class="main">
+        <div :class="plate.hidden? 'd-none' : '' " v-for="plate, index in resturant.plates" :key="index" class="card">
+          <div v-if="!plate.hidden" >
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
             </div>
-            <h5>{{ plate.name }}</h5>
+            <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
@@ -22,7 +21,7 @@
 
         </div>
       </div>
-      <OrderComponent :plateToadd="plateOrder" />
+      <OrderComponent :plateToadd="plateOrder"/>
     </div>
     <FooterResturants />
   </div>
@@ -36,12 +35,11 @@ import infoResturants from '../components/resturantsComponents/infoResturants.vu
 
 export default {
 name:'ResturantMenu',
-components: { headerResturants, FooterResturants, OrderComponent },
+components: { headerResturants, FooterResturants, OrderComponent, infoResturants },
 data(){
   return{
     resturant:undefined,
     plateOrder:[],
-    totale:0
   }
 },
 methods:{
@@ -50,31 +48,32 @@ methods:{
 
         console.log(data)
         this.resturant = data
-
         })},
         order(plate){
+
           let counter=1
           let data=
             {
-              'plate': plate,
-              'counter': counter
+              'piatto': plate,
+              'counter': counter,
+              'totalPrice': plate.price
             }
           if(this.plateOrder.length>0){
-            const array = this.plateOrder.find(element => element.plate.name == data.plate.name);
-            console.log('const',array)
+            const array = this.plateOrder.find(element => element.piatto.name == data.piatto.name);
             if(array == undefined){
               this.plateOrder.push(data)
             }else{
               this.plateOrder.forEach(element => {
-                if(element.plate.name === array.plate.name){
+                if(element.piatto.name === array.piatto.name){
                   element.counter++
+                  let price = element.piatto.price * element.counter
+                  element.totalPrice=(Math.round(price * 100) / 100).toFixed(2);
                 }
               });
             }
           }else{
             this.plateOrder.push(data)
-          }
-        },
+          }}
 },
 
   mounted() {
@@ -84,13 +83,28 @@ methods:{
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+img{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.card{
+    width: calc(100% / 4 - 20px);
+    padding: 10px 30px;
+    margin: 10px 10px;
+    border: 1px solid black;
+  }
 .card-img {
-  width: 300px;
+  width: 100%;
+  height: 230px;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
+
 </style>

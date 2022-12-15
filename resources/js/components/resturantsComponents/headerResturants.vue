@@ -1,11 +1,8 @@
 <template>
     <section id="sec-header">
         <div class="Sx"><img src="images/DelLogo.svg" alt="" id="element"></div>
-        <div class="center">
-            <input id="CercaCibo" type="text" name="" placeholder="Ristoranti, Piatti">
-        </div>
+
         <div class="Dx">
-            <button>Registrati o Accedi</button>
             <button>Carrello</button>
         </div>
     </section>
@@ -36,7 +33,7 @@
             width: 100% !important;
         }
     }
-    
+
 }
 
 
@@ -47,6 +44,7 @@
     border-bottom: 1px solid #ebebeb;
     border-top: 1px solid #ebebeb;
     display: flex;
+    justify-content: space-between;
     .Sx{
         width: 26%;
         height: 100%;
@@ -64,7 +62,7 @@
         // background-color: rgb(0, 225, 255);
         display: flex;
         align-items: center;
-        
+
         input{
             width: 77%;
             height: 70%;
