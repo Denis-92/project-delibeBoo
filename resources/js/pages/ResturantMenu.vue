@@ -1,24 +1,42 @@
 <template>
   <div >
     <headerResturants />
+
+
+
     <infoResturants :resturant = 'resturant'/>
+
+
     <div class="d-flex ">
+
+
+
       <div v-if="resturant != undefined"  class="main">
+
+
         <div :class="plate.hidden? 'd-none' : '' " v-for="plate, index in resturant.plates" :key="index" class="card">
           <div v-if="!plate.hidden" >
+
+
+
+            
+            <!-- img piatti -->
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
             </div>
+            <!-- ------------------------ -->
+
+            <!-- info -->
             <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
             <p>{{ plate.price }}</p>
-            <!-- ----------------------------------------------- -->
+            <!-- ------------ -->
+            
 
             <!-- ------------------Bottone--------------------------- -->
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
-
             <!-- --------------------------------------------------------------- -->
 
 
@@ -28,8 +46,14 @@
           </div>
         </div>
       </div>
+
+
+
       <OrderComponent :plateToadd="plateOrder"/>
     </div>
+
+
+
     <FooterResturants />
   </div>
 </template>

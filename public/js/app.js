@@ -2164,7 +2164,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
             dropdownRisto.style.display = "block";
         }
-     })*/
+      })*/
   }
 });
 
@@ -3585,16 +3585,22 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "main"
-  }, [_c("div", [_c("img", {
+  return _c("section", {
+    attrs: {
+      id: "sec"
+    }
+  }, [_c("div", {
+    staticClass: "container-principale"
+  }, [_c("div", {
+    staticClass: "Sx"
+  }, [_c("img", {
     attrs: {
       src: "storage/".concat(_vm.resturant.image),
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
-    staticClass: "title"
-  }, [_c("h5", [_vm._v(_vm._s(_vm.resturant.name))])])]);
+    staticClass: "Dx"
+  }, [_c("h5", [_vm._v(_vm._s(_vm.resturant.name))])])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -8276,10 +8282,10 @@ exports.push([module.i, "@media screen and (max-width: 650px) {\n.Sx[data-v-30ac
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto=Roboto:wght@300;400;500&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".main[data-v-6cbcc26c] {\n  position: relative;\n}\n.title[data-v-6cbcc26c] {\n  position: absolute;\n  top: 50;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\nh5[data-v-6cbcc26c] {\n  font-size: 100px;\n  color: white;\n  background-color: #a5caeb;\n}", ""]);
+exports.push([module.i, "*[data-v-6cbcc26c] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n#sec[data-v-6cbcc26c] {\n  width: 100%;\n  height: 30vh;\n}\n.container-principale[data-v-6cbcc26c] {\n  width: 90%;\n  height: 100%;\n  background-color: rgba(9, 255, 0, 0.411);\n  margin: auto;\n  display: flex;\n}\n.container-principale .Sx[data-v-6cbcc26c] {\n  height: 100%;\n  background-color: aquamarine;\n}\n.container-principale .Sx img[data-v-6cbcc26c] {\n  max-height: 100%;\n}\n.container-principale .Dx[data-v-6cbcc26c] {\n  flex-grow: 1;\n  height: 100%;\n  background-color: aqua;\n}\n.container-principale .Dx h5[data-v-6cbcc26c] {\n  font-weight: 500;\n}", ""]);
 
 // exports
 
@@ -57213,8 +57219,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\Desktop\Boolean71\ESERCIZI\PHP\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Angelo\Desktop\project-delibeBoo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
