@@ -3,7 +3,7 @@
     <h2 style="padding:20px;">Il tuo ordine</h2>
     <div class="result">
 
-    <div v-for="element,index in plateToadd" :key="index" class="card">
+    <div v-for="element,index in plate" :key="index" class="card">
           <div class="up">
             <img :src="`storage/${element.piatto.image}`" alt="">
           </div>
@@ -16,6 +16,7 @@
               <button @click="add(index)" class="btn btn-outline-info mx-2">+</button>
             </div>
             <h5>Costo: {{element.totalPrice}}</h5>
+            <button @click="plateToRemove(index)" class="btn btn-outline-danger">Rimuovi</button>
     </div>
   </div>
   </div>
@@ -30,6 +31,11 @@
 <script>
 export default {
 name:'OrderComponent',
+data(){
+  return{
+    plate:[]
+  }
+},
 props:{
     plateToadd:Array
 },
@@ -47,8 +53,22 @@ methods:{
     this.plateToadd[index].counter = this.plateToadd[index].counter - 1
     let price = this.plateToadd[index].counter * this.plateToadd[index].piatto.price
     this.plateToadd[index].totalPrice=(Math.round(price * 100) / 100).toFixed(2);
+  },
+  plateToRemove(i){
+   this.plate.forEach((element,index) => {
+    if(index == i){
+      this.plate.splice(index, 1);
+    }
+   });
+   console.log(this.plate)
   }
+},
+mounted(){
+  this.plate = this.plateToadd
 }
+
+
+
 }
 </script>
 
