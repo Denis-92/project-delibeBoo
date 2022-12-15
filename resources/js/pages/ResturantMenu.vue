@@ -33,9 +33,9 @@
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
-            <p>{{ plate.price }}</p>
+            <p>{{ plate.price }}€</p>
             <!-- ------------ -->
-            
+
 
             <!-- ------------------Bottone--------------------------- -->
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
