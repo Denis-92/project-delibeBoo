@@ -1,14 +1,8 @@
 <template>
   <div >
     <headerMenu />
-
-
-
     <infoResturants :resturant = 'resturant'/>
-
     <barraProdotti />
-
-
     <div class="d-flex ">
 
 
@@ -153,7 +147,7 @@ methods:{
   mounted() {
     const slug = this.$route.params.slug;
     this.getResturant('api/resturants/' + slug);
-  }
+  },
 }
 </script>
 

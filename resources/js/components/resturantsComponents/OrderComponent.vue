@@ -1,9 +1,9 @@
 <template>
-  <div id="sec-main">
+  <div id="sec-main" v-if='plate.length > 0' class="d-flex flex-column align-items-center">
     <h2 style="padding:20px;">Il tuo ordine</h2>
     <div class="result">
 
-    <div v-for="element,index in plate" :key="index" class="card">
+    <div v-for="element,index in plate" :key="index" class="card my-5">
           <div class="up">
             <img :src="`storage/${element.piatto.image}`" alt="">
           </div>
@@ -20,6 +20,7 @@
             <button @click="plateToRemove(index)" class="btn btn-outline-danger">Rimuovi</button>
     </div>
   </div>
+  <router-link  :to="{ name: 'cart', params: { plates: plateToadd }}" class="btn btn-success my-5">Vai al Carrello</router-link>
   </div>
 </template>
 

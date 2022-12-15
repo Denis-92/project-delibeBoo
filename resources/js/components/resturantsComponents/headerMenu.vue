@@ -2,7 +2,7 @@
     <section id="sec-header">
         <div class="Sx"><img src="images/DelLogo.svg" alt="" id="element"></div>
 
-        <div class="Dx">
+        <div class="Dx d-none">
             <button>Carrello</button>
         </div>
     </section>

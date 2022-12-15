@@ -11,7 +11,7 @@
         </div>
         <div class="Dx">
             <h5>{{ resturant.name }}</h5>
-            
+
         </div>
     </div>
 
@@ -75,10 +75,9 @@
 export default {
     name: "infoResturants",
     props:{resturant:Object},
-    data() {
-        return {
-        }
-    },
+    mounted(){
+        console.log(this.resturant)
+    }
 }
 </script>
 
