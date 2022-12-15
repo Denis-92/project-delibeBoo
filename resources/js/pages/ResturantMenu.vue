@@ -6,6 +6,8 @@
 
     <infoResturants :resturant = 'resturant'/>
 
+    <barraProdotti />
+
 
     <div class="d-flex ">
 
@@ -19,7 +21,7 @@
 
 
 
-            
+
             <!-- img piatti -->
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
@@ -31,9 +33,9 @@
             <p>Descrizione:</p>
             <p>{{ plate.description }} </p>
             <p>Prezzo:</p>
-            <p>{{ plate.price }}</p>
+            <p>{{ plate.price }}€</p>
             <!-- ------------ -->
-            
+
 
             <!-- ------------------Bottone--------------------------- -->
             <button @click="order(plate)" type="button" class="btn btn-outline-success mt-1 mb-5">Aggiungi al carrello</button>
@@ -82,10 +84,12 @@ import headerResturants from '../components/resturantsComponents/headerResturant
 import FooterResturants from '../components/resturantsComponents/FooterResturants.vue';
 import OrderComponent from '../components/resturantsComponents/OrderComponent.vue';
 import infoResturants from '../components/resturantsComponents/infoResturants.vue';
+import barraProdotti from '../components/resturantsComponents/barraProdotti.vue';
+
 
 export default {
 name:'ResturantMenu',
-components: { headerResturants, FooterResturants, OrderComponent, infoResturants },
+components: { headerResturants, FooterResturants, OrderComponent, infoResturants, barraProdotti },
 data(){
   return{
     resturant:undefined,

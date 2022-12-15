@@ -9,13 +9,14 @@
           </div>
             <h5 style="text-transform: uppercase;" >{{ element.piatto.name }}</h5>
 
-            <h5>Prezzo articolo:{{ element.piatto.price }} euro</h5>
+            <h5>Prezzo base:{{ element.piatto.price }}€</h5>
             <div class="d-flex">
               <button @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " class="btn btn-outline-info mx-2" >-</button>
               <h5 class="m-0 d-flex align-items-center">Quantita': {{ element.counter}}</h5>
               <button @click="add(index)" class="btn btn-outline-info mx-2">+</button>
             </div>
-            <h5>Costo: {{element.totalPrice}}</h5>
+            <h5>Costo totale: {{element.totalPrice}}€</h5>
+
             <button @click="plateToRemove(index)" class="btn btn-outline-danger">Rimuovi</button>
     </div>
   </div>
