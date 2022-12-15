@@ -8,7 +8,6 @@
           <div v-if="!plate.hidden" >
             <div class="card-img">
               <img :src="`storage/${plate.image}`" alt="">
-              <img :src="`storage/${resturant.image}`" alt="">
             </div>
             <h5 style="text-transform:uppercase;" class="mt-3" >{{ plate.name }}</h5>
             <p>Descrizione:</p>
