@@ -100,14 +100,16 @@
 }
 
 .sorry{
-        width: 100%;
-        height: 100%;
-        background-color: #00000080;
-        position: absolute;
-        top: 0;
-        display: none;
-        justify-content: center;
-        align-items: center;
+  width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5019607843);
+    position: absolute;
+    top: -5px;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
         
         h3{
           color: white;

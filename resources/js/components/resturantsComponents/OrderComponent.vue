@@ -65,6 +65,9 @@
     border-radius: 7px;
     border: 1px solid #00000012;
     box-shadow: #0000000a -4px 5px 9px 0px;
+
+
+    margin-right: 30px;
     .mini-conteiner{
       width: 90%;
       height: 100%;
