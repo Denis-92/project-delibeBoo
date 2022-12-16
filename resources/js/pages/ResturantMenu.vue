@@ -2,7 +2,7 @@
   <div >
     <headerMenu />
     <infoResturants :resturant = 'resturant'/>
-    <barraProdotti />
+    <!--<barraProdotti />-->
 
 <hr>
 
