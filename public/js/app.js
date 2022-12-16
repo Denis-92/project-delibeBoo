@@ -3881,14 +3881,12 @@ var render = function render() {
     return _c("div", {
       key: index,
       staticClass: "card-visible"
-    }, [!plate.hidden ? _c("div", [_c("div", {
-      staticClass: "foto"
-    }, [_c("img", {
+    }, [!plate.hidden ? _c("div", [_c("img", {
       attrs: {
         src: "storage/".concat(plate.image),
         alt: ""
       }
-    })]), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")]), _vm._v(" "), _c("button", {
+    }), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")]), _vm._v(" "), _c("button", {
       attrs: {
         type: "button"
       },
@@ -3899,12 +3897,12 @@ var render = function render() {
       }
     }, [_vm._v("Aggiungi al carrello")])]) : _c("div", [_c("div", {
       staticClass: "card-nonVisible"
-    }, [_c("div", [_c("img", {
+    }, [_c("img", {
       attrs: {
         src: "storage/".concat(plate.image),
         alt: ""
       }
-    })]), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")])])])]);
+    }), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")])])])]);
   }), 0) : _vm._e(), _vm._v(" "), _c("OrderComponent", {
     attrs: {
       plateToadd: _vm.plateOrder
@@ -8586,7 +8584,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 75%;\n  height: 100%;\n  background-color: rgba(0, 255, 157, 0.336);\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 100%;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 25%;\n  background-color: bisque;\n  border-radius: 10px;\n}\n#sec .Mastro .card-visible .foto img[data-v-77c5cfc8] {\n  max-width: 100%;\n}", ""]);
+exports.push([module.i, "*[data-v-77c5cfc8] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 255, 157, 0.336);\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 25%;\n  height: 40%;\n  background-color: bisque;\n  border-radius: 10px;\n  position: relative;\n}\n#sec .Mastro .card-visible img[data-v-77c5cfc8] {\n  max-width: 35%;\n  height: 100%;\n  border-radius: 0px 10px 10px 0px;\n  position: absolute;\n  right: 0;\n}\n#sec .Mastro .card-nonVisible[data-v-77c5cfc8] {\n  width: 100%;\n  background-color: red;\n  border-radius: 10px;\n  position: relative;\n}\n#sec .Mastro .card-nonVisible img[data-v-77c5cfc8] {\n  max-width: 60%;\n  position: absolute;\n  right: 0;\n}", ""]);
 
 // exports
 

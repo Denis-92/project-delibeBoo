@@ -14,9 +14,9 @@
             
             <!-- info card e card -->
             
-              <div class="foto">
+              
                 <img :src="`storage/${plate.image}`" alt="">
-              </div>
+              
 
 
 
@@ -36,12 +36,14 @@
 
 
           <div v-else >
+
+
             <div class="card-nonVisible">
 
                <!-- img piatti -->
-               <div>
+               
                   <img :src="`storage/${plate.image}`" alt="">
-               </div>
+               
                <!-- ------------------------ -->
 
                <!-- info -->
@@ -83,21 +85,48 @@
 
 <style scoped lang="scss">
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 #sec{
   display: flex;
-  width: 75%;
+  width: 100%;
   height: 100%;
   background-color: rgba(0, 255, 157, 0.336);
   .Mastro{
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
     .card-visible{
       width: 25%;
+      height: 40%;
       background-color: bisque;
       border-radius: 10px;
-      .foto{
-        img{
-          max-width: 100%;
-        }
+      position: relative;
+      img{
+        max-width: 35%;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .card-nonVisible{
+      width: 100%;
+      background-color: red;
+      border-radius: 10px;
+      position: relative;
+      img{
+        max-width: 60%;
+        position: absolute;
+        right: 0;
       }
     }
   }
