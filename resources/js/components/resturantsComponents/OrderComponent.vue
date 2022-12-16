@@ -1,33 +1,134 @@
 <template>
+
+
   <div id="sec-main" v-if='plate.length > 0' >
-    <h2 style="padding:20px;">Il tuo ordine</h2>
-    <div>
+    <h2 id="order">Il tuo ordine</h2>
+    <div class="mini-conteiner">
 
     <div v-for="element,index in plate" :key="index">
+      
+      <div class="content">
+
+        
+        <div class="sx">
+          <h5>{{ element.piatto.name }}</h5>
+        </div>
+        <div class="dx">
           <div>
-            <img :src="`storage/${element.piatto.image}`" alt="">
+            <button id="remove" @click="plateToRemove(index)">Rimuovi</button> 
+              <button class="meno" @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " >-</button>
+              <span>{{ element.counter}}</span>
+              <button class="più" @click="add(index)">+</button>
           </div>
-            <h5>{{ element.piatto.name }}</h5>
+            <h5>{{element.totalPrice}}€</h5>
+        </div>
+      </div>
 
-            <h5>Prezzo base:{{ element.piatto.price }}€</h5>
-            <div>
-              <button @click="remove(index)" v-if="element.counter ==1? '': 'disabled' " >-</button>
-              <h5 class="m-0 d-flex align-items-center">Quantita': {{ element.counter}}</h5>
-              <button @click="add(index)">+</button>
-            </div>
-            <h5>Costo totale: {{element.totalPrice}}€</h5>
+          
 
-            <button @click="plateToRemove(index)">Rimuovi</button>
+
+           
+
+
+
+             
     </div>
   </div>
-  <router-link  :to="{ name: 'cart', params: { plates: plateToadd }}">Vai al Carrello</router-link>
+  <router-link id="cart"  :to="{ name: 'cart', params: { plates: plateToadd }}">Vai al Carrello</router-link>
   </div>
+
+
 </template>
 
 
 <style scoped lang="scss">
+#order{
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+#cart{
+  margin-left: 25px;
+}
+
+
+
+#sec-main{
+  width: 35%;
+    min-height: 300px;
+    height: 100%;
+    background-color: rgb(255 255 255 / 56%);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 7px;
+    border: 1px solid #00000012;
+    box-shadow: #0000000a -4px 5px 9px 0px;
+    .mini-conteiner{
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .content{
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(43, 226, 150, 0.377);
+        display: flex;
+        align-items: center;
+        .sx{
+          width: 30%;
+          height: 100%;
+          // background-color: burlywood;
+        }
+        .dx{
+          width: 70%;
+          height: 100%;
+          // background-color: rgb(222, 135, 210);
+          display: flex;
+          justify-content: flex-end;
+          gap: 15px;
+        }
+        #remove{
+          margin-right: 5px;
+          margin-right: 5px;
+          background-color: #ff000080;
+          border: 2px solid #00000021;
+          border-radius: 7px;
+        }
+        .più{
+          background-color: #00dd008c;
+          margin-left: 10px;
+          border: 2px solid rgba(0, 0, 0, 0.1294117647);
+          border-radius: 7px;
+        }
+        .meno{
+          background-color: #00dd008c;
+          margin-right: 10px;
+          border: 2px solid rgba(0, 0, 0, 0.1294117647);
+          border-radius: 7px;
+        }
+      }
+    }
+}
+
 
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>

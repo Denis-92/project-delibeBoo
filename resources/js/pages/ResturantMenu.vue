@@ -9,7 +9,7 @@
     <section id="sec">
       <div v-if="resturant != undefined" class="Mastro">
         <div  v-for="plate, index in resturant.plates" :key="index" class="card-visible">
-          <div v-if="!plate.hidden">
+          <div class="non-disp" v-if="!plate.hidden">
 
 
               <!-- info Card visible (influisce anche per le NON) -->
@@ -18,31 +18,50 @@
 
               <div class="prova">
                 <h5>{{ plate.name }}</h5>
-                <p>Descrizione:</p>
-                <p>{{ plate.description }} </p>
-                <p>Prezzo:</p>
-                <p>{{ plate.price }}€</p>
-                <button @click="order(plate)" type="button">Aggiungi al carrello</button>
+                
+
+                    <p id="margin-p">{{ plate.description }} </p>
+                    <p> Prezzo:  {{ plate.price }}€</p>
+
+
+                
+                  <button @click="order(plate)" type="button"></button>
+                
+                
               </div>
 
           </div>
 
 
-          <div v-else >
-            <div class="card-nonVisible">
+          <div v-else  class="non-disp">
+            <div class="non-disp">
+              <div class="card-nonVisible Hsorry">
 
-               <!-- info Card non visible -->
-               <img :src="`storage/${plate.image}`" alt="">
-               <div class="prova">
-                <h5>{{ plate.name }}</h5>
-                <p>Descrizione:</p>
-                <p>{{ plate.description }} </p>
-                <p>Prezzo:</p>
-                <p>{{ plate.price }}€</p>
-                <button>Non permetterti a cliccarmi </button>
+                  <!-- info Card non visible -->
+                  <img :src="`storage/${plate.image}`" alt="">
+                  <div class="prova">
+                  <h5>{{ plate.name }}</h5>
+                  
+                    <p id="margin-p">{{ plate.description }} </p>
+                  
+                  
+                  <p> Prezzo:  {{ plate.price }}€</p>
+                  
+                  
+
+                    <!-- <button @click="order(plate)" type="button"></button> -->
+
+                    <div class="sorry">
+                      <h3>Attualmente non disponibile</h3>
+                    </div>
+                    
+
+
+                  </div>
+
               </div>
-               
             </div>
+           
 
           </div>
         </div>
@@ -65,6 +84,37 @@
 
 <style scoped lang="scss">
 
+.Hsorry:hover .sorry{
+  display: flex;
+}
+
+.Hsorry{
+  width: 100%;
+  height: 100%;
+}
+
+#margin-p{
+  margin: 15px 0px;
+  display: flex;
+
+}
+
+.sorry{
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        
+        h3{
+          color: white;
+        }
+      }
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -75,7 +125,7 @@
 #sec{
   display: flex;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   // background-color: rgba(0, 255, 157, 0.336);
   .Mastro{
     width: 80%;
@@ -84,20 +134,33 @@
     gap: 20px;
     margin-left: 5%;
     margin-top: 5%;
+    margin-bottom: 5%;
 
     .card-visible{
-      width: 25%;
-      // height: 45%;
+      width: 30%;
+      // max-height: 45%;
       // background-color: rgba(0, 255, 42, 0.342);
       border-radius: 5px;
       position: relative;
+      background-color: #f1f1f1;
       .prova{
         width: 65%;
-        background-color: rgba(0, 140, 255, 0.493);
+        // background-color: rgba(0, 140, 255, 0.493);
         h5{
         font-weight: 700;
         font-size: 1.4rem;
-      }
+        }
+        p{
+          font-size: 0.8rem;
+        }
+        button{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          background-color: rgba(255, 0, 0, 0);
+          border: none;
+        }
       }
 
       img{
@@ -109,19 +172,29 @@
       }
     }
 
-    .card-nonVisible{
+
+    .non-disp{
+      position: relative;
+      height: 100%;
+      
+      .card-nonVisible{
       width: 100%;
+      
       
       // background-color: rgba(255, 0, 0, 0.815);
       border-radius: 5px;
       position: relative;
       .prova{
         width: 65%;
-        background-color:  rgba(0, 140, 255, 0.493);
+        // background-color:  rgba(0, 140, 255, 0.493);
         h5{
         font-weight: 700;
         font-size: 1.4rem;
+        p{
+          font-size: 0.8rem;
+        }
       }
+
       }
       img{
         max-width: 29%;
@@ -131,6 +204,9 @@
         bottom: 14px;
       }
     }
+
+}
+    
   }
 }
 
@@ -154,7 +230,8 @@ import barraProdotti from '../components/resturantsComponents/barraProdotti.vue'
 
 export default {
 name:'ResturantMenu',
-components: { headerMenu, FooterResturants, OrderComponent, infoResturants, barraProdotti },
+components: { headerMenu, FooterResturants, OrderComponent, infoResturants,  }, 
+// barraProdotti
 data(){
   return{
     resturant:undefined,
