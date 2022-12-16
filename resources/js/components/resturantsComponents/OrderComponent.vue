@@ -68,6 +68,7 @@
 
 
     margin-right: 30px;
+    margin-top: 5%;
     .mini-conteiner{
       width: 90%;
       height: 100%;
