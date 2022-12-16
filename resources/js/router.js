@@ -14,7 +14,9 @@ const router = new VueRouter({
         {path: '/resturants/:slug', name: 'resturantMenu', component: ResturantMenu },
         {
             path:'/cart', name: 'cart', component:CarrelloPage, params:{ name: 'plates' }
-        }
+        },
+
+        {path: '/checkout', name: 'checkout' }
     ]
 });
 
