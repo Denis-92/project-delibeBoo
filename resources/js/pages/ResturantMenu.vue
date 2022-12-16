@@ -142,16 +142,22 @@
       // background-color: rgba(0, 255, 42, 0.342);
       border-radius: 5px;
       position: relative;
-      background-color: #f1f1f1;
+      background-color: #ffff;
+      box-shadow: #0000000a -4px 4px 5px 0px;
+      border: 1px solid #00000012;
       .prova{
         width: 65%;
         // background-color: rgba(0, 140, 255, 0.493);
+        margin-left: 5px;
+        margin-top: 5px;
+        
         h5{
         font-weight: 700;
         font-size: 1.4rem;
         }
         p{
           font-size: 0.8rem;
+          margin-bottom: 5px;
         }
         button{
           width: 100%;
@@ -192,6 +198,8 @@
         font-size: 1.4rem;
         p{
           font-size: 0.8rem;
+          margin-bottom: 5px;
+          margin-top: 25px;
         }
       }
 
