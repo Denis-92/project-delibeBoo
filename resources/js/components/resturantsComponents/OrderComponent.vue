@@ -3,6 +3,7 @@
 
     <div id="sec-main" v-if='plate.length > 0'>
         <h2 id="order">Il tuo ordine</h2>
+        <p>{{ total }}</p>
         <div class="mini-conteiner">
 
             <div v-for="element, index in plate" :key="index">
@@ -35,7 +36,7 @@
 
             </div>
         </div>
-        <!-- <router-link id="cart"  :to="{ name: 'cart', params: { plates: plateToadd }}">Vai al Carrello</router-link> -->
+        <router-link id="cart" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Carrello</router-link>
     </div>
 
 
@@ -151,6 +152,15 @@ export default {
     },
     props: {
         plateToadd: Array
+    },
+    computed: {
+        total() {
+            let sum = 0;
+            for (let i = 0; i < this.plate.length; i++) {
+                sum += (this.plate[i].piatto.price * this.plate[i].counter);
+            }
+            return sum;
+        }
     },
     methods: {
         add(index) {
