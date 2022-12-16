@@ -3,7 +3,7 @@
 
     <div id="sec-main" v-if='plate.length > 0'>
         <h2 id="order">Il tuo ordine</h2>
-        <p>{{ total }}</p>
+
         <div class="mini-conteiner">
 
             <div v-for="element, index in plate" :key="index">
@@ -16,25 +16,17 @@
                     </div>
                     <div class="dx">
                         <div>
-                            <button id="remove" @click="plateToRemove(index)">Rimuovi</button>
-                            <button class="meno" @click="remove(index)"
+                            <button type="button" class="btn btn-outline-info mr-2" @click="remove(index)"
                                 v-if="element.counter == 1 ? '' : 'disabled'">-</button>
                             <span>{{ element.counter }}</span>
-                            <button class="più" @click="add(index)">+</button>
+                            <button type="button" class="btn btn-outline-info ml-2" @click="add(index)">+</button>
                         </div>
                         <h5>{{ element.totalPrice }}€</h5>
                     </div>
+                    <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="plateToRemove(index)">Rimuovi</button>
                 </div>
-
-
-
-
-
-
-
-
-
             </div>
+            <h4>Totale ordine: {{ total }} €</h4>
         </div>
         <router-link id="cart" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Carrello</router-link>
     </div>
@@ -101,44 +93,10 @@
                 justify-content: flex-end;
                 gap: 15px;
             }
-
-            #remove {
-                margin-right: 5px;
-                margin-right: 5px;
-                background-color: #ff000080;
-                border: 2px solid #00000021;
-                border-radius: 7px;
-            }
-
-            .più {
-                background-color: #00dd008c;
-                margin-left: 10px;
-                border: 2px solid rgba(0, 0, 0, 0.1294117647);
-                border-radius: 7px;
-            }
-
-            .meno {
-                background-color: #00dd008c;
-                margin-right: 10px;
-                border: 2px solid rgba(0, 0, 0, 0.1294117647);
-                border-radius: 7px;
-            }
         }
     }
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

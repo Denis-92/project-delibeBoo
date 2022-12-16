@@ -3,7 +3,7 @@
     <headerMenu />
     <infoResturants :resturant = 'resturant'/>
     <barraProdotti />
-    
+
 <hr>
 
     <section id="sec">
@@ -18,18 +18,10 @@
 
               <div class="prova">
                 <h5>{{ plate.name }}</h5>
-                
-
                     <p id="margin-p">{{ plate.description }} </p>
                     <p> Prezzo:  {{ plate.price }}€</p>
-
-
-                
-                  <button @click="order(plate)" type="button"></button>
-                
-                
               </div>
-
+              <button type="button" class="btn btn-outline-success ml-1 pl-1 pt-1 pb-1 pr-1" @click="order(plate)">Aggiungi al carrello</button>
           </div>
 
 
@@ -41,27 +33,27 @@
                   <img :src="`storage/${plate.image}`" alt="">
                   <div class="prova">
                   <h5>{{ plate.name }}</h5>
-                  
+
                     <p id="margin-p">{{ plate.description }} </p>
-                  
-                  
+
+
                   <p> Prezzo:  {{ plate.price }}€</p>
-                  
-                  
+
+
 
                     <!-- <button @click="order(plate)" type="button"></button> -->
 
                     <div class="sorry">
                       <h3>Attualmente non disponibile</h3>
                     </div>
-                    
+
 
 
                   </div>
 
               </div>
             </div>
-           
+
 
           </div>
         </div>
@@ -72,7 +64,7 @@
 
         <OrderComponent :plateToadd="plateOrder"/>
 
-      
+
     </section>
 
 
@@ -110,7 +102,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-        
+
         h3{
           color: white;
         }
@@ -152,7 +144,7 @@
         // background-color: rgba(0, 140, 255, 0.493);
         margin-left: 5px;
         margin-top: 5px;
-        
+
         h5{
         font-weight: 700;
         font-size: 1.4rem;
@@ -184,11 +176,11 @@
     .non-disp{
       position: relative;
       height: 100%;
-      
+
       .card-nonVisible{
       width: 100%;
-      
-      
+
+
       // background-color: rgba(255, 0, 0, 0.815);
       border-radius: 5px;
       position: relative;
@@ -216,7 +208,7 @@
     }
 
 }
-    
+
   }
 }
 
@@ -240,7 +232,7 @@ import barraProdotti from '../components/resturantsComponents/barraProdotti.vue'
 
 export default {
 name:'ResturantMenu',
-components: { headerMenu, FooterResturants, OrderComponent, infoResturants,  }, 
+components: { headerMenu, FooterResturants, OrderComponent, infoResturants,  },
 // barraProdotti
 data(){
   return{
