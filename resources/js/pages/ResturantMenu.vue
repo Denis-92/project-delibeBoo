@@ -4,7 +4,8 @@
 
         <div>
             <router-link to="/resturants">
-                <button class="btn btn-outline-success btn-lg">Torna alla lista ristoranti</button>
+                <button type="button" class="btn btn-outline-info btn-lg ml-2 mt-2 pl-1 pt-1 pb-1 pr-1">Torna alla lista
+                    ristoranti</button>
             </router-link>
         </div>
 
@@ -56,7 +57,6 @@
                                     </div>
 
 
-
                                 </div>
 
                             </div>
@@ -67,15 +67,9 @@
                 </div>
             </div>
 
-
-
-
             <OrderComponent :plateToadd="plateOrder" />
 
-
         </section>
-
-
 
         <FooterResturants />
     </div>
@@ -227,12 +221,6 @@
     }
 }
 </style>
-
-
-
-
-
-
 
 
 <script>
