@@ -4,28 +4,27 @@
 
 
 
-<section id="sec">
-    <div class="container-principale">
-        <div class="Sx">
-            <img :src="`storage/${resturant.image}`" alt="">
+    <section id="sec">
+        <div class="container-principale">
+            <div class="Sx">
+                <img :src="`storage/${resturant.image}`" alt="">
+            </div>
+            <div class="Dx">
+                <h5>{{ resturant.name }}</h5>
+                <h6>{{ resturant.address }}</h6>
+            </div>
         </div>
-        <div class="Dx">
-            <h5>{{ resturant.name }}</h5>
 
-        </div>
-    </div>
-
-</section>
+    </section>
 
 
 
 </template>
 
 <style lang="scss" scoped>
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto=Roboto:wght@300;400;500&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -33,13 +32,14 @@
 
 }
 
-#sec{
+#sec {
     width: 100%;
     height: 30vh;
     display: flex;
     align-items: center;
 }
-.container-principale{
+
+.container-principale {
     width: 90%;
     height: 80%;
     //  background-color: rgba(9, 255, 0, 0.411);
@@ -48,20 +48,24 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    .Sx{
+
+    .Sx {
 
         height: 100%;
+
         // background-color: aquamarine;
-        img{
+        img {
             max-height: 100%;
             border-radius: 9px;
         }
     }
-    .Dx{
+
+    .Dx {
         flex-grow: 1;
         height: 95%;
+
         // background-color: aqua;
-        h5{
+        h5 {
             font-weight: 500;
             font-size: 2.2rem;
         }
@@ -74,8 +78,8 @@
 <script>
 export default {
     name: "infoResturants",
-    props:{resturant:Object},
-    mounted(){
+    props: { resturant: Object },
+    mounted() {
         console.log(this.resturant)
     }
 }
