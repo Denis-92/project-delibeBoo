@@ -4,7 +4,7 @@
     <infoResturants :resturant = 'resturant'/>
     <barraProdotti />
     
-
+<hr>
 
     <section id="sec">
       <div v-if="resturant != undefined" class="Mastro">

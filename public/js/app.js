@@ -3878,7 +3878,7 @@ var render = function render() {
     attrs: {
       resturant: _vm.resturant
     }
-  }), _vm._v(" "), _c("barraProdotti"), _vm._v(" "), _c("section", {
+  }), _vm._v(" "), _c("barraProdotti"), _vm._v(" "), _c("hr"), _vm._v(" "), _c("section", {
     attrs: {
       id: "sec"
     }
