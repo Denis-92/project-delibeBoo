@@ -11,58 +11,38 @@
         <div  v-for="plate, index in resturant.plates" :key="index" class="card-visible">
           <div v-if="!plate.hidden">
 
-            
-            <!-- info card e card -->
-            
-              
-                <img :src="`storage/${plate.image}`" alt="">
-              
+
+              <!-- info Card visible (influisce anche per le NON) -->
+              <img :src="`storage/${plate.image}`" alt="">
 
 
-
-              <h5>{{ plate.name }}</h5>
-              <p>Descrizione:</p>
-              <p>{{ plate.description }} </p>
-              <p>Prezzo:</p>
-              <p>{{ plate.price }}€</p>
-            
-            <!-- ------------ -->
-
-            <!-- ------------------Bottone--------------------------- -->
-            <button @click="order(plate)" type="button">Aggiungi al carrello</button>
-            <!-- --------------------------------------------------------------- -->
+              <div class="prova">
+                <h5>{{ plate.name }}</h5>
+                <p>Descrizione:</p>
+                <p>{{ plate.description }} </p>
+                <p>Prezzo:</p>
+                <p>{{ plate.price }}€</p>
+                <button @click="order(plate)" type="button">Aggiungi al carrello</button>
+              </div>
 
           </div>
 
 
           <div v-else >
-
-
             <div class="card-nonVisible">
 
-               <!-- img piatti -->
+               <!-- info Card non visible -->
+               <img :src="`storage/${plate.image}`" alt="">
+               <div class="prova">
+                <h5>{{ plate.name }}</h5>
+                <p>Descrizione:</p>
+                <p>{{ plate.description }} </p>
+                <p>Prezzo:</p>
+                <p>{{ plate.price }}€</p>
+                <button>Non permetterti a cliccarmi </button>
+              </div>
                
-                  <img :src="`storage/${plate.image}`" alt="">
-               
-               <!-- ------------------------ -->
-
-               <!-- info -->
-               <h5>{{ plate.name }}</h5>
-               <p>Descrizione:</p>
-               <p>{{ plate.description }} </p>
-               <p>Prezzo:</p>
-               <p>{{ plate.price }}€</p>
-               <!-- ------------ -->
-
             </div>
-
-
-            
-            <!-- <div class="soldout">
-              <h2 class="text-danger">SOLD OUT</h2>
-            </div> -->
-
-
 
           </div>
         </div>
@@ -96,43 +76,63 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 255, 157, 0.336);
+  // background-color: rgba(0, 255, 157, 0.336);
   .Mastro{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
 
     .card-visible{
       width: 25%;
-      height: 40%;
-      background-color: bisque;
-      border-radius: 10px;
+      // height: 45%;
+      // background-color: rgba(0, 255, 42, 0.342);
+      border-radius: 5px;
       position: relative;
+      .prova{
+        width: 65%;
+        background-color: rgba(0, 140, 255, 0.493);
+        h5{
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      }
+
       img{
-        max-width: 35%;
-        height: 100%;
-        border-radius: 0px 10px 10px 0px;
+        max-width: 29%;
+        height: 80%;
         position: absolute;
-        right: 0;
+        right: 17px;
+        bottom: 14px;
       }
     }
 
     .card-nonVisible{
       width: 100%;
-      background-color: red;
-      border-radius: 10px;
+      
+      // background-color: rgba(255, 0, 0, 0.815);
+      border-radius: 5px;
       position: relative;
+      .prova{
+        width: 65%;
+        background-color:  rgba(0, 140, 255, 0.493);
+        h5{
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      }
       img{
-        max-width: 60%;
+        max-width: 29%;
+        height: 80%;
         position: absolute;
-        right: 0;
+        right: 17px;
+        bottom: 14px;
       }
     }
   }
 }
-
-
 
 
 </style>

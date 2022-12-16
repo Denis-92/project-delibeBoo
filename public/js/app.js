@@ -3886,7 +3886,9 @@ var render = function render() {
         src: "storage/".concat(plate.image),
         alt: ""
       }
-    }), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")]), _vm._v(" "), _c("button", {
+    }), _vm._v(" "), _c("div", {
+      staticClass: "prova"
+    }, [_c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")]), _vm._v(" "), _c("button", {
       attrs: {
         type: "button"
       },
@@ -3895,14 +3897,16 @@ var render = function render() {
           return _vm.order(plate);
         }
       }
-    }, [_vm._v("Aggiungi al carrello")])]) : _c("div", [_c("div", {
+    }, [_vm._v("Aggiungi al carrello")])])]) : _c("div", [_c("div", {
       staticClass: "card-nonVisible"
     }, [_c("img", {
       attrs: {
         src: "storage/".concat(plate.image),
         alt: ""
       }
-    }), _vm._v(" "), _c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")])])])]);
+    }), _vm._v(" "), _c("div", {
+      staticClass: "prova"
+    }, [_c("h5", [_vm._v(_vm._s(plate.name))]), _vm._v(" "), _c("p", [_vm._v("Descrizione:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.description) + " ")]), _vm._v(" "), _c("p", [_vm._v("Prezzo:")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(plate.price) + "€")]), _vm._v(" "), _c("button", [_vm._v("Non permetterti a cliccarmi ")])])])])]);
   }), 0) : _vm._e(), _vm._v(" "), _c("OrderComponent", {
     attrs: {
       plateToadd: _vm.plateOrder
@@ -8584,7 +8588,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "*[data-v-77c5cfc8] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 255, 157, 0.336);\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 25%;\n  height: 40%;\n  background-color: bisque;\n  border-radius: 10px;\n  position: relative;\n}\n#sec .Mastro .card-visible img[data-v-77c5cfc8] {\n  max-width: 35%;\n  height: 100%;\n  border-radius: 0px 10px 10px 0px;\n  position: absolute;\n  right: 0;\n}\n#sec .Mastro .card-nonVisible[data-v-77c5cfc8] {\n  width: 100%;\n  background-color: red;\n  border-radius: 10px;\n  position: relative;\n}\n#sec .Mastro .card-nonVisible img[data-v-77c5cfc8] {\n  max-width: 60%;\n  position: absolute;\n  right: 0;\n}", ""]);
+exports.push([module.i, "*[data-v-77c5cfc8] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin-left: 5%;\n  margin-top: 5%;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 25%;\n  border-radius: 5px;\n  position: relative;\n}\n#sec .Mastro .card-visible .prova[data-v-77c5cfc8] {\n  width: 65%;\n  background-color: rgba(0, 140, 255, 0.493);\n}\n#sec .Mastro .card-visible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .card-visible img[data-v-77c5cfc8] {\n  max-width: 29%;\n  height: 80%;\n  position: absolute;\n  right: 17px;\n  bottom: 14px;\n}\n#sec .Mastro .card-nonVisible[data-v-77c5cfc8] {\n  width: 100%;\n  border-radius: 5px;\n  position: relative;\n}\n#sec .Mastro .card-nonVisible .prova[data-v-77c5cfc8] {\n  width: 65%;\n  background-color: rgba(0, 140, 255, 0.493);\n}\n#sec .Mastro .card-nonVisible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .card-nonVisible img[data-v-77c5cfc8] {\n  max-width: 29%;\n  height: 80%;\n  position: absolute;\n  right: 17px;\n  bottom: 14px;\n}", ""]);
 
 // exports
 
