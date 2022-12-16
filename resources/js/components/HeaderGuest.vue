@@ -28,8 +28,8 @@
 
 
         <div class="d-flex align-items-center" style="column-gap:20px;">
-            <div class="text-white ricerca" style="text-transform:uppercase">Ordina dai tuoi ristorantiInizia la ricerca</div>
-            <div > <router-link to="resturants"><button class="btn btn-outline-success">VAI</button></router-link> </div>
+            <h3 class="text-white">Ordina dai tuoi ristoranti</h3>
+            <div ><router-link to="resturants"><button class="btn btn-outline-success btn-lg">Inizia la ricerca</button></router-link> </div>
         </div>
 
     </div>
