@@ -1,35 +1,36 @@
 <template>
 
 
-<div id="sec-main" v-if='plate.length > 0'>
-    <h2 id="order">Il tuo ordine</h2>
+    <div id="sec-main" v-if='plate.length > 0'>
+        <h2 id="order">Il tuo ordine</h2>
 
-    <div class="mini-conteiner">
+        <div class="mini-conteiner">
 
-        <div v-for="element, index in plate" :key="index">
+            <div v-for="element, index in plate" :key="index">
 
-            <div class="content">
+                <div class="content">
 
 
-                <div class="sx">
-                    <h5>{{ element.piatto.name }}</h5>
-                </div>
-                <div class="dx">
-                    <div>
-                        <button type="button" class="btn btn-outline-info mr-2" @click="remove(index)"
-                            v-if="element.counter == 1 ? '' : 'disabled'">-</button>
-                        <span>{{ element.counter }}</span>
-                        <button type="button" class="btn btn-outline-info ml-2" @click="add(index)">+</button>
+                    <div class="sx">
+                        <h5>{{ element.piatto.name }}</h5>
                     </div>
-                    <h5>{{ element.totalPrice }}€</h5>
+                    <div class="dx">
+                        <div>
+                            <button type="button" class="btn btn-outline-info mr-2" @click="remove(index)"
+                                v-if="element.counter == 1 ? '' : 'disabled'">-</button>
+                            <span>{{ element.counter }}</span>
+                            <button type="button" class="btn btn-outline-info ml-2" @click="add(index)">+</button>
+                        </div>
+                        <h5>{{ element.totalPrice }}€</h5>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger ml-4 mb-2"
+                        @click="plateToRemove(index)">Rimuovi</button>
                 </div>
-                <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="plateToRemove(index)">Rimuovi</button>
             </div>
+            <h4>Totale ordine: {{ total }} €</h4>
         </div>
-        <h4>Totale ordine: {{ total }} €</h4>
+        <router-link id="cart" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Pagamento</router-link>
     </div>
-    <router-link id="cart" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Carrello</router-link>
-</div>
 
 
 
@@ -42,7 +43,7 @@ export default {
     data() {
         return {
             plate: [],
-            platestorage:undefined
+            platestorage: undefined
         }
     },
     props: {
@@ -82,21 +83,21 @@ export default {
 
 
         this.platestorage = JSON.parse(localStorage.getItem('plates'));
-          console.log('storage', this.platestorage)
-          if(this.platestorage.length > 0){
+        console.log('storage', this.platestorage)
+        if (this.platestorage.length > 0) {
             this.platestorage.forEach(element => {
-              console.log('element', element)
-              this.plate.push(element)
+                console.log('element', element)
+                this.plate.push(element)
             });
             console.log('push')
-          }
+        }
 
 
 
     },
-  updated(){
-          localStorage.setItem('plates',JSON.stringify(this.plate))
-        }
+    updated() {
+        localStorage.setItem('plates', JSON.stringify(this.plate))
+    }
 }
 </script>
 
