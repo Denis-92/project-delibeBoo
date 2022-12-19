@@ -1,36 +1,66 @@
 <template>
     <div>
         <header-menu />
-        <div>
-            <div>
-                <h1>Riepilogo dell'ordine</h1>
-            </div>
-            <div v-for="plate, index in plates" :key="index">
-                <div class="up">
-                    <img :src="`storage/${plate.piatto.image}`" alt="">
-                </div>
-                <h5 style="text-transform: uppercase;">{{ plate.piatto.name }}</h5>
 
-                <h5>Prezzo base:{{ plate.piatto.price }}€</h5>
-                <div class="d-flex">
-                    <h5 class="m-0 d-flex align-items-center">Quantita': {{ plate.counter }}</h5>
-                </div>
-                <h5>Costo totale: {{ plate.totalPrice }}€</h5>
-            </div>
-            <div>
-                <h2>Prezzo totale :</h2>
-                <p>{{ totale }}€</p>
-            </div>
+        <!-- Form pagamento -->
+        <div id="dropin-wrapper">
+            <div id="checkout-message"></div>
+            <div id="dropin-container"></div>
+            <router-link to="/checkout">
+                <button id="submit-button">Submit payment</button>
+            </router-link>
         </div>
+        <!-- / Form pagamento -->
         <footer-resturants />
     </div>
 </template>
 
 <script>
+
+// Form pagamento
+var button = document.querySelector('#submit-button');
+
+braintree.dropin.create({
+  // Insert your tokenization key here
+  authorization: 'sandbox_tv86qh36_vj929p636krz3fqj',
+  container: '#dropin-container'
+}, function (createErr, instance) {
+  button.addEventListener('click', function () {
+    instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
+      // When the user clicks on the 'Submit payment' button this code will send the
+      // encrypted payment information in a variable called a payment method nonce
+      $.ajax({
+        type: 'POST',
+        url: '/checkout',
+        data: {'paymentMethodNonce': payload.nonce}
+      }).done(function(result) {
+        // Tear down the Drop-in UI
+        instance.teardown(function (teardownErr) {
+          if (teardownErr) {
+            console.error('Could not tear down Drop-in UI!');
+          } else {
+            console.info('Drop-in UI has been torn down!');
+            // Remove the 'Submit payment' button
+            $('#submit-button').remove();
+          }
+        });
+
+        if (result.success) {
+          $('#checkout-message').html('<h1>Success</h1><p>Your Drop-in UI is working! Check your <a href="https://sandbox.braintreegateway.com/login">sandbox Control Panel</a> for your test transactions.</p><p>Refresh to try another transaction.</p>');
+        } else {
+          console.log(result);
+          $('#checkout-message').html('<h1>Error</h1><p>Check your console.</p>');
+        }
+      });
+    });
+  });
+});
+
 import FooterResturants from '../components/resturantsComponents/FooterResturants.vue'
 import headerMenu from '../components/resturantsComponents/headerMenu.vue'
+
 export default {
-    components: { headerMenu, FooterResturants },
+    components: { headerMenu, FooterResturants},
     name: 'CarrelloPage',
     data() {
         return {
@@ -47,6 +77,8 @@ export default {
 
     },
 }
+
+
 
 </script>
 

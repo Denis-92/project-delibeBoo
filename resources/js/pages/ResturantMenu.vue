@@ -3,7 +3,6 @@
         <headerMenu />
 
 
-
         <infoResturants :resturant='resturant' />
         <!--<barraProdotti />-->
 
@@ -52,7 +51,6 @@
                                     </div>
 
 
-
                                 </div>
 
                             </div>
@@ -63,15 +61,9 @@
                 </div>
             </div>
 
-
-
-
             <OrderComponent :plateToadd="plateOrder" />
 
-
         </section>
-
-
 
         <FooterResturants />
     </div>
@@ -223,12 +215,6 @@
     }
 }
 </style>
-
-
-
-
-
-
 
 
 <script>

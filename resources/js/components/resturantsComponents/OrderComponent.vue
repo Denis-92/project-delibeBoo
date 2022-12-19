@@ -29,7 +29,9 @@
             </div>
             <h4>Totale ordine: {{ total }} €</h4>
         </div>
-        <router-link id="cart" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Pagamento</router-link>
+
+        <router-link  id="cart" type="button" class="btn btn-outline-info" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Pagamento</router-link>
+
     </div>
 
 
@@ -110,8 +112,6 @@ export default {
 #cart {
     margin-left: 25px;
 }
-
-
 
 #sec-main {
     width: 35%;
