@@ -4,7 +4,7 @@
 
         <div class="Dx">
 
-            <router-link to="/resturants">
+            <router-link to="resturantMenu">
                 <button class="btn btn-outline-info btn-lg">Torna alla lista ristoranti</button>
             </router-link>
 

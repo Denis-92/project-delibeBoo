@@ -2,11 +2,7 @@
     <div>
         <headerMenu />
 
-        <div>
-            <router-link to="/resturants">
-                <button class="btn btn-outline-success btn-lg">Torna alla lista ristoranti</button>
-            </router-link>
-        </div>
+
 
         <infoResturants :resturant='resturant' />
         <!--<barraProdotti />-->
