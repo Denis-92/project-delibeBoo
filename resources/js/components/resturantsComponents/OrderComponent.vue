@@ -30,7 +30,7 @@
             <h4>Totale ordine: {{ total }} €</h4>
         </div>
 
-        <router-link  id="cart" type="button" class="btn btn-outline-info" :to="{ name: 'cart', params: { plates: plateToadd } }">Vai al Pagamento</router-link>
+        <button  id="cart" type="button" @click='cart()' class="btn btn-outline-info">Vai al Pagamento</button>
 
     </div>
 
@@ -61,6 +61,9 @@ export default {
         },
     },
     methods: {
+        cart(){
+            window.location.href='/payment'
+        },
         add(index) {
             this.plateToadd[index].counter = this.plateToadd[index].counter + 1
             let price = this.plateToadd[index].counter * this.plateToadd[index].piatto.price
