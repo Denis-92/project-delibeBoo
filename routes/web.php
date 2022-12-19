@@ -70,12 +70,7 @@ Route::post('/checkout', function(Request $request) {
 });
 
 
-
 Auth::routes();
-
-
-
-
 
 Route::middleware('auth')
     ->namespace('Admin')
