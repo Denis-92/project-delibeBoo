@@ -28,7 +28,7 @@ Route::get('/payment', function () {
 
     $token = $gateway->ClientToken()->generate();
 
-    return view("pagamento", [
+    return view("hosted", [
         'token' => $token
     ]);
 });
@@ -87,7 +87,3 @@ Route::middleware('auth')
 
 
 Route::get('/log', 'HomeController@index')->name('home');
-
-Route::get("{any?}", function() {
-    return redirect()->route('home');
-})->where("any", ".*");
