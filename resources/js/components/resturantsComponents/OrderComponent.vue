@@ -34,6 +34,8 @@
         <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="emptyChart()">Svuota
             carrello</button>
 
+        <PaymentComponentVue />
+
     </div>
 
 
@@ -42,7 +44,12 @@
 
 
 <script>
+import PaymentComponentVue from './PaymentComponent.vue';
+
 export default {
+    components: {
+        PaymentComponentVue
+    },
     name: 'OrderComponent',
     data() {
         return {
