@@ -30,7 +30,9 @@
             <h4>Totale ordine: {{ total }} €</h4>
         </div>
 
-        <button  id="cart" type="button" @click='cart()' class="btn btn-outline-info">Vai al Pagamento</button>
+        <button id="cart" type="button" @click='cart()' class="btn btn-outline-info">Vai al Pagamento</button>
+        <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="emptyChart(plate)">Svuota
+            carrello</button>
 
     </div>
 
@@ -61,8 +63,8 @@ export default {
         },
     },
     methods: {
-        cart(){
-            window.location.href='/payment'
+        cart() {
+            window.location.href = '/payment'
         },
         add(index) {
             this.plateToadd[index].counter = this.plateToadd[index].counter + 1
@@ -81,6 +83,14 @@ export default {
                 }
             });
             console.log(this.plate)
+        },
+        emptyChart() {
+            this.plate.forEach((element, index) => {
+                this.plate.splice(index, 1);
+            });
+            this.plate.forEach((element, index) => {
+                this.plate.splice(index, 1);
+            });
         }
     },
     mounted() {
