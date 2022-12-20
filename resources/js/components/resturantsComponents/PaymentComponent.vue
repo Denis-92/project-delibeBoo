@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <div class="col-md-6 offset-md-3">
+    <div class="container-principale">
+        <div >
             <h2>Inserisci i tuoi dati per completare l'ordine</h2>
 
             <form id="payment-form">
@@ -14,15 +14,15 @@
                     <input type="text" class="form-control" id="name_on_card" name="name_on_card">
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                <div >
+                    <div >
                         <div class="form-group">
                             <label for="address">Indirizzo</label>
                             <input type="text" class="form-control" id="address" name="address">
                         </div>
                     </div>
 
-                    <div class="col-md-12">
+                    <div >
                         <div class="form-group">
                             <label for="phone">Cellulare</label>
                             <input type="text" class="form-control" id="phone" name="phone">
@@ -31,13 +31,13 @@
 
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                <div >
+                    <div >
                         <label for="cc_number">Numero della carta</label>
                         <input type="text" class="form-group" id="card-number">
                     </div>
 
-                    <div class="col-md-6">
+                    <div >
                         <label for="expiry">Scadenza</label>
 
                         <div class="form-group" id="expiration-date">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div >
                         <label for="cvv">CVV</label>
 
                         <div class="form-group" id="cvv">
@@ -109,25 +109,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-    margin: 24px 0;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.hidden {
-    display: none;
+
+.container-principale{
+  width: 50%;
+  height: 100%;
+  background-color: #00f8ff8c;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.spacer {
-    margin-bottom: 24px;
-}
 
-#card-number,
-#cvv,
-#expiration-date {
-    background: white;
-    height: 38px;
-    border: 1px solid #CED4DA;
-    padding: .375rem .75rem;
-    border-radius: .25rem;
-}
 </style>

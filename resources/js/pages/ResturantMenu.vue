@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="appiglio">
         <headerMenu />
 
 
@@ -110,15 +110,21 @@
     padding: 0;
 }
 
+#appiglio{
+    position: relative;
+}
+
 
 #sec {
     display: flex;
     width: 100%;
+    // position: relative;
 
     // height: 100%;
     // background-color: rgba(0, 255, 157, 0.336);
     .Mastro {
         width: 80%;
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
