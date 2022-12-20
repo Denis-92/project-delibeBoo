@@ -3699,7 +3699,9 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "container-principale"
-  }, [_c("div", [_c("h2", [_vm._v("Inserisci i tuoi dati per completare l'ordine")]), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "container-content"
+  }, [_c("h2", [_vm._v("Inserisci i tuoi dati per completare l'ordine")]), _vm._v(" "), _c("form", {
     attrs: {
       id: "payment-form"
     }
@@ -8745,7 +8747,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.container-principale[data-v-1e012438] {\n  width: 50%;\n  height: 100%;\n  background-color: rgba(0, 248, 255, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n}", ""]);
+exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.container-principale[data-v-1e012438] {\n  width: 50%;\n  height: 100%;\n  background-color: rgba(0, 248, 255, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 80%;\n  background: red;\n}", ""]);
 
 // exports
 

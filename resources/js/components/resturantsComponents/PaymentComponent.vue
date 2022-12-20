@@ -1,6 +1,6 @@
 <template>
     <div class="container-principale">
-        <div >
+        <div class="container-content">
             <h2>Inserisci i tuoi dati per completare l'ordine</h2>
 
             <form id="payment-form">
@@ -124,6 +124,13 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container-content{
+    width: 80%;
+    background: red;
+  }
 }
 
 
