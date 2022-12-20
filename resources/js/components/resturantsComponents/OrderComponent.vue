@@ -31,7 +31,7 @@
         </div>
 
         <button id="cart" type="button" @click='cart()' class="btn btn-outline-info">Vai al Pagamento</button>
-        <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="emptyChart(plate)">Svuota
+        <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="emptyChart()">Svuota
             carrello</button>
 
     </div>
