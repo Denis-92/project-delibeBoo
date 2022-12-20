@@ -12,6 +12,10 @@
             margin: 24px 0;
         }
 
+        .hidden {
+            display: none;
+        }
+
         .spacer {
             margin-bottom: 24px;
         }
@@ -112,8 +116,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="text" class="form-control" id="amount" name="amount" value="11">
+                            <label for="amount"></label>
+                            <input type="text" class="form-control hidden" id="amount" name="amount"
+                                value="11">
                         </div>
                     </div>
                 </div>
