@@ -142,7 +142,8 @@
         margin-bottom: 5%;
 
         .card-visible {
-            width: 40%;
+            width: 44%;
+            margin-right: 30px;
             // max-height: 45%;
             // background-color: rgba(0, 255, 42, 0.342);
             border-radius: 5px;
