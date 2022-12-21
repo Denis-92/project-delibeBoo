@@ -103,7 +103,7 @@ export default {
                 this.plate.splice(index, 1);
             });
             this.plate.forEach((element, index) => {
-                this.plate.splice(index, 1);
+                this.plate.splice(index, 5);
             });
         }
     },
