@@ -33,7 +33,9 @@
         <button type="button" class="btn btn-outline-danger ml-4 mb-2" @click="emptyChart()">Svuota
             carrello</button>
 
-        <PaymentComponentVue />
+        <button class="btn btn-outline-success ml-4 mb-2" @click="showForm()">Vai al Pagamento</button>
+
+        <PaymentComponent :piatti="this.cartPiatti" @close="hiddenPayment()" :show="showPayment"/>
 
     </div>
 
@@ -43,17 +45,19 @@
 
 
 <script>
-import PaymentComponentVue from './PaymentComponent.vue';
+import PaymentComponent from './PaymentComponent.vue';
 
 export default {
     components: {
-        PaymentComponentVue
+        PaymentComponent
     },
     name: 'OrderComponent',
     data() {
         return {
             plate: [],
-            platestorage: undefined
+            platestorage: undefined,
+            showPayment:false,
+            cartPiatti:undefined
         }
     },
     props: {
@@ -69,6 +73,13 @@ export default {
         },
     },
     methods: {
+        hiddenPayment(value){
+            this.showPayment=value
+        },
+        showForm(){
+            this.showPayment=true;
+            this.cartPiatti=this.plate
+        },
         add(index) {
             this.plateToadd[index].counter = this.plateToadd[index].counter + 1
             let price = this.plateToadd[index].counter * this.plateToadd[index].piatto.price

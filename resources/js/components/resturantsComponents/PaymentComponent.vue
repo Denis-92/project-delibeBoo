@@ -1,48 +1,22 @@
 <template>
 
 
+<div id="dropin-wrapper">
+    <div class="container-principale" :class="show? 'd-flex': 'd-none'">
 
-    <div class="container-principale">
-
-        <div class="container-content">
+        <div class="container-content" >
+           <div class="close">
+            <button class="btn btn-outline-danger px-2" @click="closePayment()">X</button>
+           </div>
             <h2>Inserisci i tuoi dati per completare l'ordine</h2>
 
 
 
-            <form id="payment-form">
-
-
-<!-- ------------info card--------- -->
-
-              <div class="info-card">
-                    <div id="card-n">
-                        <label for="cc_number">Numero della carta</label>
-                        <input type="text" class="form-group" id="card-number">
-                    </div>
-
-                    <div id="secure-info">
-
-                        <div class="prova">
-                          <label for="expiry">Scadenza</label> 
-                          <input type="text" name="Scadenza" id="">
-                        </div>
-
-                        <div class="prova">
-                          <label for="cvv">CVV</label> 
-                          <input type="number" name="CVV" id="">
-                        </div>
-
-
-                    </div>
-              </div>
-
-
-
+            <form id="payment-form" >
 
 
 
 <!-- ------------info untente--------- -->
-              
               <div class="form-group">
                 <div class="info-form">
                   <label for="name_on_card">Titolare</label>
@@ -52,11 +26,11 @@
 
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="email">
-                
+
 
                   <label for="phone">Cellulare</label>
                   <input type="text" class="form-control" id="phone" name="phone">
-                       
+
                   <label for="address">Indirizzo</label>
                   <input type="text" class="form-control" id="address" name="address">
                 </div>
@@ -64,22 +38,33 @@
 
 <!-- ------------------------------------------------------------------ -->
 
+                    <!-- ------------info card--------- -->
+
+                    <div class="info-card" id="dropin-container">
+
+                    </div>
+
+
+
+
+
 
 
 
                 <!-- -altro -->
                     <router-link to="/checkout">
-                        <button type="button" class="btn btn-outline-success mb-2 mt-2 py-2"
+                        <button type="submit" class="btn btn-outline-success mb-2 mt-2 py-2"
                         id="submit-button">Completa il pagamento</button>
                         <div class="space">
 
                         </div>
                     </router-link>
-                   
+
 
             </form>
         </div>
     </div>
+</div>
 </template>
 
 
@@ -90,7 +75,12 @@
   padding: 0;
   margin: 0;
 }
-
+.close{
+    display: flex;
+                        width: 89%;
+                        justify-content: end;
+                        padding-top: 15px;
+}
 input{
   background-color: white;
   border: 1px solid #000000a3;
@@ -110,7 +100,6 @@ input{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none; 
   align-items: center;
   justify-content: center;
   .container-content{
@@ -118,7 +107,7 @@ input{
     background: rgb(255 255 255);
     position: absolute;
     top: 10%;
-    
+
 
     display: flex;
     flex-direction: column;
@@ -232,5 +221,19 @@ braintree.dropin.create({
 
 export default {
     name: 'PaymentComponent',
+    props:{
+        show:Boolean,
+        piatti:Array
+    },
+    methods:{
+        piattishow(){
+            console.log(this.piatti)
+        },
+        closePayment(){
+            this.show=false
+            this.$emit('close', this.show)
+        }
+    },
+
 }
 </script>
