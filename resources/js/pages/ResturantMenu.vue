@@ -1,6 +1,6 @@
 <template>
     <div id="appiglio">
-        <headerMenu />
+        <headerMenu class="ciaoprova"/>
 
 
         <infoResturants :resturant='resturant' />
@@ -75,6 +75,12 @@
     display: flex;
 }
 
+.ciaoprova{
+    position: fixed;
+    background-color: white;
+}
+
+
 .Hsorry {
     width: 100%;
     height: 100%;
@@ -118,6 +124,7 @@
 #sec {
     display: flex;
     width: 100%;
+    padding-top: 4%;
     // position: relative;
 
     // height: 100%;
