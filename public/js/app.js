@@ -3705,7 +3705,7 @@ var render = function render() {
     attrs: {
       id: "payment-form"
     }
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("router-link", {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("router-link", {
     attrs: {
       to: "/checkout"
     }
@@ -3721,6 +3721,54 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
+    staticClass: "info-card"
+  }, [_c("div", {
+    attrs: {
+      id: "card-n"
+    }
+  }, [_c("label", {
+    attrs: {
+      "for": "cc_number"
+    }
+  }, [_vm._v("Numero della carta")]), _vm._v(" "), _c("input", {
+    staticClass: "form-group",
+    attrs: {
+      type: "text",
+      id: "card-number"
+    }
+  })]), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "secure-info"
+    }
+  }, [_c("div", {
+    staticClass: "prova"
+  }, [_c("label", {
+    attrs: {
+      "for": "expiry"
+    }
+  }, [_vm._v("Scadenza")]), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "text",
+      name: "Scadenza",
+      id: ""
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "prova"
+  }, [_c("label", {
+    attrs: {
+      "for": "cvv"
+    }
+  }, [_vm._v("CVV")]), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "number",
+      name: "CVV",
+      id: ""
+    }
+  })])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "form-group"
   }, [_c("label", {
     attrs: {
@@ -3732,30 +3780,18 @@ var staticRenderFns = [function () {
       type: "email",
       id: "email"
     }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("label", {
     attrs: {
       "for": "name_on_card"
     }
-  }, [_vm._v("Titolare della carta")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Titolare")]), _vm._v(" "), _c("input", {
     staticClass: "form-control",
     attrs: {
       type: "text",
       id: "name_on_card",
       name: "name_on_card"
     }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", [_c("div", [_c("div", {
-    staticClass: "form-group"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("label", {
     attrs: {
       "for": "address"
     }
@@ -3766,9 +3802,7 @@ var staticRenderFns = [function () {
       id: "address",
       name: "address"
     }
-  })])]), _vm._v(" "), _c("div", [_c("div", {
-    staticClass: "form-group"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("label", {
     attrs: {
       "for": "phone"
     }
@@ -3779,39 +3813,7 @@ var staticRenderFns = [function () {
       id: "phone",
       name: "phone"
     }
-  })])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", [_c("div", [_c("label", {
-    attrs: {
-      "for": "cc_number"
-    }
-  }, [_vm._v("Numero della carta")]), _vm._v(" "), _c("input", {
-    staticClass: "form-group",
-    attrs: {
-      type: "text",
-      id: "card-number"
-    }
-  })]), _vm._v(" "), _c("div", [_c("label", {
-    attrs: {
-      "for": "expiry"
-    }
-  }, [_vm._v("Scadenza")]), _vm._v(" "), _c("div", {
-    staticClass: "form-group",
-    attrs: {
-      id: "expiration-date"
-    }
-  })]), _vm._v(" "), _c("div", [_c("label", {
-    attrs: {
-      "for": "cvv"
-    }
-  }, [_vm._v("CVV")]), _vm._v(" "), _c("div", {
-    staticClass: "form-group",
-    attrs: {
-      id: "cvv"
-    }
-  })])]);
+  })]);
 }];
 render._withStripped = true;
 
@@ -8747,7 +8749,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.container-principale[data-v-1e012438] {\n  width: 50%;\n  height: 100%;\n  background-color: rgba(0, 248, 255, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 80%;\n  background: red;\n}", ""]);
+exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.container-principale[data-v-1e012438] {\n  width: 50%;\n  height: 100%;\n  background-color: rgba(0, 248, 255, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 80%;\n  background: red;\n}\n.container-principale .container-content h2[data-v-1e012438] {\n  padding: 40px 0px;\n  font-size: 2.2rem;\n}\n.container-principale .container-content #payment-form[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container-principale .container-content #payment-form .form-group[data-v-1e012438] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n}\n.container-principale .container-content #payment-form .info-card[data-v-1e012438] {\n  background: aquamarine;\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #card-n[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card #card-n input[data-v-1e012438] {\n  width: 100%;\n}\n.container-principale .container-content #payment-form .info-card #secure-info[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #secure-info .prova[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  width: 33%;\n}", ""]);
 
 // exports
 

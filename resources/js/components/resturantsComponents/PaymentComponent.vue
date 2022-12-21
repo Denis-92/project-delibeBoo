@@ -3,57 +3,65 @@
         <div class="container-content">
             <h2>Inserisci i tuoi dati per completare l'ordine</h2>
 
+
+
             <form id="payment-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
-                </div>
 
-                <div class="form-group">
-                    <label for="name_on_card">Titolare della carta</label>
-                    <input type="text" class="form-control" id="name_on_card" name="name_on_card">
-                </div>
 
-                <div >
-                    <div >
-                        <div class="form-group">
-                            <label for="address">Indirizzo</label>
-                            <input type="text" class="form-control" id="address" name="address">
-                        </div>
-                    </div>
+<!-- ------------info card--------- -->
 
-                    <div >
-                        <div class="form-group">
-                            <label for="phone">Cellulare</label>
-                            <input type="text" class="form-control" id="phone" name="phone">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div >
-                    <div >
+              <div class="info-card">
+                    <div id="card-n">
                         <label for="cc_number">Numero della carta</label>
                         <input type="text" class="form-group" id="card-number">
                     </div>
 
-                    <div >
-                        <label for="expiry">Scadenza</label>
+                    <div id="secure-info">
 
-                        <div class="form-group" id="expiration-date">
-
+                        <div class="prova">
+                          <label for="expiry">Scadenza</label> 
+                          <input type="text" name="Scadenza" id="">
                         </div>
-                    </div>
 
-                    <div >
-                        <label for="cvv">CVV</label>
-
-                        <div class="form-group" id="cvv">
-
+                        <div class="prova">
+                          <label for="cvv">CVV</label> 
+                          <input type="number" name="CVV" id="">
                         </div>
-                    </div>
 
+
+                    </div>
+              </div>
+
+
+<!-- ------------info untente--------- -->
+              
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                
+
+                
+                    <label for="name_on_card">Titolare</label>
+                    <input type="text" class="form-control" id="name_on_card" name="name_on_card">
+                
+
+                
+                                  
+                     <label for="address">Indirizzo</label>
+                     <input type="text" class="form-control" id="address" name="address">
+
+                     <label for="phone">Cellulare</label>
+                     <input type="text" class="form-control" id="phone" name="phone">
+                      
                 </div>
+
+
+
+
+
+
+
                     <router-link to="/checkout">
                         <button type="button" class="btn btn-outline-success mb-2 mt-2"
                         id="submit-button">Completa il pagamento</button>
@@ -64,6 +72,89 @@
         </div>
     </div>
 </template>
+
+
+
+<style lang="scss" scoped>
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.container-principale{
+  width: 50%;
+  height: 100%;
+  background-color: #00f8ff8c;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container-content{
+    width: 80%;
+    background: red;
+    h2{
+      padding: 40px 0px;
+      font-size: 2.2rem;
+    }
+    #payment-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form-group{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .info-card{
+        background: aquamarine;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        #card-n{
+          width: 70%;
+          input{
+            width: 100%;
+          }
+        }
+        #secure-info{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+          .prova{
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 // Form pagamento
@@ -107,31 +198,3 @@ export default {
     name: 'PaymentComponent',
 }
 </script>
-
-<style lang="scss" scoped>
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
-.container-principale{
-  width: 50%;
-  height: 100%;
-  background-color: #00f8ff8c;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .container-content{
-    width: 80%;
-    background: red;
-  }
-}
-
-
-</style>
