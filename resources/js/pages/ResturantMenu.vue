@@ -1,6 +1,6 @@
 <template>
     <div id="appiglio">
-        <headerMenu class="ciaoprova"/>
+        <headerMenu class="ciaoprova" />
 
 
         <infoResturants :resturant='resturant' />
@@ -75,8 +75,9 @@
     display: flex;
 }
 
-.ciaoprova{
+.ciaoprova {
     position: fixed;
+    z-index: 800;
     background-color: white;
 }
 
@@ -116,7 +117,7 @@
     padding: 0;
 }
 
-#appiglio{
+#appiglio {
     position: relative;
 }
 
@@ -148,7 +149,7 @@
             background-color: #ffff;
             box-shadow: #0000000a -4px 4px 5px 0px;
             border: 1px solid #00000012;
-            
+
 
             .prova {
                 width: 65%;
@@ -221,7 +222,7 @@
                     height: 100%;
                     position: absolute;
                     right: 0px;
-                    bottom: 5px;    
+                    bottom: 5px;
                 }
             }
 
