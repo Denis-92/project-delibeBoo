@@ -1,5 +1,9 @@
 <template>
+
+
+
     <div class="container-principale">
+
         <div class="container-content">
             <h2>Inserisci i tuoi dati per completare l'ordine</h2>
 
@@ -67,7 +71,7 @@
                     <router-link to="/checkout">
                         <button type="button" class="btn btn-outline-success mb-2 mt-2 py-2"
                         id="submit-button">Completa il pagamento</button>
-                        <div class="spz">
+                        <div class="space">
 
                         </div>
                     </router-link>
@@ -93,7 +97,7 @@ input{
   border-radius: 5px;
 }
 
-.spz{
+.space{
   width: 100px;
   height: 20px;
 
@@ -106,7 +110,7 @@ input{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
+  display: none; 
   align-items: center;
   justify-content: center;
   .container-content{
@@ -114,6 +118,7 @@ input{
     background: rgb(255 255 255);
     position: absolute;
     top: 10%;
+    
 
     display: flex;
     flex-direction: column;
