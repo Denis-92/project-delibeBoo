@@ -141,6 +141,7 @@
             background-color: #ffff;
             box-shadow: #0000000a -4px 4px 5px 0px;
             border: 1px solid #00000012;
+            
 
             .prova {
                 width: 65%;
@@ -174,6 +175,7 @@
                 position: absolute;
                 right: 0px;
                 bottom: 5px;
+                border-radius: 0px 5px 5px 0px;
             }
         }
 
