@@ -27,9 +27,11 @@
         <h3>I piatti dei ristoranti che ami e la spesa, a domicilio</h3>
 
 
-        <div class="d-flex align-items-center" style="column-gap:20px;">
-            <h3 class="text-white">Ordina dai tuoi ristoranti</h3>
-            <div ><router-link to="resturants"><button class="btn btn-outline-success btn-lg">Inizia la ricerca</button></router-link> </div>
+        <div class="d-flex align-items-center Angelo" style="column-gap:20px;">
+            
+                <h3 id="mis" class="via">Ordina dai tuoi ristoranti</h3>
+                <div ><router-link to="resturants"><button class="btn btn-outline-success btn-lg">Inizia la ricerca</button></router-link> </div>   
+            
         </div>
 
     </div>
@@ -146,6 +148,12 @@ methods:{
         margin-left: 20px;
     }
 
+}
+#mis{
+    font-size: 2.5rem;
+}
+.Angelo{
+    justify-content: center;
 }
 
 

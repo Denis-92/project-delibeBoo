@@ -30,7 +30,7 @@
 
   export default {
       name: 'app',
-      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap, Offert, footerDeli },
+      components: { HeaderGuest, AnimationGuest, FixAnimat, MainMap, Offert, footerDeli,  },
 
       }
   </script>
