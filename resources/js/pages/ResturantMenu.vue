@@ -78,6 +78,7 @@
 .ciaoprova{
     position: fixed;
     background-color: white;
+    z-index: 800;
 }
 
 
@@ -140,7 +141,7 @@
         margin-bottom: 5%;
 
         .card-visible {
-            width: 30%;
+            width: 40%;
             // max-height: 45%;
             // background-color: rgba(0, 255, 42, 0.342);
             border-radius: 5px;

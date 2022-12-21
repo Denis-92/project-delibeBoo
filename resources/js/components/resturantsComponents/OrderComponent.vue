@@ -1,7 +1,7 @@
 <template>
 
 
-    <div id="sec-main" v-if='plate.length > 0'>
+    <div id="sec-main" >
         <h2 id="order">Il tuo ordine</h2>
 
         <div class="mini-conteiner">
