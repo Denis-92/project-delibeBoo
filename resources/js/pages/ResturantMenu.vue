@@ -170,7 +170,7 @@
 
             img {
                 max-width: 27%;
-                height: 69%;
+                height: 100px;
                 position: absolute;
                 right: 17px;
                 bottom: 30px;
@@ -209,7 +209,7 @@
 
                 img {
                     max-width: 27%;
-                    height: 69%;
+                    height: 100px;
                     position: absolute;
                     right: 17px;
                     bottom: 30px;
