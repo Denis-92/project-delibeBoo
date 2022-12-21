@@ -42,7 +42,7 @@
 
         @if ($plate->image !== null)
             <div style="width: 400px; height:250px" class="p-0">
-                <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $plate->image) }}" alt="test">
+                <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $plate->image) }}" alt="">
             </div>
         @endif
     </div>
