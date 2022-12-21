@@ -33,40 +33,45 @@
               </div>
 
 
+
+
+
+
 <!-- ------------info untente--------- -->
               
-                <div class="form-group">
+              <div class="form-group">
+                <div class="info-form">
+                  <label for="name_on_card">Titolare</label>
+                  <input type="text" class="form-control" id="name_on_card" name="name_on_card">
 
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
+
+
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email">
                 
 
-                
-                    <label for="name_on_card">Titolare</label>
-                    <input type="text" class="form-control" id="name_on_card" name="name_on_card">
-                
-
-                
-                                  
-                     <label for="address">Indirizzo</label>
-                     <input type="text" class="form-control" id="address" name="address">
-
-                     <label for="phone">Cellulare</label>
-                     <input type="text" class="form-control" id="phone" name="phone">
-                      
+                  <label for="phone">Cellulare</label>
+                  <input type="text" class="form-control" id="phone" name="phone">
+                       
+                  <label for="address">Indirizzo</label>
+                  <input type="text" class="form-control" id="address" name="address">
                 </div>
+              </div>
+
+<!-- ------------------------------------------------------------------ -->
 
 
 
 
-
-
-
+                <!-- -altro -->
                     <router-link to="/checkout">
-                        <button type="button" class="btn btn-outline-success mb-2 mt-2"
+                        <button type="button" class="btn btn-outline-success mb-2 mt-2 py-2"
                         id="submit-button">Completa il pagamento</button>
+                        <div class="spz">
+
+                        </div>
                     </router-link>
-                    <!-- / Form pagamento -->
+                   
 
             </form>
         </div>
@@ -82,11 +87,21 @@
   margin: 0;
 }
 
+input{
+  background-color: white;
+  border: 1px solid #000000a3;
+  border-radius: 5px;
+}
 
+.spz{
+  width: 100px;
+  height: 20px;
+
+}
 .container-principale{
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-color: #00f8ff8c;
+  background-color: #0000008c;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -95,25 +110,41 @@
   align-items: center;
   justify-content: center;
   .container-content{
-    width: 80%;
-    background: red;
+    width: 35%;
+    background: rgb(255 255 255);
+    position: absolute;
+    top: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+
     h2{
       padding: 40px 0px;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
+      text-align: center;
     }
     #payment-form{
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 25px;
+      width: 100%;
       .form-group{
-        width: 80%;
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        // background-color: antiquewhite;
+        .info-form{
+          width: 70%;
+        }
       }
 
       .info-card{
-        background: aquamarine;
-        width: 80%;
+        // background: aquamarine;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;

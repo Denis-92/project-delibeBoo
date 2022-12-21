@@ -3710,12 +3710,14 @@ var render = function render() {
       to: "/checkout"
     }
   }, [_c("button", {
-    staticClass: "btn btn-outline-success mb-2 mt-2",
+    staticClass: "btn btn-outline-success mb-2 mt-2 py-2",
     attrs: {
       type: "button",
       id: "submit-button"
     }
-  }, [_vm._v("Completa il pagamento")])])], 1)])]);
+  }, [_vm._v("Completa il pagamento")]), _vm._v(" "), _c("div", {
+    staticClass: "spz"
+  })])], 1)])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3770,17 +3772,9 @@ var staticRenderFns = [function () {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "form-group"
+  }, [_c("div", {
+    staticClass: "info-form"
   }, [_c("label", {
-    attrs: {
-      "for": "email"
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "email",
-      id: "email"
-    }
-  }), _vm._v(" "), _c("label", {
     attrs: {
       "for": "name_on_card"
     }
@@ -3793,14 +3787,13 @@ var staticRenderFns = [function () {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      "for": "address"
+      "for": "email"
     }
-  }, [_vm._v("Indirizzo")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Email")]), _vm._v(" "), _c("input", {
     staticClass: "form-control",
     attrs: {
-      type: "text",
-      id: "address",
-      name: "address"
+      type: "email",
+      id: "email"
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
@@ -3813,7 +3806,18 @@ var staticRenderFns = [function () {
       id: "phone",
       name: "phone"
     }
-  })]);
+  }), _vm._v(" "), _c("label", {
+    attrs: {
+      "for": "address"
+    }
+  }, [_vm._v("Indirizzo")]), _vm._v(" "), _c("input", {
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      id: "address",
+      name: "address"
+    }
+  })])]);
 }];
 render._withStripped = true;
 
@@ -8749,7 +8753,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.container-principale[data-v-1e012438] {\n  width: 50%;\n  height: 100%;\n  background-color: rgba(0, 248, 255, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 80%;\n  background: red;\n}\n.container-principale .container-content h2[data-v-1e012438] {\n  padding: 40px 0px;\n  font-size: 2.2rem;\n}\n.container-principale .container-content #payment-form[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container-principale .container-content #payment-form .form-group[data-v-1e012438] {\n  width: 80%;\n  display: flex;\n  flex-wrap: wrap;\n}\n.container-principale .container-content #payment-form .info-card[data-v-1e012438] {\n  background: aquamarine;\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #card-n[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card #card-n input[data-v-1e012438] {\n  width: 100%;\n}\n.container-principale .container-content #payment-form .info-card #secure-info[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #secure-info .prova[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  width: 33%;\n}", ""]);
+exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\ninput[data-v-1e012438] {\n  background-color: white;\n  border: 1px solid rgba(0, 0, 0, 0.6392156863);\n  border-radius: 5px;\n}\n.spz[data-v-1e012438] {\n  width: 100px;\n  height: 20px;\n}\n.container-principale[data-v-1e012438] {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 35%;\n  background: rgb(255, 255, 255);\n  position: absolute;\n  top: 10%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border-radius: 18px;\n}\n.container-principale .container-content h2[data-v-1e012438] {\n  padding: 40px 0px;\n  font-size: 1.8rem;\n  text-align: center;\n}\n.container-principale .container-content #payment-form[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n  width: 100%;\n}\n.container-principale .container-content #payment-form .form-group[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container-principale .container-content #payment-form .form-group .info-form[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #card-n[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card #card-n input[data-v-1e012438] {\n  width: 100%;\n}\n.container-principale .container-content #payment-form .info-card #secure-info[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #secure-info .prova[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  width: 33%;\n}", ""]);
 
 // exports
 
