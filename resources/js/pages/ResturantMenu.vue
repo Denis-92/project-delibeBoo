@@ -169,11 +169,11 @@
             }
 
             img {
-                max-width: 29%;
-                height: 80%;
+                max-width: 27%;
+                height: 69%;
                 position: absolute;
                 right: 17px;
-                bottom: 14px;
+                bottom: 30px;
             }
         }
 
@@ -208,11 +208,11 @@
                 }
 
                 img {
-                    max-width: 29%;
-                    height: 80%;
+                    max-width: 27%;
+                    height: 69%;
                     position: absolute;
                     right: 17px;
-                    bottom: 14px;
+                    bottom: 30px;
                 }
             }
 

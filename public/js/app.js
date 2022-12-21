@@ -2183,13 +2183,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    PaymentComponentVue: _PaymentComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    PaymentComponent: _PaymentComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   name: 'OrderComponent',
   data: function data() {
     return {
       plate: [],
-      platestorage: undefined
+      platestorage: undefined,
+      showPayment: false,
+      cartPiatti: undefined
     };
   },
   props: {
@@ -2205,6 +2207,13 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    hiddenPayment: function hiddenPayment(value) {
+      this.showPayment = value;
+    },
+    showForm: function showForm() {
+      this.showPayment = true;
+      this.cartPiatti = this.plate;
+    },
     add: function add(index) {
       this.plateToadd[index].counter = this.plateToadd[index].counter + 1;
       var price = this.plateToadd[index].counter * this.plateToadd[index].piatto.price;
@@ -2230,7 +2239,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.plate.splice(index, 1);
       });
       this.plate.forEach(function (element, index) {
-        _this2.plate.splice(index, 1);
+        _this2.plate.splice(index, 5);
       });
     }
   },
@@ -2302,7 +2311,20 @@ braintree.dropin.create({
   });
 });
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'PaymentComponent'
+  name: 'PaymentComponent',
+  props: {
+    show: Boolean,
+    piatti: Array
+  },
+  methods: {
+    piattishow: function piattishow() {
+      console.log(this.piatti);
+    },
+    closePayment: function closePayment() {
+      this.show = false;
+      this.$emit('close', this.show);
+    }
+  }
 });
 
 /***/ }),
@@ -3675,7 +3697,24 @@ var render = function render() {
         return _vm.emptyChart();
       }
     }
-  }, [_vm._v("Svuota\n        carrello")]), _vm._v(" "), _c("PaymentComponentVue")], 1) : _vm._e();
+  }, [_vm._v("Svuota\n        carrello")]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-outline-success ml-4 mb-2",
+    on: {
+      click: function click($event) {
+        return _vm.showForm();
+      }
+    }
+  }, [_vm._v("Vai al Pagamento")]), _vm._v(" "), _c("PaymentComponent", {
+    attrs: {
+      piatti: this.cartPiatti,
+      show: _vm.showPayment
+    },
+    on: {
+      close: function close($event) {
+        return _vm.hiddenPayment();
+      }
+    }
+  })], 1) : _vm._e();
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -3698,76 +3737,47 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container-principale"
+    attrs: {
+      id: "dropin-wrapper"
+    }
+  }, [_c("div", {
+    staticClass: "container-principale",
+    "class": _vm.show ? "d-flex" : "d-none"
   }, [_c("div", {
     staticClass: "container-content"
-  }, [_c("h2", [_vm._v("Inserisci i tuoi dati per completare l'ordine")]), _vm._v(" "), _c("form", {
+  }, [_c("div", {
+    staticClass: "close"
+  }, [_c("button", {
+    staticClass: "btn btn-outline-danger px-2",
+    on: {
+      click: function click($event) {
+        return _vm.closePayment();
+      }
+    }
+  }, [_vm._v("X")])]), _vm._v(" "), _c("h2", [_vm._v("Inserisci i tuoi dati per completare l'ordine")]), _vm._v(" "), _c("form", {
     attrs: {
       id: "payment-form"
     }
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("router-link", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "info-card",
+    attrs: {
+      id: "dropin-container"
+    }
+  }), _vm._v(" "), _c("router-link", {
     attrs: {
       to: "/checkout"
     }
   }, [_c("button", {
     staticClass: "btn btn-outline-success mb-2 mt-2 py-2",
     attrs: {
-      type: "button",
+      type: "submit",
       id: "submit-button"
     }
-  }, [_vm._v("Completa il pagamento")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Completa\n                        il pagamento")]), _vm._v(" "), _c("div", {
     staticClass: "space"
-  })])], 1)])]);
+  })])], 1)])])]);
 };
 var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "info-card"
-  }, [_c("div", {
-    attrs: {
-      id: "card-n"
-    }
-  }, [_c("label", {
-    attrs: {
-      "for": "cc_number"
-    }
-  }, [_vm._v("Numero della carta")]), _vm._v(" "), _c("input", {
-    staticClass: "form-group",
-    attrs: {
-      type: "text",
-      id: "card-number"
-    }
-  })]), _vm._v(" "), _c("div", {
-    attrs: {
-      id: "secure-info"
-    }
-  }, [_c("div", {
-    staticClass: "prova"
-  }, [_c("label", {
-    attrs: {
-      "for": "expiry"
-    }
-  }, [_vm._v("Scadenza")]), _vm._v(" "), _c("input", {
-    attrs: {
-      type: "text",
-      name: "Scadenza",
-      id: ""
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "prova"
-  }, [_c("label", {
-    attrs: {
-      "for": "cvv"
-    }
-  }, [_vm._v("CVV")]), _vm._v(" "), _c("input", {
-    attrs: {
-      type: "number",
-      name: "CVV",
-      id: ""
-    }
-  })])])]);
-}, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -8753,7 +8763,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\ninput[data-v-1e012438] {\n  background-color: white;\n  border: 1px solid rgba(0, 0, 0, 0.6392156863);\n  border-radius: 5px;\n}\n.space[data-v-1e012438] {\n  width: 100px;\n  height: 20px;\n}\n.container-principale[data-v-1e012438] {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  display: none;\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 35%;\n  background: rgb(255, 255, 255);\n  position: absolute;\n  top: 10%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border-radius: 18px;\n}\n.container-principale .container-content h2[data-v-1e012438] {\n  padding: 40px 0px;\n  font-size: 1.8rem;\n  text-align: center;\n}\n.container-principale .container-content #payment-form[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n  width: 100%;\n}\n.container-principale .container-content #payment-form .form-group[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container-principale .container-content #payment-form .form-group .info-form[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #card-n[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card #card-n input[data-v-1e012438] {\n  width: 100%;\n}\n.container-principale .container-content #payment-form .info-card #secure-info[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #secure-info .prova[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  width: 33%;\n}", ""]);
+exports.push([module.i, "*[data-v-1e012438] {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n.close[data-v-1e012438] {\n  display: flex;\n  width: 89%;\n  justify-content: flex-end;\n  padding-top: 15px;\n}\ninput[data-v-1e012438] {\n  background-color: white;\n  border: 1px solid rgba(0, 0, 0, 0.6392156863);\n  border-radius: 5px;\n}\n.space[data-v-1e012438] {\n  width: 100px;\n  height: 20px;\n}\n.container-principale[data-v-1e012438] {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5490196078);\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  align-items: center;\n  justify-content: center;\n}\n.container-principale .container-content[data-v-1e012438] {\n  width: 35%;\n  background: rgb(255, 255, 255);\n  position: absolute;\n  top: 10%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border-radius: 18px;\n}\n.container-principale .container-content h2[data-v-1e012438] {\n  padding: 40px 0px;\n  font-size: 1.8rem;\n  text-align: center;\n}\n.container-principale .container-content #payment-form[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n  width: 100%;\n}\n.container-principale .container-content #payment-form .form-group[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container-principale .container-content #payment-form .form-group .info-form[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #card-n[data-v-1e012438] {\n  width: 70%;\n}\n.container-principale .container-content #payment-form .info-card #card-n input[data-v-1e012438] {\n  width: 100%;\n}\n.container-principale .container-content #payment-form .info-card #secure-info[data-v-1e012438] {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 25px;\n}\n.container-principale .container-content #payment-form .info-card #secure-info .prova[data-v-1e012438] {\n  display: flex;\n  flex-direction: column;\n  width: 33%;\n}", ""]);
 
 // exports
 
@@ -8867,7 +8877,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Hsorry:hover .sorry[data-v-77c5cfc8] {\n  display: flex;\n}\n.Hsorry[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n}\n#margin-p[data-v-77c5cfc8] {\n  margin: 15px 0px;\n  display: flex;\n}\n.sorry[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5019607843);\n  position: absolute;\n  top: -5px;\n  right: 0;\n  display: none;\n  justify-content: center;\n  align-items: center;\n  border-radius: 5px;\n}\n.sorry h3[data-v-77c5cfc8] {\n  color: white;\n}\n*[data-v-77c5cfc8] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n#appiglio[data-v-77c5cfc8] {\n  position: relative;\n}\n#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 100%;\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 80%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin-left: 5%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 30%;\n  border-radius: 5px;\n  position: relative;\n  background-color: white;\n  box-shadow: rgba(0, 0, 0, 0.0392156863) -4px 4px 5px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0705882353);\n}\n#sec .Mastro .card-visible .prova[data-v-77c5cfc8] {\n  width: 65%;\n  margin-left: 5px;\n  margin-top: 5px;\n}\n#sec .Mastro .card-visible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .card-visible .prova p[data-v-77c5cfc8] {\n  font-size: 0.8rem;\n  margin-bottom: 5px;\n}\n#sec .Mastro .card-visible .prova button[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  background-color: rgba(255, 0, 0, 0);\n  border: none;\n}\n#sec .Mastro .card-visible img[data-v-77c5cfc8] {\n  max-width: 29%;\n  height: 80%;\n  position: absolute;\n  right: 17px;\n  bottom: 14px;\n}\n#sec .Mastro .non-disp[data-v-77c5cfc8] {\n  position: relative;\n  height: 100%;\n}\n#sec .Mastro .non-disp .card-nonVisible[data-v-77c5cfc8] {\n  width: 100%;\n  border-radius: 5px;\n  position: relative;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova[data-v-77c5cfc8] {\n  width: 65%;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova h5 p[data-v-77c5cfc8] {\n  font-size: 0.8rem;\n  margin-bottom: 5px;\n  margin-top: 25px;\n}\n#sec .Mastro .non-disp .card-nonVisible img[data-v-77c5cfc8] {\n  max-width: 29%;\n  height: 80%;\n  position: absolute;\n  right: 17px;\n  bottom: 14px;\n}", ""]);
+exports.push([module.i, ".Hsorry:hover .sorry[data-v-77c5cfc8] {\n  display: flex;\n}\n.Hsorry[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n}\n#margin-p[data-v-77c5cfc8] {\n  margin: 15px 0px;\n  display: flex;\n}\n.sorry[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5019607843);\n  position: absolute;\n  top: -5px;\n  right: 0;\n  display: none;\n  justify-content: center;\n  align-items: center;\n  border-radius: 5px;\n}\n.sorry h3[data-v-77c5cfc8] {\n  color: white;\n}\n*[data-v-77c5cfc8] {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n#appiglio[data-v-77c5cfc8] {\n  position: relative;\n}\n#sec[data-v-77c5cfc8] {\n  display: flex;\n  width: 100%;\n}\n#sec .Mastro[data-v-77c5cfc8] {\n  width: 80%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin-left: 5%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n}\n#sec .Mastro .card-visible[data-v-77c5cfc8] {\n  width: 30%;\n  border-radius: 5px;\n  position: relative;\n  background-color: white;\n  box-shadow: rgba(0, 0, 0, 0.0392156863) -4px 4px 5px 0px;\n  border: 1px solid rgba(0, 0, 0, 0.0705882353);\n}\n#sec .Mastro .card-visible .prova[data-v-77c5cfc8] {\n  width: 65%;\n  margin-left: 5px;\n  margin-top: 5px;\n}\n#sec .Mastro .card-visible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .card-visible .prova p[data-v-77c5cfc8] {\n  font-size: 0.8rem;\n  margin-bottom: 5px;\n}\n#sec .Mastro .card-visible .prova button[data-v-77c5cfc8] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  background-color: rgba(255, 0, 0, 0);\n  border: none;\n}\n#sec .Mastro .card-visible img[data-v-77c5cfc8] {\n  max-width: 27%;\n  height: 69%;\n  position: absolute;\n  right: 17px;\n  bottom: 30px;\n}\n#sec .Mastro .non-disp[data-v-77c5cfc8] {\n  position: relative;\n  height: 100%;\n}\n#sec .Mastro .non-disp .card-nonVisible[data-v-77c5cfc8] {\n  width: 100%;\n  border-radius: 5px;\n  position: relative;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova[data-v-77c5cfc8] {\n  width: 65%;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova h5[data-v-77c5cfc8] {\n  font-weight: 700;\n  font-size: 1.4rem;\n}\n#sec .Mastro .non-disp .card-nonVisible .prova h5 p[data-v-77c5cfc8] {\n  font-size: 0.8rem;\n  margin-bottom: 5px;\n  margin-top: 25px;\n}\n#sec .Mastro .non-disp .card-nonVisible img[data-v-77c5cfc8] {\n  max-width: 27%;\n  height: 69%;\n  position: absolute;\n  right: 17px;\n  bottom: 30px;\n}", ""]);
 
 // exports
 
