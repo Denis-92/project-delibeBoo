@@ -45,7 +45,7 @@
     </div>
     @if ($resturant->image !== null)
         <div style="width: 400px; height:250px">
-            <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $resturant->image) }}" alt="test">
+            <img style="height: 100%; width: 100%" src="{{ asset('storage/' . $resturant->image) }}" alt="">
         </div>
     @endif
     <div class="d-flex mt-4" style="column-gap: 20px">
