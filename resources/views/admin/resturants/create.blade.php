@@ -12,7 +12,7 @@
         @csrf
         <div class="d-flex flex-column">
 
-            <label for="name">Nome Attivita:</label>
+            <label for="name">* Nome Attivita:</label>
             <input type="text" name="name" min="3" max="255" required placeholder="Nome Attivita'">
             @error('name')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>
@@ -21,7 +21,7 @@
             @enderror
 
 
-            <label for="address">Indirizzo:</label>
+            <label for="address">* Indirizzo:</label>
             <input type="text" name="address" min="3" max="255" required placeholder="Indirizzo'">
             @error('address')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>
@@ -29,7 +29,7 @@
                 </div>
             @enderror
 
-            <label for="p_iva">P.Iva:</label>
+            <label for="p_iva">* P.Iva:</label>
             <input type="text" name="p_iva" min="11" max="11" required placeholder="P.Iva">
             @error('p_iva')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>
@@ -45,7 +45,7 @@
             <label for="dinner_closing">Chiusura Cena:</label>
             <input type="time" name="dinner_closing">
             <div class="d-flex justify-content-center align-items-center" @error('categories') class="is-invalid" @enderror>
-                <p class="m-0 p-0">Categorie:</p>
+                <p class="m-0 p-0">Categorie:&nbsp;&nbsp;</p>
                 <div class="d-flex align-items-center flex-wrap" style="column-gap: 30px; row-gap: 10px">
                     @foreach ($categories as $category)
                         <div class="d-flex" style="width:calc(100% / 7 - 10px); column-gap:5px">
@@ -63,6 +63,7 @@
                     </div>
                 @enderror
             </div>
+            <br><br>
             <label for="image">Carica immagine:</label>
             <input type="file" name="image">
             @error('image')
@@ -71,7 +72,10 @@
                 </div>
             @enderror
 
-            <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success m-2" value="Invia">
+            <div>
+                <p>* campo obbligatorio</p>
+            </div>
+            <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success m-2" value="Crea">
             </div>
 
         </div>
