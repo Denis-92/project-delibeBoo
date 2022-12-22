@@ -13,7 +13,7 @@
         @csrf
         <div class="d-flex flex-column">
 
-            <label for="name">Nome Attivita:</label>
+            <label for="name">* Nome Attivita:</label>
             <input value="{{ old('name', $resturant->name) }}" type="text" name="name" min="3" max="255"
                 required />
             @error('name')
@@ -23,7 +23,7 @@
             @enderror
 
 
-            <label for="address">Indirizzo:</label>
+            <label for="address">* Indirizzo:</label>
             <input value="{{ old('address', $resturant->address) }}" type="text" name="address" min="3"
                 max="255" required />
             @error('address')
@@ -33,7 +33,7 @@
             @enderror
 
 
-            <label for="p_iva">P.Iva:</label>
+            <label for="p_iva">* P.Iva:</label>
             <input type="text" name="p_iva" min="11" max="11" required
                 value="{{ old('p_iva', $resturant->p_iva) }}" />
             @error('p_iva')
@@ -91,6 +91,7 @@
             @endif
         </div>
 
+        <br>
         <div>
             <label for="image">Cambia immagine:</label>
             <input type="file" name="image" />
@@ -102,8 +103,12 @@
             @enderror
         </div>
 
+        <div>
+            <p>* campo obbligatorio</p>
+        </div>
+
         <div class="d-flex justify-content-center">
-            <input type="submit" class="btn btn-success" value="Invia">
+            <input type="submit" class="btn btn-success" value="Modifica">
         </div>
     </form>
 @endsection

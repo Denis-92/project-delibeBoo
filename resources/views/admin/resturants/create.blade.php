@@ -64,13 +64,15 @@
                 @enderror
             </div>
             <br><br>
-            <label for="image">Carica immagine:</label>
-            <input type="file" name="image">
-            @error('image')
-                <div class='alert alert-danger p-1 ms-3 mb-0'>
-                    {{ __($message) }}
-                </div>
-            @enderror
+            <div>
+                <label for="image">Carica immagine:</label>
+                <input type="file" name="image">
+                @error('image')
+                    <div class='alert alert-danger p-1 ms-3 mb-0'>
+                        {{ __($message) }}
+                    </div>
+                @enderror
+            </div>
 
             <div>
                 <p>* campo obbligatorio</p>
