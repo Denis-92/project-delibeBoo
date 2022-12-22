@@ -22,7 +22,7 @@
                 </div>
             @endforeach
         @else
-            <h5>non ci sono ordini per questo piatto</h5>
+            <h5>Questo ristorante non ha ricevuto ordini</h5>
         @endif
 
 
