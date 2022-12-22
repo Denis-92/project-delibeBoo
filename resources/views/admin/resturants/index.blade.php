@@ -1,8 +1,17 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h2 class="text-info mb-5">LE TUE ATTIVITA':</h2>
+    <div class="w-100">
+        <div class="d-flex flex-column justify-content-between align-items-center p-2"
+            style="width: 100%; background-color: #bffed9 !important; row-gap:15px">
+            <h3 class="m-0 text-success">Aggiungi Attivita'</h3>
+            <a href="{{ route('admin.resturants.create') }}" class="btn btn-success">Aggiungi</a>
+        </div>
+    </div>
 
+    <div><br><br></div>
+
+    <h2 class="text-info mb-5">LE TUE ATTIVITA':</h2>
 
     <div class="d-flex flex-column w-100" style="row-gap: 100px">
         <div class="w-100">
@@ -16,13 +25,6 @@
                 @endif
             @endforeach
         </div>
-
-        <div class="w-100">
-            <div class="d-flex flex-column justify-content-between align-items-center p-2"
-                style="width: 100%; background-color: #bffed9 !important; row-gap:15px">
-                <h3 class="m-0 text-success">Aggiungi Attivita'</h3>
-                <a href="{{ route('admin.resturants.create') }}" class="btn btn-success">Aggiungi</a>
-            </div>
-        </div>
+        <br>
     </div>
 @endsection
