@@ -21,7 +21,7 @@
         <img src="{{ asset('images/logo_deliveboo.webp') }}" class="deliveboo_icon" alt="">
         <div class="d-flex flex-column"><a class="navbar-brand col-sm-3 col-md-2 mr-0 text-white"
                 href="{{ route('login') }}">
-                <h3>Deliveboo</h3>
+                <h3>DeliveBoo</h3>
             </a>
             <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-white" href="/">Vai al Sito</a>
         </div>
@@ -59,7 +59,7 @@
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrazione') }}</a>
                     </li>
                 @endif
             @endauth
