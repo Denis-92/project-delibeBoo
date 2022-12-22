@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">BACK</a>
+        <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla lista dei piatti</a>
     </div>
     <h1 class="mb-5">Modifica piatto: </h1>
 

@@ -44,7 +44,7 @@
 <script>
     function conferma(event) {
         const confirmdelete = confirm(
-            "Are u sure u want to delete it?"
+            "Vuoi cancellare questo piatto dal menu? L'operazione è irreversibile!"
         );
         if (!confirmdelete) {
             event.preventDefault(); // evento che inibisce submit del form
