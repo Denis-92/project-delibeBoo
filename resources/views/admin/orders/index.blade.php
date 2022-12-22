@@ -3,7 +3,7 @@
 @section('content')
     <div class="mb-4 d-flex w-100">
         <h5> <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger"
-                style="text-decoration: underline">Back</a></h5>
+                style="text-decoration: underline">Torna alla pagina precedente</a></h5>
     </div>
     <div style="width: 80%">
         <h1>Ordini:</h1>
