@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla lista dei piatti</a>
+        <h3>
+            <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla lista dei
+                piatti</a>
+        </h3>
     </div>
     <h1 class="mb-5">Modifica piatto: </h1>
 
@@ -76,7 +79,15 @@
                 @enderror
             </div>
 
-            <input type="submit" class="btn btn-success m-2" value="Modifica">
+
+
+            <div class="d-flex justify-content-center centrato-asse-y">
+                <input type="submit" class="btn btn-success m-2" value="Modifica">
+                <h5>
+                    <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla lista
+                        dei piatti</a>
+                </h5>
+            </div>
 
         </div>
     </form>
@@ -89,5 +100,9 @@
 
     form>* {
         row-gap: 20px
+    }
+
+    .centrato-asse-y {
+        align-items: center;
     }
 </style>

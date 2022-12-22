@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="d-flex w-100">
-        <h5> <a class="text-danger" style="text-decoration: underline"
+        <h3> <a class="text-danger" style="text-decoration: underline"
                 href="{{ route('admin.resturants.show', $resturant->id) }}">Torna alla pagina del ristorante</a>
-        </h5>
+        </h3>
     </div>
     <h1>Inserisci la tua Attivita' </h1>
 
@@ -107,8 +107,11 @@
             <p>* campo obbligatorio</p>
         </div>
 
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center centrato-asse-y">
             <input type="submit" class="btn btn-success" value="Modifica">
+            <h5> <a class="text-danger" style="text-decoration: underline"
+                    href="{{ route('admin.resturants.show', $resturant->id) }}">Torna alla pagina del ristorante</a>
+            </h5>
         </div>
     </form>
 @endsection
@@ -119,5 +122,13 @@
 
     form>* {
         row-gap: 20px
+    }
+
+    .centrato-asse-y {
+        align-items: center;
+    }
+
+    h5 {
+        margin-left: 1rem;
     }
 </style>

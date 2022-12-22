@@ -2,8 +2,10 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ route('admin.plates.index', $id) }}" class="text-danger" style="text-decoration: underline">Torna alla
-            lista dei piatti</a>
+        <h3>
+            <a href="{{ route('admin.plates.index', $id) }}" class="text-danger" style="text-decoration: underline">Torna alla
+                lista dei piatti</a>
+        </h3>
     </div>
     <div class="d-flex flex-column boxshow" style="row-gap: 20px">
 

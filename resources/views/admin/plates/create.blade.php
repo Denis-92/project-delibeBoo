@@ -2,7 +2,11 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla pagina precedente</a>
+        <h3>
+            <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">
+                Torna alla pagina precedente
+            </a>
+        </h3>
     </div>
     <h1 class="mb-5">Inserisci nuovo piatto: </h1>
 
@@ -79,10 +83,12 @@
                 </div>
             @enderror
 
-            <div class="centrato">
+            <div class="d-flex justify-content-center centrato-asse-y">
                 <input type="submit" class="btn btn-success m-2" value="Crea">
-                <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla pagina
-                    precedente</a>
+                <h5>
+                    <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla pagina
+                        precedente</a>
+                </h5>
             </div>
 
         </div>
@@ -98,9 +104,7 @@
         row-gap: 20px
     }
 
-    .centrato {
-        display: flex;
-        justify-content: space-around;
+    .centrato-asse-y {
         align-items: center;
     }
 </style>

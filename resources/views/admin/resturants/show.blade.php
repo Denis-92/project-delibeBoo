@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="d-flex w-100">
-        <h5> <a class="text-danger" style="text-decoration: underline" href="{{ route('admin.resturants.index') }}">Torna alla
+        <h3> <a class="text-danger" style="text-decoration: underline" href="{{ route('admin.resturants.index') }}">Torna alla
                 lista delle tue attività</a>
-        </h5>
+        </h3>
     </div>
 
     <div class="d-flex" style="column-gap: 20px">

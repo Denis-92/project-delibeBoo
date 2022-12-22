@@ -77,7 +77,13 @@
             <div>
                 <p>* campo obbligatorio</p>
             </div>
-            <div class="d-flex justify-content-center"> <input type="submit" class="btn btn-success m-2" value="Crea">
+
+            <div class="d-flex justify-content-center centrato-asse-y">
+                <input type="submit" class="btn btn-success m-2" value="Crea">
+                <h5> <a class="text-danger" style="text-decoration: underline"
+                        href="{{ route('admin.resturants.index') }}">Torna alla
+                        pagina precedente</a>
+                </h5>
             </div>
 
         </div>
@@ -91,5 +97,9 @@
 
     form>* {
         row-gap: 20px
+    }
+
+    .centrato-asse-y {
+        align-items: center;
     }
 </style>

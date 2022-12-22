@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="w-100">
-        <h5><a href="{{ route('admin.resturants.show', $id) }}" class="text-danger" style="text-decoration: underline">Torna
+        <h3><a href="{{ route('admin.resturants.show', $id) }}" class="text-danger" style="text-decoration: underline">Torna
                 alla pagina precedente</a>
-        </h5>
+        </h3>
     </div>
 
     <h3>DETTAGLI ORDINE:</h3>

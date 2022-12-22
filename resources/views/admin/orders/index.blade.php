@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="mb-4 d-flex w-100">
-        <h5> <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger"
-                style="text-decoration: underline">Torna alla pagina del ristorante</a></h5>
+        <h3> <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger"
+                style="text-decoration: underline">Torna alla pagina del ristorante</a></h3>
     </div>
     <div style="width: 80%">
         <h1>Ordini:</h1>
