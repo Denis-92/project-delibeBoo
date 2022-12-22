@@ -20,19 +20,19 @@
                     <div class="form-group">
                         <div class="info-form">
                             <label for="name_on_card">Titolare</label>
-                            <input type="text" class="form-control" id="name_on_card" name="name_on_card">
+                            <input type="text" class="form-control" id="name_on_card" name="name_on_card" required min="3" />
 
 
 
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" required />
 
 
                             <label for="phone">Cellulare</label>
-                            <input type="text" class="form-control" id="phone" name="phone">
+                            <input type="text" class="form-control" id="phone" name="phone" required />
 
                             <label for="address">Indirizzo</label>
-                            <input type="text" class="form-control" id="address" name="address">
+                            <input type="text" class="form-control" id="address" name="address" required min="3" />
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
 
 
 
-                    <!-- -altro -->
+               <!-- -altro -->
                     <router-link to="/checkout">
                         <button type="submit" class="btn btn-outline-success mb-2 mt-2 py-2" id="submit-button">Completa
                             il pagamento</button>
@@ -222,9 +222,7 @@ export default {
         piatti: Array
     },
     methods: {
-        piattishow() {
-            console.log(this.piatti)
-        },
+
         closePayment() {
             this.show = false
             this.$emit('close', this.show)
