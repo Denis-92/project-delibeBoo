@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="w-100">
-        <h5><a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Back</a></h5>
+        <h5><a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla pagina
+                precedente</a></h5>
     </div>
 
 

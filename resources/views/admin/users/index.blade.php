@@ -33,7 +33,7 @@
 <script>
     function conferma(event) {
         const confirmdelete = confirm(
-            "Are u sure u want to delete it?"
+            "ATTENZIONE questa operazione è irreversibile! Sei sicuro di voler cancellare il tuo Profilo?"
         );
         if (!confirmdelete) {
             event.preventDefault(); // evento che inibisce submit del form
