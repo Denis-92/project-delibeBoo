@@ -79,7 +79,11 @@
                 </div>
             @enderror
 
-            <input type="submit" class="btn btn-success m-2" value="Crea">
+            <div class="centrato">
+                <input type="submit" class="btn btn-success m-2" value="Crea">
+                <a href="{{ URL::previous() }}" class="text-danger" style="text-decoration: underline">Torna alla pagina
+                    precedente</a>
+            </div>
 
         </div>
     </form>
@@ -92,5 +96,11 @@
 
     form>* {
         row-gap: 20px
+    }
+
+    .centrato {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 </style>
