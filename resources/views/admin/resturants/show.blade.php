@@ -4,7 +4,7 @@
 
     <div class="d-flex w-100">
         <h5> <a class="text-danger" style="text-decoration: underline" href="{{ route('admin.resturants.index') }}">Torna alla
-                pagina precedente</a>
+                lista delle tue attività</a>
         </h5>
     </div>
 

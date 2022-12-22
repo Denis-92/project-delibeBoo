@@ -39,11 +39,11 @@
 
             <div>
                 <input type="radio" name="hidden" value="0" @if (!$plate->hidden) checked @endif>
-                <label for="hidden">Piatto visibile</label>
+                <label for="hidden">Piatto disponibile</label>
             </div>
             <div>
                 <input type="radio" name="hidden" value="1" @if ($plate->hidden) checked @endif>
-                <label for="hidden">Piatto nascosto</label>
+                <label for="hidden">Piatto non disponibile</label>
             </div>
             @error('hidden')
                 <div class='alert alert-danger p-1 ms-3 mb-0'>

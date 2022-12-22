@@ -2,8 +2,18 @@
 
 @section('content')
     <div class="w-100 mb-4">
-        <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger" style="text-decoration: underline">BACK</a>
+        <a href="{{ route('admin.resturants.show', $restid) }}" class="text-danger" style="text-decoration: underline">
+            <h3>Torna
+                alla pagina del ristorante</h3>
+        </a>
     </div>
+
+    <h2>
+        <a href="{{ route('admin.plates.create', $restid) }}">Crea Nuovo Piatto</a>
+    </h2>
+
+    <hr>
+
     <h2 class="text-info mb-5">I TUOI PIATTI:</h2>
 
     <div class="d-flex flex-column w-100" style="row-gap: 100px">
@@ -29,10 +39,6 @@
                 </h2>
             @endforeach
         </div>
-    </div>
-
-    <div>
-        <a href="{{ route('admin.plates.create', $restid) }}">Crea Nuovo Piatto</a>
     </div>
 @endsection
 <script>
